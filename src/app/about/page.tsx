@@ -273,11 +273,11 @@ const AboutPage = () => {
       </section>
 
       {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="bg-gradient-to-b from-[#000] to-[#7D73C3] relative lg:mx-auto mx-4 my-18 max-w-4xl overflow-hidden rounded-2xl px-4 py-16 text-white shadow-xl sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-[#000] to-[#7D73C3] relative lg:mx-auto mx-4 my-18 max-w-6xl overflow-hidden rounded-2xl px-4 py-16 text-white shadow-xl sm:px-6 lg:px-">
         <div className="container mx-auto max-w-3xl flex flex-col items-center text-center px-4">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
-            Take a smarter approach to AI in <br className="hidden sm:block" />{" "}
-            your business today.
+            Take a smarter approach to AI in your business today.<br className="hidden sm:block" />{" "}
+            
           </h2>
           <p>Seamlessly connect ai to your everyday tools and start working faster, better, and easier</p>
           <Link href="/contact-us" passHref className="mt-14">
