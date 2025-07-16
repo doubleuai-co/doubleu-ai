@@ -1,9 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import MobileNav from "./mobile-nav";

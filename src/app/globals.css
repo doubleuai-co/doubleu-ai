@@ -1,6 +1,26 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-satoshi: 'Satoshi', sans-serif;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -125,3 +145,4 @@
     @apply bg-background text-foreground font-inter;
   }
 }
+

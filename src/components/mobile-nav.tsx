@@ -5,7 +5,6 @@ import { Menu, XIcon } from 'lucide-react';
 import { Logo } from "./logo";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
-import Image from "next/image";
 import { navItems } from "./navbar";
 import Link from "next/link";
 

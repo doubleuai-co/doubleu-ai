@@ -98,7 +98,7 @@ const AboutPage = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for About Page */}
-      <section className="justify-center w-full relative flex lg:h-[826px] items-center overflow-hidden bg-[#1a1a2e] px-4 py-20 text-white sm:px-6 lg:px-8">
+      <section className="justify-center w-full relative flex lg:h-[700px] items-center overflow-hidden bg-[#1a1a2e] px-4 py-20 text-white sm:px-6 lg:px-8">
         {/* Background elements - subtle blurs/gradients */}
         <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
         <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-20 mix-blend-screen blur-3xl filter"></div>
@@ -167,7 +167,7 @@ const AboutPage = () => {
       </section>
 
       {/* 4. Our Revolutionary Approach Section */}
-      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-white px-4 py-4 sm:px-6 lg:px-20">
         <div className="container mx-auto mb-12 text-center">
           <h2 className="mb-4 lg:text-4xl text-2xl font-bold text-[#0B0A0A]">
             Our Revolutionary Approach
@@ -233,7 +233,7 @@ const AboutPage = () => {
 
 
       {/* 7. Testimonials Section */}
-      <section className="bg-white px-4 py-8 sm:px-6 lg:px-8">
+      <section className="bg-white px-4 py-8 sm:px-6 lg:px-18">
         <div className="container mx-auto max-w-xl mb-12 text-center ">
           <h2 className="mb-4 text-2xl lg:text-4xl font-bold text-[#0B0A0A]">
             We handle the boring stuff so you can focus on real work.
