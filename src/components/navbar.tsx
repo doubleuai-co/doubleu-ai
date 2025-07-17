@@ -1,6 +1,5 @@
 "use client";
 
-
 import { Logo } from "./logo";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import MobileNav from "./mobile-nav";
@@ -22,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       {isDesktop ? (
-        <nav className="bg-[#0B0A0A] h-[99px] border-b-[1px] border-gray-600 pt-6 px-[120px] text-white shadow-md">
+        <nav className="h-[99px] border-b-[1px] border-gray-600 bg-[#0B0A0A] px-[120px] pt-6 text-white shadow-md">
           <div className="container mx-auto flex items-center justify-between">
             {/* Logo Section */}
             <div className="mx-12 flex items-center justify-center">
@@ -30,19 +29,21 @@ export default function Navbar() {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden items-center space-x-10 md:flex">
+            <div className="hidden items-center space-x-10 md:flex md:text-lg">
               {navItems.map((item) => (
                 <a
-                  key={item.name} 
+                  key={item.name}
                   href={item.href}
                   className="transition duration-300 ease-in-out hover:text-[#7D73C3]"
                 >
                   {item.name}
                 </a>
               ))}
-              <button className="rounded-lg bg-[#7D73C3] px-6 py-3 text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+              <a 
+              href="/contact"
+              className="rounded-lg bg-[#7D73C3] px-6 py-3 text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
         </nav>

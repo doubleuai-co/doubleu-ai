@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Mail, MapPin, X, Linkedin, Instagram, Facebook } from "lucide-react"; // Import necessary Lucide icons
+import { Mail, MapPin, Linkedin, Instagram, Facebook, Twitter } from "lucide-react"; // Import necessary Lucide icons
 import { Logo } from "./logo";
 
 // Define footer links similar to navItems for reusability and clarity
@@ -16,8 +16,8 @@ export const footerQuickLinks = [
 export default function Footer() {
   return (
     // Main footer container with a subtle gradient background
-    <footer className="bg-gradient-to-l from-[#1a1a2e] to-[#0d0d1a] px-8 pt-24 lg;pt-18 pb-8 text-gray-300 md:px-8 lg:px-28">
-      <div className="container mx-auto mb-8 grid grid-cols-1 gap-8 border-b border-gray-700 pb-8 md:grid-cols-3">
+    <footer className="lg;pt-18 bg-gradient-to-l from-[#1a1a2e] to-[#0d0d1a] px-6 pt-24 pb-8 text-gray-300 md:px-8 lg:px-28">
+      <div className="container mx-auto mb-8 grid grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">
         {/* Column 1: Logo, Description, and Contact Info */}
         <div className="flex flex-col space-y-4">
           {/* Logo */}
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         {/* Column 2: Quick Links */}
-        <div>
+        <div className="md:pl-20">
           <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
           <ul className="space-y-2">
             {footerQuickLinks.map((link) => (
@@ -73,23 +73,27 @@ export default function Footer() {
           <p className="mb-4 text-sm leading-relaxed">
             Have any feedback or questions? We&apos;d love to hear from you.
           </p>
-          <Link href="/contact" className="py-2 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:text-[#7D73C3]"passHref>
-              Contact Us
+          <Link
+            href="/contact"
+            className="py-2 text-[#00B4D8] underline-offset-2 transition duration-300 ease-in-out hover:text-[#fff]"
+            passHref
+          >
+            Contact Us
           </Link>
         </div>
       </div>
 
       {/* Bottom Section: Copyright and Social Icons */}
-      <div className="flex flex-col items-center justify-between px-6 text-sm text-gray-500 sm:flex-row">
-        <p className="mb-4 sm:mb-0">© 2025 DoubleU AI. All rights reserved.</p>
-        <div className="flex space-x-6">
+      <div className="flex flex-col items-center justify-between text-sm text-[#D0D5DD] sm:flex-row">
+        <p className="mb-4 sm:mb-0 text-center">© 2025 DoubleU AI. All rights reserved.</p>
+        <div className="flex space-x-6 pt-4">
           <a
             href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
           >
-            <X size={20} className="text-[#fff]"/> {/* X (Twitter) icon */}
+            <Twitter size={20} className="text-[#fff]" /> {/* X (Twitter) icon */}
           </a>
           <a
             href="https://linkedin.com/"
@@ -97,7 +101,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
           >
-            <Linkedin size={20} className="text-[#fff]"/> {/* LinkedIn icon */}
+            <Linkedin size={20} className="text-[#fff]" /> {/* LinkedIn icon */}
           </a>
           <a
             href="https://facebook.com/"
@@ -105,7 +109,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
           >
-            <Facebook size={20} className="text-[#fff]"/> {/* LinkedIn icon */}
+            <Facebook size={20} className="text-[#fff]" /> {/* LinkedIn icon */}
           </a>
           <a
             href="https://instagram.com/"
@@ -113,7 +117,8 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
           >
-            <Instagram size={20} className="text-[#fff]"/> {/* Instagram icon */}
+            <Instagram size={20} className="text-[#fff]" />{" "}
+            {/* Instagram icon */}
           </a>
         </div>
       </div>

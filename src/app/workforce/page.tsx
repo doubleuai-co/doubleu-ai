@@ -1,18 +1,63 @@
-import EmblaCarousel from "@/components/card-parrallex";
-import { EmblaOptionsType } from "embla-carousel";
-import { Button } from "@/components/ui/button";
+// import EmblaCarousel from "@/components/card-parrallex";
+// import { EmblaOptionsType } from "embla-carousel";
+// import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { CheckCircle } from "lucide-react"; // Lucide icons
+
 // import "../embla.css";
 
-const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+// const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+// const SLIDE_COUNT = 5;
+// const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Workforce() {
+  const agents = [
+    { name: "Mylo", role: "Product Sale Worker", image: "/", id: "01" },
+    { name: "Ehiz", role: "Hiring Manager", image: "/", id: "02" },
+    { name: "Neo", role: "Sales Service Worker", image: "/", id: "03" },
+    { name: "Agora", role: "Event Manager", image: "/", id: "04" },
+  ];
+
+  // Data for "Our Workers general features" section
+  const generalFeatures = [
+    "24/7 availability, ensuring continuous operation.",
+    "Seamless integration with your existing systems.",
+    "Customizable to fit unique business processes.",
+    "Scalable to grow with your enterprise needs.",
+    "Data-driven insights for improved decision-making.",
+    "Secure and compliant data handling.",
+    "Intuitive and easy-to-use interfaces.",
+    "Continuous learning and adaptation.",
+  ];
+
   return (
-    <main className="flex-1 pt-24 md:pt-0">
-      <section className="relative grid place-items-center">
+    <main className="bg-white">
+      {/* 1. Hero Section for Workforce Page */}
+      <section className="relative flex h-[65vh] w-full place-items-center overflow-hidden bg-[#1a1a2e] px-4 py-20 text-white sm:px-6 md:h-screen lg:px-8">
+        {/* Background elements - subtle blurs/gradients */}
+        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-10 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-10 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob animation-delay-4000 absolute bottom-0 left-1/4 h-60 w-60 rounded-full bg-[#ff6347] opacity-10 mix-blend-screen blur-3xl filter"></div>
+
+        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+          <h1 className="mb-4 text-center text-[40px] leading-[46px] font-black -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
+            Workforce built specifically <br className="hidden md:block" /> for
+            business needs
+          </h1>
+          <p className="justify-center text-center text-xl leading-[28px] -tracking-wide text-[#fff] md:max-w-2xl md:text-2xl md:leading-[34px]">
+            AI Workforce represents the beginning of a transformative paradigm
+            in operational efficiency.
+          </p>
+          <Link href="/contact-us" passHref>
+            <button className="rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+              Book a Demo
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* <section className="relative grid place-items-center">
         <div className="h-[65vh] w-full md:h-screen">
           <Image
             src="/mountain.jpeg"
@@ -32,26 +77,13 @@ export default function Workforce() {
             in operational efficiency.
           </p>
         </div>
-      </section>
+      </section> */}
 
-      <section className="px-5 py-6 md:py-10">
+      {/* <section className="px-5 py-6 md:py-10">
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-      </section>
+      </section> */}
       <section>
-        <div className="mx-auto my-10 flex flex-col items-center gap-6 px-5 py-6 md:max-w-6xl">
-          <h3 className="font-montserrat text-center text-[2.5rem] leading-[110%] font-bold -tracking-wide md:text-[4rem]">
-            Meet Our Workforce
-          </h3>
-          <p className="max-w-5xl text-center text-xl leading-[1.75rem] font-normal -tracking-wide md:text-2xl md:leading-[150%]">
-            Our AI Workforce is composed of autonomous digital professionals who
-            understand natural language, respond intelligently, and make
-            decisive actions while adapting in real time. They streamline
-            operations by taking over mundane and repetitive tasks once handled
-            by humans, delivering results with lightning speed, pinpoint
-            accuracy, and zero burnout.
-          </p>
-
-          <div className="mx-auto grid w-full grid-cols-1 gap-4 px-5 md:max-w-6xl md:grid-cols-2 md:px-16">
+        {/* <div className="mx-auto grid w-full grid-cols-1 gap-4 px-5 md:max-w-6xl md:grid-cols-2 md:px-16">
             <div className="border-secondary relative overflow-hidden rounded-3xl border bg-[url(/pattern1.png)]">
               <div className="flex flex-col items-center justify-center rounded-3xl bg-[url(/gradient.svg)] bg-center">
                 <div className="h-[240px] w-[306px] pt-3.5 md:h-[374px] md:w-[491px]">
@@ -287,8 +319,82 @@ export default function Workforce() {
                 </div>
               </div>
             </div>
+          </div> */}
+
+        {/* 2. Meet our AI workforce Section */}
+        <section className="bg-white px-4 py-16 text-gray-800 sm:px-6 lg:px-8">
+          <div className="container mx-auto mb-12 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-[#222831]">
+              Meet our AI workforce
+            </h2>
+            <p className="text-md max-w-5xl px-24 text-center leading-[1.75rem] font-normal -tracking-wide md:text-xl md:leading-[150%]">
+              Skilled, specialized, and always ready, these AI agents are built
+              to work for you.
+            </p>
           </div>
-        </div>
+
+          <div className="container mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {agents.map((agent, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm"
+              >
+                {/* Agent ID Circle */}
+                <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
+                  {agent.id}
+                </div>
+                {/* Agent Image */}
+                <Image
+                  src={agent.image} // Replace with actual agent image paths
+                  alt={agent.name}
+                  width={250} // Adjust based on actual image dimensions
+                  height={300} // Adjust based on actual image dimensions
+                  className="h-auto w-full rounded-t-xl object-cover"
+                />
+                {/* Name and Role Overlay */}
+                <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
+                  <h3 className="text-xl font-semibold">{agent.name}</h3>
+                  <p className="text-sm text-gray-300">{agent.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 3. Our Workers General Features Section */}
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="container mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+            {/* Left Column: Features List */}
+            <div className="flex flex-col space-y-6">
+              <h2 className="mb-4 text-4xl font-bold text-[#222831]">
+                Our Workers general features
+              </h2>
+              <ul className="space-y-4">
+                {generalFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <CheckCircle
+                      size={20}
+                      className="mt-1 flex-shrink-0 text-[#00bcd4]"
+                    />
+                    <p className="text-lg text-gray-700">{feature}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right Column: Image */}
+            <div className="flex justify-center md:justify-end">
+              {/* Placeholder for the image of a person using AI */}
+              <Image
+                src="/" // Replace with actual image path
+                alt="User interacting with AI"
+                width={500} // Adjust as needed
+                height={400} // Adjust as needed
+                className="rounded-xl object-cover shadow-lg"
+              />
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );

@@ -1,38 +1,51 @@
 "use client";
 import { useState } from "react";
-import { Menu, XIcon } from 'lucide-react';
 
-import { Logo } from "./logo";
+import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { navItems } from "./navbar";
 import Link from "next/link";
+import { LogoNav } from "./logo nav";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 z-50 border-b border-gray-700 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-md shadow-black/50">
+    <div className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-gray-700 bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50">
       {/* Logo */}
-      <Logo />
+      <LogoNav />
 
       {/* Mobile Menu Trigger */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="hover:bg-transparent md:hidden"
-          >
-            <Menu size={48} className="text-[#fff]" />
+          <Button className="pt-6" variant="trans" size="icon">
+            <Image
+              src="/new-img/Menu.svg"
+              alt=""
+              width={350}
+              height={150}
+              className="object-fit mb-6 object-cover"
+            />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="top" className="h-screen">
+        <SheetContent side="top" className="h-screen bg-[#0B0A0A]">
           <div className="flex items-center justify-between bg-[#0B0A0A] px-[21px] py-6">
-            <Logo />
-            <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
-              <XIcon size={48} className="text-[#fff]"/>
+            <LogoNav />
+            <Button
+              className="pt-6"
+              variant="trans"
+              size="icon"
+              onClick={() => setOpen(false)}
+            >
+              <Image
+                src="/new-img/Xoutline.svg"
+                alt=""
+                width={350}
+                height={150}
+                className="object-fit mb-6 object-cover"
+              />
               <span className="sr-only">Close menu</span>
             </Button>
           </div>
@@ -41,15 +54,18 @@ export default function MobileNav() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-xl font-medium"
+                className="text-xl font-light text-[#A2A2A2] hover:text-[#7D73C3]"
                 onClick={() => setOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Button className="mt-4 px-8 py-6 cursor-pointer rounded-full border border-[#7D73C3] bg-[#7D73C3] text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-white hover:text-[#1E2A47] hover:shadow-none">
+            <a
+              href="/contact"
+              className="mt-4 cursor-pointer rounded-md border border-[#7D73C3] bg-[#7D73C3] px-6 py-4 text-xl text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
+            >
               Book a Demo
-            </Button>
+            </a>
           </nav>
         </SheetContent>
       </Sheet>
