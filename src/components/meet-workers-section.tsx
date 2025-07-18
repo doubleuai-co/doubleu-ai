@@ -91,9 +91,9 @@ export default function MeetWorkersSection() {
             className="group relative overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm"
           >
             {/* Agent ID Circle */}
-            <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
+            {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
               {agent.id}
-            </div>
+            </div> */}
             {/* Agent Image */}
             <Image
               src={agent.image} // Replace with actual agent image paths
@@ -103,10 +103,10 @@ export default function MeetWorkersSection() {
               className="h-auto w-full rounded-t-xl object-cover"
             />
             {/* Name and Role Overlay */}
-            <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
+            {/* <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
               <h3 className="text-xl font-semibold">{agent.name}</h3>
               <p className="text-sm text-gray-300">{agent.role}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
