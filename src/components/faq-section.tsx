@@ -11,7 +11,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-700 py-4">
+    <div className="border-b border-gray-700 py-2 md:py-4 ">
       <button
         className="flex w-full items-center justify-between text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
@@ -24,7 +24,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         )}
       </button>
       {isOpen && (
-        <div className="mt-2 pr-8 text-base text-gray-400">
+        <div className="mt-2 pr-8 text-justify text-gray-400">
           <p>{answer}</p>
         </div>
       )}
@@ -37,37 +37,37 @@ export default function FAQSection() {
     {
       question: "What is DoubleU AI?",
       answer:
-        "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, quo et ducimus expedita repellendus veniam veritatis rem libero consectetur laboriosam voluptas totam animi doloribus tenetur hic consequuntur eligendi provident recusandae.",
+        "DoubleU AI is an AI-powered assistant designed to help businesses automate routine tasks, streamline communication, and improve customer experiences across platforms.",
     },
     {
       question: "How can DoubleU AI help my business?",
-      answer: "lorem",
+      answer: "DoubleU AI can handle tasks like customer support, appointment scheduling, data collection, and internal operations — freeing up your team to focus on more strategic work.",
     },
     {
       question: "Is DoubleU AI customizable to my business needs?",
-      answer: "lorem",
+      answer: "Yes! DoubleU AI is tailored to your brand’s voice, workflows, and goals, so it feels like a seamless part of your team, not just another bot.",
     },
 
     {
       question: "What platforms does DoubleU AI work on?",
-      answer: "lorem",
+      answer: "DoubleU integrates with popular platforms like WhatsApp, email, web chat, and your internal tools. It works where your customers and team already area.",
     },
 
     {
       question: "How secure is DoubleU AI?",
-      answer: "lorem",
+      answer: "Data security is a top priority. We follow best practices in encryption and privacy compliance to ensure your business and customer data stay protected.",
     },
 
     {
       question: "What kind of support will I get?",
-      answer: "lorem",
+      answer: "Our team offers onboarding, training, and ongoing support to make sure DoubleU AI is delivering results. We’re here when you need us.",
     },
   ];
 
   return (
     <section className="bg-[#0B0A0A] px-4 py-20 text-white sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-3xl">
-        <h2 className="mb-22 lg:mb-12 text-center text-4xl font-bold text-white">
+      <div className="container mx-auto max-w-sm lg:max-w-3xl">
+        <h2 className="mb-22 lg:mb-12 text-center text-2xl lg:text-4xl font-bold text-white">
           FREQUENTLY ASKED <br /> QUESTIONS
         </h2>
 

@@ -109,11 +109,11 @@ const AboutPage = () => {
             AI workers that handles the work, So you can handle what&apos;s next{" "}
             <br className="hidden md:block" />
           </h1>
-          <p className="lg:px-40 px-4 py-6 lg:text-2xl font-normal">
+          <p className="lg:px-40 px-4 py-2 lg:text-2xl font-normal">
             Build, grow, and scale your business with our AI workforce,
             custom-built for your business needs
           </p>
-          <Link href="/contact-us" passHref className="pt-4">
+          <Link href="/contact-us" passHref className="mt-12">
             <button className="rounded-md bg-[#6a5acd] px-8 py-4 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
               Book a Demo
             </button>

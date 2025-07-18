@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     // Main footer container with a subtle gradient background
     <footer className="lg;pt-18 bg-gradient-to-l from-[#1a1a2e] to-[#0d0d1a] px-6 pt-24 pb-8 text-gray-300 md:px-8 lg:px-28">
-      <div className="container mx-auto mb-8 grid grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">
+      <div className="container pr-30 md:pr-0 text-justify mx-auto mb-8 grid grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">
         {/* Column 1: Logo, Description, and Contact Info */}
         <div className="flex flex-col space-y-4">
           {/* Logo */}
@@ -31,7 +31,7 @@ export default function Footer() {
           </p>
 
           {/* Contact Information */}
-          <div className="flex items-center space-x-2 text-sm">
+          <div className="flex items-center space-x-2 text-sm pt-4 md:pt-0">
             <Mail size={18} className="text-[#fff]" />
             <a
               href="mailto:info@doubleuai.co"
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         {/* Column 2: Quick Links */}
-        <div className="md:pl-20">
+        <div className="md:pl-20 pt-4 md:pt-0">
           <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
           <ul className="space-y-2">
             {footerQuickLinks.map((link) => (
@@ -68,14 +68,14 @@ export default function Footer() {
         </div>
 
         {/* Column 3: Contact Section */}
-        <div>
+        <div className="py-4 md:pt-0 pr-8">
           <h3 className="mb-4 text-lg font-semibold text-white">Contact</h3>
           <p className="mb-4 text-sm leading-relaxed">
             Have any feedback or questions? We&apos;d love to hear from you.
           </p>
           <Link
             href="/contact"
-            className="py-2 text-[#00B4D8] underline-offset-2 transition duration-300 ease-in-out hover:text-[#fff]"
+            className="py-2 text-[#00B4D8] underline decoration-2 decoration-solid decoration-[#00B4D8] transition duration-300 ease-in-out hover:text-[#fff]"
             passHref
           >
             Contact Us

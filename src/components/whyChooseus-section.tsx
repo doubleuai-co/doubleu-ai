@@ -55,7 +55,7 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="bg-white px-2 py-4 text-[#0B0A0A] sm:px-6 lg:px-8">
+    <section className="bg-white px-8 py-16 text-[#0B0A0A] sm:px-6 lg:px-8">
       <div className="container mx-auto mb-12 text-center">
         <h2 className="mb-4 text-2xl lg:text-4xl font-bold text-[#222831]">
           Why top brands choose DoubleU AI
