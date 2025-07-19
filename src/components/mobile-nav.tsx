@@ -19,7 +19,7 @@ export default function MobileNav() {
       {/* Mobile Menu Trigger */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button className="pt-6" variant="trans" size="icon">
+          <Button className="cursor-pointer pt-6" variant="trans" size="icon">
             <Image
               src="/new-img/Menu.svg"
               alt=""
@@ -34,7 +34,7 @@ export default function MobileNav() {
           <div className="flex items-center justify-between bg-[#0B0A0A] px-[21px] py-6">
             <LogoNav />
             <Button
-              className="pt-6"
+              className="cursor-pointer pt-6"
               variant="trans"
               size="icon"
               onClick={() => setOpen(false)}

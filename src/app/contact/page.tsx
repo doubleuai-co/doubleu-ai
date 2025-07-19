@@ -1,10 +1,10 @@
 const Contact = () => {
   return (
-    <div className="bg-white pb-18 text-gray-800">
+    <div className="bg-white md:pb-18 text-gray-800">
       {/* 1. Hero Section for Contact Page */}
       <section className="relative overflow-hidden bg-white px-4 pt-36 pb-8 text-[#222831] sm:px-6 lg:px-8">
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
-          <h1 className="mb-6 text-center text-[40px] leading-[46px] font-black -tracking-wide text-[#222831] md:text-[4rem] md:leading-[72px]">
+          <h1 className="mb-6 pt-18 md:mt-0 text-center text-[40px] leading-[46px] font-black -tracking-wide text-[#222831] md:text-[4rem] md:leading-[72px]">
             Talk with our team
           </h1>
           <p className="max-w-sm text-center text-lg leading-[28px] -tracking-wide text-gray-600 md:text-xl md:leading-[34px] px-4">
@@ -20,7 +20,7 @@ const Contact = () => {
           {/* Removed shadow/border as per design */}
           <form className="space-y-6">
             {/* Name Fields */}
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-2">
               <div>
                 <label
                   htmlFor="firstName"
