@@ -51,7 +51,7 @@ export default function CounterRowSection() {
         ))}
       </div>
       {/* Small Screen */}
-      <div className="container mx-auto mb-20 grid grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-4 lg:text-center">
+      <div className="container mx-auto mb-20 md:hidden grid grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-4 lg:text-center">
         {stats.map((stat, index) => (
           <div
             key={index}

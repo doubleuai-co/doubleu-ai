@@ -1,252 +1,209 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Ehiz() {
-  const items = [
+  // Data for "What Ehiz can do for you" section
+  const Capabilities = [
     {
+      icon: "/brand-logo.png", //
       title: "Smart and Efficient Screening",
       description:
-        "Ehiz instantly evaluates candidate qualifications, matching skills and experience to job requirements with AI-driven precision, prioritizing applicants based on best-fit analysis to ensure recruiters focus on top-tier candidates.",
+        "Ehiz uses AI to match candidates to job requirements, so recruiters can focus on the best-fit applicants.",
     },
     {
+      icon: "/brand-logo.png", //
       title: "Automated Interview Scheduling",
       description:
-        "Ehiz eliminates the tedious back-and-forth by coordinating interview times with both recruiters and candidates, ensuring a smooth, conflict-free process that enhances the candidate experience.",
+        "Ehiz schedules interviews for recruiters and candidates, cutting the back-and-forth and making the process smooth and stress-free.",
     },
     {
+      icon: "/brand-logo.png", //
       title: "Streamlined Communication",
       description:
-        "Ehiz acts as a 24/7 hiring assistant, handling inquiries, application updates, and follow-ups in real-time, keeping recruiters and candidates informed to foster transparency and engagement.",
+        "Ehiz is your 24/7 hiring assistant, managing inquiries, updates, and follow-ups in real-time to keep everyone in the loop.",
     },
     {
+      icon: "/brand-logo.png", //
       title: "AI-Powered Insights & Analytics",
       description:
-        "Ehiz provides actionable insights into candidate performance, hiring trends, and potential recruitment roadblocks, helping recruiters refine their strategies for continuous improvement.",
+        "Ehiz gives clear insights on candidate performance, hiring trends, and roadblocks to help recruiters improve continuously.",
     },
     {
+      icon: "/brand-logo.png", //
       title: "Seamless Integration with Existing Tools",
       description:
-        "Ehiz syncs effortlessly with ATS platforms, HR software, and communication tools to create a unified hiring workflow, minimizing disruption without requiring major process overhauls.",
+        "Ehiz connects seamlessly with your ATS, HR tools, and comms apps — streamlining hiring without disrupting your workflow.",
     },
     {
+      icon: "/brand-logo.png", //
       title: "Reliable and Scalable Support",
       description:
         "Ehiz adapts to various industries and hiring needs, ensuring a tailored approach to recruitment that scales alongside your business as your team grows.",
     },
-    {
-      title: "Improved Candidate Experience",
-      description:
-        "Ehiz ensures quick responses and personalized interactions, making candidates feel valued and strengthening your employer brand by delivering a professional and engaging hiring experience.",
-    },
   ];
+
   return (
-    <main className="flex-1 pt-24 md:pt-0">
-      <section>
-        <div className="mx-auto mt-2.5 flex max-w-6xl flex-col gap-6 px-5 pb-3 md:flex-row md:items-center md:justify-between md:gap-0 md:pt-28">
-          <div className="flex flex-col items-center gap-6 md:max-w-[32.75rem] md:items-start">
-            <h1 className="font-montserrat text-center text-[40px] leading-[46px] font-black -tracking-wide text-[#222831] md:text-left md:text-[4rem] md:leading-[110%]">
-              Hi, I’m Ehiz!
+    <div className="bg-white text-gray-800">
+      {/* 1. Hero Section for Ehiz Page */}
+      <section className="relative overflow-hidden bg-[#0B0A0A] px-4 py-0 text-white sm:px-6 lg:px-8">
+        {/* Background elements - subtle blurs/gradients */}
+        {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
+        <div className="animate-blob animation-delay-2000 absolute top-1/4 right-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
+        {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
+
+        <div className="max-h-7xl relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between md:flex-row md:items-center">
+          {/* Left Column: Text Content */}
+          <div className="mt-48 flex flex-col items-center text-center md:mt-0 md:mb-0 md:w-1/2 md:items-start md:text-left">
+            <h1 className="mb-6 text-[40px] leading-[46px] font-black -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
+              Hi, I&apos;m Ehiz!
             </h1>
-            <p className="text-center text-xl leading-[28px] -tracking-wide text-[#222831] md:text-left md:text-2xl md:leading-[34px]">
+            <p className="text-md mb-8 max-w-xl leading-[28px] -tracking-wide text-gray-300 md:text-xl md:leading-[34px]">
               I help you enhance your recruitment process by sourcing top
               talent, screening candidates, and simplifying hiring decisions.
               Let me handle the search while you focus on building your dream
               team.
             </p>
-            <Button className="h-11 w-full rounded-full border border-[#1E2A47] bg-[#1E2A47] px-8 font-normal text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-white hover:text-[#1E2A47] hover:shadow-none md:h-14 md:w-fit md:text-xl">
-              Book a demo
-            </Button>
+            <Link href="/" passHref>
+              <button className="rounded-md bg-[#7D73C3] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+                Try DoubleU AI
+              </button>
+            </Link>
           </div>
 
-          {/* <div className="h-[283px] w-[372px] pt-3.5 md:h-[617px] md:w-[833px]">
+          {/* Right Column: Ehiz Image with Overlays */}
+          <div className="relative m-0 flex w-full items-end justify-end p-0 md:w-1/2">
             <Image
-              src="/mylo3.svg"
-              alt="mylo image"
-              width={833}
-              height={617}
-              className="z-30 h-full w-full object-cover"
+              src="/new-img/Ehiz-m.svg" // Placeholder for Ehiz's image
+              alt="Ehiz AI Worker"
+              width={400} // Adjust based on actual image dimensions
+              height={500} // Adjust based on actual image dimensions
+              className="h-full w-full object-contain"
             />
-          </div> */}
-
-          <div className="relative flex w-full justify-end">
-            <div className="from-primary to-secondary absolute inset-0 -z-10 rounded-full bg-linear-to-r blur-[300px]"></div>
-
-            <div>
-              <div className="h-[226px] w-[357.55px] bg-[url(/gridm.svg)] bg-center bg-no-repeat md:h-[510px] md:w-[625px] md:bg-[url(/grid.svg)]">
-                <Image
-                  src="/ehiz2.png"
-                  alt="ehiz image"
-                  placeholder="blur"
-                  blurDataURL="/ehiz2.png"
-                  width={400}
-                  height={320}
-                  className="h-full w-full shrink-0 object-contain"
-                />
-              </div>
-              <div className="h-[36px] w-[355px] md:h-[46.5px] md:w-[671px]">
-                <Image
-                  src="/grad.svg"
-                  alt="gradient"
-                  placeholder="blur"
-                  blurDataURL="/grad.svg"
-                  width={400}
-                  height={320}
-                  className="h-full w-full"
-                />
-              </div>
-            </div>
+            {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
+            {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
+      <div className="absolute top-1/3 right-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">Sales Agent</div>
+   */}{" "}
           </div>
         </div>
       </section>
-      <section className="flex items-center px-6 py-5 md:px-[100px] md:py-20">
-        <div className="from-primary/30 to-secondary/30 flex w-full max-w-6xl flex-col items-center justify-center gap-6 rounded-[36px] bg-gradient-to-r px-5 py-6 text-center">
-          <h2 className="font-montserrat max-w-4xl text-center text-4xl leading-11 font-bold -tracking-wide text-[#222831] md:text-6xl md:leading-[110%]">
-            Who is Ehiz?
+
+      {/* 2. Who is Ehiz? Section */}
+      <section className="bg-white px-6 py-8 sm:px-6 md:py-16 lg:px-8">
+        <div className="container mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+          {/* Left Column: Text Content */}
+          <div className="text-left">
+            <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
+              Who is Ehiz?
+            </h2>
+            <p className="text-md mb-4 text-justify leading-relaxed text-gray-700">
+              Ehiz isn’t just a hiring tool, it’s your recruitment partner,
+              built to streamline every stage of talent acquisition. From
+              screening applicants to scheduling interviews and managing
+              communications, Ehiz makes the process efficient, personalized,
+              and effective. More than automation, Ehiz acts as a 24/7 extension
+              of your team, helping evaluate candidates, coordinate interviews,
+              and connect you with top talent. With Ehiz, you reduce
+              time-to-hire, improve candidate engagement, and make smarter
+              hiring decisions, while maintaining a strong, approachable
+              employer brand.
+            </p>
+          </div>
+
+          {/* Right Column: Illustration */}
+          <div className="flex justify-center md:justify-end">
+            <Image
+              src="/new-img/image-2.svg" // Placeholder for the sales illustration
+              alt="Sales process illustration"
+              width={400}
+              height={300}
+              className="rounded-xl border-2 border-gray-400 object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 3. What Ehiz can do for you Section */}
+      <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-4 lg:px-8">
+        <div className="container mx-auto mb-12 text-center">
+          <h2 className="mb-4 px-28 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
+            What Ehiz can do for you
           </h2>
-          <div>
-            <p className="text-xl leading-7 -tracking-wide md:text-2xl md:leading-[34px]">
-              Ehiz isn&apos;t just another hiring tool, it&apos;s your dedicated
-              recruitment partner, designed to streamline every aspect of talent
-              acquisition. Whether screening applicants, scheduling interviews,
-              or managing candidate communications, Ehiz ensures every
-              interaction is efficient, personalized, and effective.
-            </p>
-            <p className="text-xl leading-7 -tracking-wide md:text-2xl md:leading-[34px]">
-              Ehiz is more than just automation, it&apos;s a strategic extension
-              of your recruitment team. Available 24/7, it helps hiring managers
-              evaluate candidates, coordinate interviews, and create seamless
-              pathways to connect with top talent. Ehiz ensures that both
-              recruiters and candidates receive value-driven experiences while
-              keeping the hiring process natural, engaging, and productive.
-            </p>
-            <p className="text-xl leading-7 -tracking-wide md:text-2xl md:leading-[34px]">
-              By integrating Ehiz into your recruitment workflow, organizations
-              can reduce time-to-hire, enhance candidate engagement, and
-              optimize hiring decisions—all while maintaining a professional and
-              approachable employer brand.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="relative flex flex-col items-center gap-5 bg-[url(/pattern-bg.png)] px-6 py-5 md:px-[100px] md:pt-10 md:pb-32">
-        <h2 className="font-montserrat text-center text-4xl leading-11 font-bold -tracking-wide text-[#222831] md:text-[64px] md:leading-[110%]">
-          Who needs Ehiz?
-        </h2>
-        <div className="h-[266px] w-[306px] md:h-[750px] md:w-[950px]">
-          <Image
-            src="/ehiz4.svg"
-            alt="ehiz image"
-            placeholder="blur"
-            blurDataURL="/ehiz4.svg"
-            width={400}
-            height={320}
-            className="h-full w-full object-contain"
-          />
-        </div>
-
-        <div className="rounded-[36px] bg-[#D9DFF0] text-center shadow-md shadow-black/25 lg:absolute lg:top-[35%] lg:left-[8%]">
-          <h4 className="font-montserrat rounded-t-[36px] bg-white px-[23px] py-6 text-[28px] leading-[110%] font-bold -tracking-wide">
-            For Tech Companies
-          </h4>
-          <p className="max-w-[317px] px-[19px] py-6 text-lg leading-7 -tracking-wide">
-            Agora syncs with popular event management tools, streamlining tasks
-            like bookings, check-ins, and guest list management without
-            requiring complex setup.
+          <p className="px-14 text-[#404040] md:px-0">
+            Skilled, specialized, and always ready, these AI agents are built to
+            work for you.
           </p>
         </div>
-        <div className="rounded-[36px] bg-[#D9DFF0] text-center shadow-md shadow-black/25 lg:absolute lg:bottom-[5%] lg:left-[38%]">
-          <h4 className="font-montserrat rounded-t-[36px] bg-white px-[23px] py-6 text-[28px] leading-[110%] font-bold -tracking-wide">
-            For Tech Companies
-          </h4>
-          <p className="max-w-[317px] px-[19px] py-6 text-lg leading-7 -tracking-wide">
-            Agora syncs with popular event management tools, streamlining tasks
-            like bookings, check-ins, and guest list management without
-            requiring complex setup.
-          </p>
-        </div>
-        <div className="rounded-[36px] bg-[#D9DFF0] text-center shadow-md shadow-black/25 lg:absolute lg:top-[35%] lg:right-[10%]">
-          <h4 className="font-montserrat rounded-t-[36px] bg-white px-[23px] py-6 text-[28px] leading-[110%] font-bold -tracking-wide">
-            For Tech Companies
-          </h4>
-          <p className="max-w-[317px] px-[19px] py-6 text-lg leading-7 -tracking-wide">
-            Agora syncs with popular event management tools, streamlining tasks
-            like bookings, check-ins, and guest list management without
-            requiring complex setup.
-          </p>
-        </div>
-      </section>
-      <section className="flex flex-col items-center gap-5 bg-[#D9DFF0] px-6 py-5 md:px-[100px] md:py-20">
-        <h2 className="font-montserrat text-center text-4xl leading-11 font-bold -tracking-wide text-[#222831] md:text-[64px] md:leading-[110%]">
-          What Can Ehiz Do For You
-        </h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {items.map((item, idx) => (
+        <div className="container mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {Capabilities.map((capability, index) => (
             <div
-              key={idx}
-              className="space-y-4 rounded-[36px] bg-white px-5 py-6 text-center"
+              key={index}
+              className="max-x-3xl flex flex-col items-center rounded-xl border border-gray-100 bg-gray-50 px-6 py-10 text-center shadow-sm md:px-4"
             >
-              <h4 className="font-montserrat max-w-[317px] rounded-[36px] bg-[#D9DFF0] p-2 text-[28px] leading-8 font-bold -tracking-wide md:text-[32px] md:leading-[110%]">
-                {item.title}
-              </h4>
-              <p className="max-w-[317px] p-2 text-base leading-5 -tracking-wide md:text-lg md:leading-7">
-                {item.description}
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-[#222831]">
+                {/* Placeholder for capability icon */}
+                <Image
+                  src={capability.icon}
+                  alt={capability.title + " icon"}
+                  width={28}
+                  height={28}
+                  className="flex-shrink-0 object-contain group-hover:brightness-200"
+                />
+              </div>
+              <h3 className="text-md mb-2 pt-4 font-semibold text-[#222831] md:text-lg">
+                {capability.title}
+              </h3>
+              <p className="md:text-md text-sm text-gray-700">
+                {capability.description}
               </p>
             </div>
           ))}
         </div>
       </section>
-      <section className="flex items-center px-6 py-5 md:px-[100px] md:py-20">
-        <div className="from-primary/30 to-secondary/30 flex w-full flex-col items-center justify-center gap-6 rounded-[36px] bg-gradient-to-r px-5 py-6 text-center">
-          <h2 className="font-montserrat max-w-4xl text-center text-4xl leading-11 font-bold -tracking-wide text-[#222831] md:text-6xl md:leading-[110%]">
+
+      {/* 4. The future of AI-driven sales Section (CTA) */}
+      <section className="relative w-screen overflow-hidden bg-[#0B0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+        <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-30 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-10 mix-blend-screen blur-3xl filter"></div>
+
+        <div className="container mx-0 max-w-4xl px-2 md:mx-auto">
+          <h2 className="mb-4 px-14 text-2xl leading-tight font-bold md:px-0 md:text-4xl">
             The Future of AI-Driven Business Solutions
           </h2>
-
-          <div>
-            <p className="text-xl leading-7 -tracking-wide md:text-2xl md:leading-[34px]">
-              Ehiz redefines how organizations approach talent acquisition by
-              providing a balance between automation and human connection. It
-              ensures that every stage of recruitment is streamlined,
-              data-informed, and candidate-centric, making hiring managers
-              confident in their decisions and candidates impressed with their
-              experience.
-            </p>
-            <p className="text-xl leading-7 -tracking-wide md:text-2xl md:leading-[34px]">
-              With AI-driven recruitment becoming essential for competitive
-              organizations, Ehiz offers a seamless, scalable, and intelligent
-              solution for engaging candidates and building exceptional teams.
-              Whether you&apos;re a growing startup or an established
-              enterprise, integrating Ehiz enhances your hiring process and
-              strengthens your talent pipeline.
-            </p>
-          </div>
+          <p className="text-md mx-auto text-justify leading-relaxed text-[#D9D9D9] md:text-center">
+            Ehiz redefines how organizations approach talent acquisition by
+            providing a balance between automation and human connection. It
+            ensures that every stage of recruitment is streamlined,
+            data-informed, and candidate-centric, making hiring managers
+            confident in their decisions and candidates impressed with their
+            experience. With AI-driven recruitment becoming essential for
+            competitive organizations, Ehiz offers a seamless, scalable, and
+            intelligent solution for engaging candidates and building
+            exceptional teams.
+          </p>
         </div>
       </section>
-      <section className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 rounded-[36px] bg-white px-5 py-6 text-center md:py-20">
-        <h2 className="font-montserrat text-center text-[2.5rem] leading-12 font-bold -tracking-wide text-[#222831] md:text-[4rem] md:leading-16">
-          Get Started with Ehiz Today!
-        </h2>
 
-        <p className="max-w-3xl text-center text-xl leading-7 -tracking-wide text-[#222831] md:text-2xl md:leading-[2.125rem]">
-          Empower your events with an AI-powered agent who ensures every detail
-          is handled perfectly. Contact us today to integrate Agora and
-          revolutionize the way you plan, manage, and deliver unforgettable
-          experiences!
-        </p>
-        <Button className="h-11 w-full rounded-full border border-[#1E2A47] bg-[#1E2A47] px-8 font-normal text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-white hover:text-[#1E2A47] hover:shadow-none md:h-14 md:w-fit md:text-xl">
-          Book a Demo
-        </Button>
-
-        <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
-          <Image
-            src="/watermark.png"
-            alt="watermark"
-            placeholder="blur"
-            blurDataURL="/watermark.png"
-            width={1000}
-            height={200}
-          />
+      {/* 5. Bottom CTA Banner ("Take a smarter approach...") */}
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:my-18 lg:mx-auto lg:px-2">
+        <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
+          <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
+            Get Started with Ehiz Today
+            <br className="hidden sm:block" />{" "}
+          </h2>
+          <p className="px-4 md:px-0">
+            Discover a new level of customer engagement with an AI sales agent
+            who ensures every moment of your customer&apos;s experience counts.
+            Integrate Mylo into your business today and revolutionize the way
+            you connect with prospects and close sales.
+          </p>
+          <Link href="/contact-us" passHref className="mt-14">
+            <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+              Get Started Now
+            </button>
+          </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
