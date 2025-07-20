@@ -83,7 +83,7 @@ export default function HeroSection() {
           </div>
         </div>
         {/* Small screens  */}
-        <div className="flex flex-row flex-wrap items-center justify-center gap-3 text-center text-gray-300 md:flex-col md:gap-6">
+        <div className="flex md:hidden flex-row flex-wrap items-center justify-center gap-3 text-center text-gray-300 md:flex-col md:gap-6">
           <div className="flex items-center justify-center space-x-2">
             <Image
               src="/new-img/icon-check.svg"
@@ -92,7 +92,7 @@ export default function HeroSection() {
               height={12}
               className="object-cover"
             />
-            <span className="text-sm">Always Available</span>
+            <span className="text-xs sm:text-sm">Always Available</span>
           </div>
           <div className="flex items-center justify-center space-x-2">
             <Image
@@ -102,7 +102,7 @@ export default function HeroSection() {
               height={12}
               className="object-cover"
             />
-            <span className="text-sm">Cloud & Secure</span>
+            <span className="text-xs sm:text-sm">Cloud & Secure</span>
           </div>
           <div className="flex items-center justify-center space-x-2">
             <Image
@@ -112,7 +112,7 @@ export default function HeroSection() {
               height={12}
               className="object-cover"
             />
-            <span className="text-sm">AI Solution</span>
+            <span className="text-xs sm:text-sm">AI Solution</span>
           </div>
         </div>
       </div>
