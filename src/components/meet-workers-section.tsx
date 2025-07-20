@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useRef } from "react";
 
 export default function MeetWorkersSection() {
@@ -9,24 +10,28 @@ export default function MeetWorkersSection() {
       role: "Product Sale Worker",
       image: "/new-img/mylo.svg",
       id: "01",
+      access: "/workforce/mylo",
     },
     {
       name: "Ehiz",
       role: "Hiring Manager",
       image: "/new-img/ehiz.svg",
       id: "02",
+      access: "/workforce/ehiz",
     },
     {
       name: "Neo",
       role: "Sales Service Worker",
       image: "/new-img/neo.svg",
       id: "03",
+      access: "/workforce/neo",
     },
     {
       name: "Agora",
       role: "Event Manager",
       image: "/new-img/agora.svg",
       id: "04",
+      access: "/workforce/agora",
     },
   ];
 
@@ -72,7 +77,7 @@ export default function MeetWorkersSection() {
   };
 
   return (
-    <section className="bg-white px-4 py-16 text-gray-800 sm:px-6 lg:px-8">
+    <section className="bg-white px-4 py-8 text-gray-800 sm:px-6 lg:px-8">
       <div className="container mx-auto mb-12 text-center">
         <h2 className="mb-4 text-4xl font-bold text-[#222831]">
           Meet our AI workforce
@@ -86,28 +91,30 @@ export default function MeetWorkersSection() {
       {/* Desktop Grid Layout (lg and up) */}
       <div className="container mx-auto hidden grid-cols-1 gap-8 sm:grid-cols-2 lg:grid lg:grid-cols-4">
         {agents.map((agent, index) => (
-          <div
-            key={index}
-            className="group relative overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm"
-          >
-            {/* Agent ID Circle */}
-            {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
+          <Link key="" href={agent.access} passHref className="mt-12">
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm"
+            >
+              {/* Agent ID Circle */}
+              {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
               {agent.id}
-            </div> */}
+            </div>
             {/* Agent Image */}
-            <Image
-              src={agent.image} // Replace with actual agent image paths
-              alt={agent.name}
-              width={250} // Adjust based on actual image dimensions
-              height={300} // Adjust based on actual image dimensions
-              className="h-auto w-full rounded-t-xl object-cover"
-            />
-            {/* Name and Role Overlay */}
-            {/* <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
+              <Image
+                src={agent.image} // Replace with actual agent image paths
+                alt={agent.name}
+                width={250} // Adjust based on actual image dimensions
+                height={300} // Adjust based on actual image dimensions
+                className="h-auto w-full rounded-t-xl object-cover"
+              />
+              {/* Name and Role Overlay */}
+              {/* <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
               <h3 className="text-xl font-semibold">{agent.name}</h3>
               <p className="text-sm text-gray-300">{agent.role}</p>
             </div> */}
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
 

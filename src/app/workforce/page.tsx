@@ -93,7 +93,7 @@ export default function Workforce() {
 
           <div className="container mx-auto grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-8 px-6 sm:grid-cols-2 sm:px-4 md:max-w-2xl md:px-0 lg:grid-cols-2">
             {agents.map((agent, index) => (
-              <Link key="" href={agent.access} passHref className="mt-12">
+              <Link key="" href={agent.access} passHref>
                 <div
                   key={index}
                   className="group relative w-full overflow-hidden"

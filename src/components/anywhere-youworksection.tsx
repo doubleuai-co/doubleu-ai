@@ -26,9 +26,9 @@ export default function AnywhereYouworkSection() {
   ];
 
   return (
-    <section className="bg-white px-0 py-4 text-[#0B0A0A] lg:px-8">
+    <section className="bg-white px-0 py-16 text-[#0B0A0A] lg:px-8">
       <div className="container mx-auto mb-12 text-center">
-        <h2 className="mb-4 text-2xl font-bold lg:text-4xl">
+        <h2 className="mb-4 text-2xl font-bold lg:text-4xl px-12">
           DoubleU AI, anywhere you work
         </h2>
         <p className="text-md mx-auto max-w-2xl px-8 text-gray-600 lg:text-lg">
