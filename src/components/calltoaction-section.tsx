@@ -16,14 +16,13 @@ export default function CallToActionSection() {
             One AI! all your platforms, always on.
           </p>
           <Link href="/" passHref>
-            <button className="rounded-full bg-white px-8 py-3 text-base font-semibold text-[#6a5acd] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+            <button className="rounded-full bg-white px-8 py-3 text-base font-semibold text-[#7D73C3] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
               Get Started Now
             </button>
           </Link>
         </div>
 
-        {/* Illustration (Placeholder) */}
-        {/* In a real scenario, you'd use an SVG or a high-quality PNG for this illustration */}
+        {/* Image Content */}
         <div className="relative top-13 flex w-full justify-center md:w-1/2 md:justify-end items-end">
           <Image
             src="/new-img/cta-robot.png" 

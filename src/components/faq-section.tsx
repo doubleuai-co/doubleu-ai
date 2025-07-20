@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Plus, Minus } from "lucide-react"; // Lucide icons for accordion
+import { Plus, Minus } from "lucide-react";
 
 interface FAQItemProps {
   question: string;
@@ -18,9 +18,11 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
       >
         <span className="text-lg font-medium text-white">{question}</span>
         {isOpen ? (
-          <Minus size={24} className="text-white" />
+          <div className="p-1 bg-[#fff] rounded-lg opacity-80">
+          <Minus size={20} className="text-black" />
+          </div>
         ) : (
-          <Plus size={24} className="text-white" />
+          <Plus size={20} className="text-white" />
         )}
       </button>
       {isOpen && (

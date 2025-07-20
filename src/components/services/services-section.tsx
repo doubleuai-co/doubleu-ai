@@ -40,8 +40,8 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="bg-white px-0 py-8 text-[#0B0A0A] lg:px-8">
-      <div className="container mx-auto md:mb-8 mb-2 px-4 text-center">
+    <section className="bg-white px-0 py-8 text-[#0B0A0A] md:py-12">
+      <div className="container mx-auto mb-2 px-4 text-center md:mb-8">
         <h2 className="mb-4 text-2xl font-medium lg:text-4xl">Services</h2>
       </div>
 
@@ -51,19 +51,19 @@ export default function ServicesSection() {
           {singleServices.slice(0, 3).map((singleService, index) => (
             <div
               key={index}
-              className="mx-6 flex flex-col rounded-xl border border-gray-100 text-left md:text-center shadow-sm"
+              className="mx-6 flex flex-col overflow-hidden rounded-xl border border-gray-100 text-left shadow-sm md:text-center"
             >
               <Image
                 src={singleService.image}
                 alt={singleService.alt}
-                width="1000"
+                width={450}
                 height={200}
-                className="rounded-lg object-contain"
+                className="w-max object-cover p-0"
               />
-              <h3 className="mb-2 pt-8 text-xl px-4 font-semibold text-[#222831]">
+              <h3 className="mb-2 px-4 pt-8 text-xl font-semibold text-[#222831]">
                 {singleService.title}
               </h3>
-              <p className="md:px-12 px-4 pb-8 text-base text-gray-700 text-justify">
+              <p className="px-4 pb-8 text-justify text-base text-gray-700 md:px-12">
                 {singleService.description}
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Second Row: 2 items centered on large screens */}
-        <div className="mt-14 flex flex-col items-center gap-8 lg:flex-row lg:justify-center max-w-5xl mx-auto">
+        <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center gap-8 lg:flex-row lg:justify-center">
           {singleServices.slice(3, 5).map((singleService, index) => (
             <div
               key={index}

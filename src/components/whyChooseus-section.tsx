@@ -89,7 +89,7 @@ export default function WhyChooseUsSection() {
 
       <div className="mt-16 text-center">
         <Link href="/explore-ai-workers" passHref>
-          <button className="text-md rounded-md bg-[#6a5acd] px-8 py-4 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+          <button className="text-md rounded-md bg-[#7D73C3] px-8 py-4 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
             Explore AI Workers
           </button>
         </Link>

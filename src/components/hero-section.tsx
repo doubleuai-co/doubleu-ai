@@ -41,7 +41,7 @@ export default function HeroSection() {
         </p>
 
         {/* Call to Action Button */}
-        <Link href="/demo" passHref>
+        <Link href="/contact" passHref>
           <Button className="rounded-2 mb-12 cursor-pointer bg-[#7D73C3] px-6 py-6 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:py-8 md:text-xl lg:text-lg">
             Try DoubleU AI
           </Button>
