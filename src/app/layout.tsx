@@ -1,15 +1,36 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // Available weights
+  weight: ["400", "500", "700"],
 });
+
+// const satoshi = localFont({
+//   src: [
+//     {
+//       path: "/fonts/satoshi/Satoshi-Regular.woff",
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: "/fonts/satoshi/Satoshi-Medium.woff2",
+//       weight: "500",
+//       style: "normal",
+//     },
+//     {
+//       path: "/fonts/satoshi/Satoshi-Bold.woff2",
+//       weight: "700",
+//       style: "normal",
+//     },
+//   ],
+//   variable: "--font-satoshi",
+// });
 
 export const metadata: Metadata = {
   title: "DoubleU AI",
@@ -24,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-      {/* <body className={`${montserrat.variable} ${heebo.variable} ${inter.variable} antialiased`}> */}
+        {/* <body className={`${montserrat.variable} ${heebo.variable} ${inter.variable} antialiased`}> */}
         <Navbar />
         {children}
         <Footer />

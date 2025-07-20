@@ -9,8 +9,8 @@ export const footerQuickLinks = [
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Workforce", href: "/workforce" },
-  { name: "Terms and Condition", href: "/terms" },
-  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Terms and Condition", href: "/terms-of-service" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 export default function Footer() {

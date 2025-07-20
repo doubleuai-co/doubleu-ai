@@ -28,7 +28,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="mb-6 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.5rem] md:leading-[72px]">
+        <h1 className="font-satoshi b-6 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.5rem] md:leading-[72px]">
           Your business, boosted by <br className="hidden md:block" /> AI that
           actually gets it
         </h1>
@@ -83,38 +83,36 @@ export default function HeroSection() {
           </div>
         </div>
         {/* Small screens  */}
-        <div className="flex-col space-y-4 text-center mx-auto items-center justify-center gap-6 text-gray-300 md:hidden md:flex-row md:gap-12">
-          <div className="flex items-center space-x-1 justify-evenly text-center">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-3 text-center text-gray-300 md:flex-col md:gap-6">
+          <div className="flex items-center justify-center space-x-2">
             <Image
               src="/new-img/icon-check.svg"
               alt="DoubleU AI Chat Interface"
-              width={15}
-              height={15}
+              width={12}
+              height={12}
               className="object-cover"
             />
-            <span className="text-md lg:text-base">
-              Always Available Workforce
-            </span>
+            <span className="text-sm">Always Available</span>
           </div>
-          <div className="flex items-center space-x-2 text-center justify-center">
+          <div className="flex items-center justify-center space-x-2">
             <Image
               src="/new-img/icon-check.svg"
               alt="DoubleU AI Chat Interface"
-              width={15}
-              height={15}
+              width={12}
+              height={12}
               className="object-cover"
             />
-            <span className="text-md lg:text-base">Cloud-Based & Secure</span>
+            <span className="text-sm">Cloud & Secure</span>
           </div>
-          <div className="flex items-center space-x-2 justify-center">
+          <div className="flex items-center justify-center space-x-2">
             <Image
               src="/new-img/icon-check.svg"
               alt="DoubleU AI Chat Interface"
-              width={15}
-              height={15}
+              width={12}
+              height={12}
               className="object-cover"
             />
-            <span className="text-sm lg:text-base">AI Solution</span>
+            <span className="text-sm">AI Solution</span>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export const navItems = [
 ];
 
 export default function Navbar() {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 1120px)");
 
   // // Split navigation items for desktop layout
   // const leftNavItems = navItems.slice(0, 3);
@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       {isDesktop ? (
-        <nav className="h-[99px] border-b-[1px] border-gray-600 bg-[#0B0A0A] px-[120px] pt-6 text-white shadow-md">
+        <nav className="h-[99px] border-b-[1px] border-gray-100 bg-[#0B0A0A] px-[120px] pt-6 text-white shadow-md">
           <div className="container mx-auto flex items-center justify-between">
             {/* Logo Section */}
             <div className="mx-12 flex items-center justify-center">

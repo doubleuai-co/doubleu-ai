@@ -54,7 +54,7 @@ export default function MobileNav() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-xl font-light text-[#A2A2A2] hover:text-[#7D73C3]"
+                className="transition duration-300 ease-in-out text-xl font-light text-[#A2A2A2] hover:text-[#7D73C3]"
                 onClick={() => setOpen(false)}
               >
                 {item.name}
