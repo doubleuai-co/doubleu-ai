@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       {isDesktop ? (
-        <nav className="h-[99px] border-b-[1px] border-gray-50 bg-[#0B0A0A] px-[120px] pt-6 text-white shadow-md">
+        <nav className="h-[99px] border-b-[1px] border-gray-700 bg-[#0B0A0A] px-[120px] pt-6 text-white shadow-md">
           <div className="container mx-auto flex items-center justify-between">
             {/* Logo Section */}
             <div className="mx-12 flex items-center justify-center">
