@@ -82,19 +82,19 @@ export default function MeetWorkersSection() {
         <h2 className="mb-4 text-4xl font-bold text-[#222831]">
           Meet our AI workforce
         </h2>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">
+        <p className="mx-auto max-w-md text-lg text-gray-600">
           Skilled, specialized, and always ready, these AI workers are built to
           work for you.
         </p>
       </div>
 
       {/* Desktop Grid Layout (lg and up) */}
-      <div className="container mx-auto hidden grid-cols-1 gap-8 sm:grid-cols-2 lg:grid lg:grid-cols-4">
+      <div className="container mx-auto hidden grid-cols-1 gap-8 sm:grid-cols-2 lg:grid lg:grid-cols-4 max-w-7xl">
         {agents.map((agent, index) => (
           <Link key="" href={agent.access} passHref className="mt-12">
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm"
+              className="group relative overflow-hidden rounded-xl border  bg-[#EAEAEA] "
             >
               {/* Agent ID Circle */}
               {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
@@ -106,7 +106,7 @@ export default function MeetWorkersSection() {
                 alt={agent.name}
                 width={250} // Adjust based on actual image dimensions
                 height={300} // Adjust based on actual image dimensions
-                className="h-auto w-full rounded-t-xl object-cover"
+                className="h-fit w-full rounded-t-xl object-cover -z-12"
               />
               {/* Name and Role Overlay */}
               {/* <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
@@ -134,7 +134,7 @@ export default function MeetWorkersSection() {
             {agents.map((agent, index) => (
               <div
                 key={index}
-                className="relative mx-2 w-1/2 flex-shrink-0 overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm"
+                className="relative mx-2 w-1/2 flex-shrink-0 overflow-hidden rounded-xl"
               >
                 {/* Agent ID Circle */}
                 {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">

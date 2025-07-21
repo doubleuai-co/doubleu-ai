@@ -28,21 +28,21 @@ export default function AnywhereYouworkSection() {
   return (
     <section className="bg-white px-0 py-16 text-[#0B0A0A] lg:px-8">
       <div className="container mx-auto mb-12 text-center">
-        <h2 className="mb-4 text-2xl font-bold lg:text-4xl px-12">
+        <h2 className="mb-4 text-2xl font-bold lg:text-4xl px-12 max-w-lg mx-auto">
           DoubleU AI, anywhere you work
         </h2>
-        <p className="text-md mx-auto max-w-2xl px-8 text-gray-600 lg:text-lg">
+        <p className="text-md mx-auto max-w-xl px-8 text-gray-600 lg:text-lg">
           Your AI agents go where you go, making work faster, smoother, and
           hands-free. Start anywhere, pick up anytime. One AI, same great
           experience.
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-3 px-26">
         {platforms.map((platform, index) => (
           <div
             key={index}
-            className="mx-10 flex flex-col rounded-xl border border-gray-100 text-justify shadow-sm md:text-center"
+            className="mx-4 flex flex-col rounded-xl border border-gray-100 text-justify shadow-sm md:text-start"
           >
             {/* Placeholder for the device mockups. You'll need actual images for these. */}
             <Image
@@ -50,13 +50,13 @@ export default function AnywhereYouworkSection() {
               alt={platform.alt}
               width="1000" // Adjust based on your actual image dimensions
               height={200} // Adjust based on your actual image dimensions
-              className="rounded-lg object-contain"
+              className="rounded-lg object-contain w-full"
             />
 
-            <h3 className="mb-2 px-6 pt-8 text-xl font-medium text-[#0B0A0A] lg:px-12">
+            <h3 className="mb-2 px-2 pt-6 text-xl font-medium text-[#0B0A0A] md:px-6">
               {platform.title}
             </h3>
-            <p className="px-6 pb-8 text-base text-gray-700 lg:px-12">
+            <p className="px-2 pb-4 text-base text-gray-700 md:px-6">
               {platform.description}
             </p>
           </div>

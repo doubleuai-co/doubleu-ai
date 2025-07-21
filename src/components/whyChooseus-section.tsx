@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image"; // Import Next.js Image component
+import Image from "next/image"; 
 
 export default function WhyChooseUsSection() {
   const features = [
@@ -49,12 +49,12 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="bg-white px-8 py-16 text-[#0B0A0A] sm:px-6 lg:px-8">
-      <div className="container mx-auto mb-12 text-center">
-        <h2 className="mb-4 text-2xl font-bold text-[#222831] lg:text-4xl">
+    <section className="bg-white px-8 py-16 text-[#0B0A0A] sm:px-6 md:px-8">
+      <div className="container mx-auto mb-12 text-center max-w-md">
+        <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] md:text-4xl">
           Why top brands choose DoubleU AI
         </h2>
-        <p className="text-md mx-auto max-w-2xl text-gray-600 lg:text-lg">
+        <p className="text-md mx-auto max-w-2xl text-gray-600 md:text-lg">
           It&apos;s more than automation, it&apos;s smarter work, seamless
           integration, and real results.
         </p>

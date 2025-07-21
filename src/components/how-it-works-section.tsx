@@ -24,7 +24,7 @@ export default function HowSection() {
   return (
   <section className="bg-white text-gray-800 py-4 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto text-center mb-12">
-        <h2 className="text-2xl lg:text-4xl font-bold text-[#222831] mb-4">
+        <h2 className="text-2xl lg:text-4xl font-bold text-[#0B0A0A] mb-4">
           How DoubleU AI works
         </h2>
         <p className="text-lg text-gray-600">
@@ -39,7 +39,7 @@ export default function HowSection() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row items-center md:items-start w-full max-w-3xl mb-12 ${
+            className={`flex flex-col md:flex-row items-center md:items-start w-full max-w-5xl mb-12 ${
               index % 2 === 0 ? 'md:pr-20' : 'md:pl-20' // Alternate left/right alignment
             }`}
           >
@@ -49,7 +49,7 @@ export default function HowSection() {
                 index % 2 === 0 ? 'md:text-left text-center md:order-1' : 'md:text-left text-center md:order-3'
               }`}
             >
-              <h3 className="text-xl font-semibold text-[#222831] mb-2">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-[#0B0A0A] mb-2">{step.title}</h3>
               <p className="text-base text-gray-700">{step.description}</p>
             </div>
 
