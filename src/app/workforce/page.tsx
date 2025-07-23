@@ -55,23 +55,33 @@ export default function Workforce() {
   return (
     <main className="bg-white">
       {/* 1. Hero Section for Workforce Page */}
-      <section className="relative flex h-[40vh] w-full place-items-center overflow-hidden bg-[#1a1a2e] px-4 pb-48 text-white sm:px-6 md:h-[700px] lg:px-8">
-        {/* Background elements - subtle blurs/gradients */}
-        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-10 mix-blend-screen blur-3xl filter"></div>
-        <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-10 mix-blend-screen blur-3xl filter"></div>
-        <div className="animate-blob animation-delay-4000 absolute bottom-0 left-1/4 h-60 w-60 rounded-full bg-[#ff6347] opacity-10 mix-blend-screen blur-3xl filter"></div>
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black text-white">
+        {/* Background Image */}
+        {/* <Image
+          src="/hero-img.svg" // Make sure this is the correct filename you uploaded
+          alt="Background Graphic"
+          layout="fill"
+          objectFit="cover"
+          className="pointer-events-none opacity-40 select-none"
+        /> */}
 
-        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-          <h1 className="mt-72 mb-4 text-center text-[40px] leading-[46px] font-black -tracking-wide text-white md:pt-0 md:text-[4rem] md:leading-[72px]">
-            Workforce built specifically <br className="hidden md:block" /> for
-            business needs
+        {/* Overlay Glow (if any) */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/30 to-black/90" />
+
+        {/* Main Content */}
+        <div className="relative z-20 mx-auto max-w-5xl px-4 text-center">
+          <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
+            Workforce built specifically
+            <br />
+            for business needs
           </h1>
-          <p className="justify-center text-center text-xl leading-[28px] -tracking-wide text-[#fff] md:max-w-2xl md:text-2xl md:leading-[34px]">
-            AI Workforce represents the beginning of a transformative paradigm
-            in operational efficiency.
+          <p className="mt-6 text-base text-gray-300">
+            AI workforce represents the beginning of a transformative
+            <br />
+            paradigm in operational efficiency.
           </p>
-          <Link href="/contact-us" passHref className="mt-12">
-            <button className="rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+          <Link href="/contact-us" passHref>
+            <button className="mt-8 rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
               Book a Demo
             </button>
           </Link>
@@ -80,8 +90,8 @@ export default function Workforce() {
 
       <section>
         {/* 2. Meet our AI workforce Section */}
-        <section className="bg-white px-2 py-10 text-gray-800 sm:px-2 lg:px-8">
-          <div className="container mx-auto md:mb-20 text-center">
+        <section className="bg-white px-2 py-24 text-gray-800 sm:px-2 lg:px-8">
+          <div className="container mx-auto text-center md:mb-20">
             <h2 className="mb-4 text-2xl font-bold text-[#222831] md:text-4xl">
               Meet our AI workforce
             </h2>
