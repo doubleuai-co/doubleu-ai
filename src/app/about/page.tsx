@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Star, Lightbulb, Target, Rocket, User } from "lucide-react"; 
+import { Star, Lightbulb, Target, Rocket, User } from "lucide-react";
 
 const AboutPage = () => {
   // Data for "Our Impact by the Numbers" section
@@ -18,37 +18,37 @@ const AboutPage = () => {
   // Data for "Our Revolutionary Approach" section
   const approachSteps = [
     {
-      icon: Lightbulb, 
+      icon: Lightbulb,
       title: "True Autonomy",
       description:
         "Our system operates independently, handling routine tasks without the need for constant oversight.",
     },
     {
-      icon: Target, 
+      icon: Target,
       title: "End-to-End Mastery",
       description:
         "We own the complete process from the first interaction to the final outcome, through an integrated solution.",
     },
     {
-      icon: Rocket, 
+      icon: Rocket,
       title: "Results Over Rhetoric",
       description:
         "We're not here for show. We measure success by the real-world impact we deliver.",
     },
     {
-      icon: Rocket, 
+      icon: Rocket,
       title: "Task-Based Value",
       description:
         "Every dollar you invest translates directly into efficient, measurable outcomes.",
     },
     {
-      icon: Rocket, 
+      icon: Rocket,
       title: "Smart Integration",
       description:
         "By merging cutting-edge analytics with next-gen data management, we empower smarter and faster.",
     },
     {
-      icon: Rocket, 
+      icon: Rocket,
       title: "Human Empowerment",
       description:
         "We liberate you from the mundane, so you can focus on what fuels your business.",
@@ -98,24 +98,57 @@ const AboutPage = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for About Page */}
-      <section className="relative flex w-full items-center justify-center overflow-hidden bg-[#1a1a2e] px-4 py-20 text-white sm:px-6 lg:h-[700px] lg:px-8">
-        {/* Background elements - subtle blurs/gradients */}
-        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
-        <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-20 mix-blend-screen blur-3xl filter"></div>
-        {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
+      <section  className="relative bg-center inset-0 overflow-hidden py-24"
+      style={{
+        background: '#0B0A0A', // Main dark background
+        // Reference the image directly from the public folder
+        backgroundImage: `url('dots-bg.png')`,
+        backgroundRepeat: 'no-repeat', // Assuming you want the pattern to repeat
+        backgroundSize: 'cover', // Or 'contain', 'cover', or a specific size like '20px 20px'
+                               // 'auto' will use the natural size of the image, adjust as needed.
+      }}
+    >
+      {/* Blurred Shape 1 */}
+      <div
+        className="absolute opacity-40"
+        style={{
+          top: '18%', // Adjust position as needed
+          left: '4%', // Adjust position as needed
+          width: '500px', // Adjust size
+          height: '500px', // Adjust size
+          borderRadius: '50%', // Make it circular for a blob-like effect
+          background: '#7D73C39E', // Purple with transparency
+          filter: 'blur(100px)', // The desired blur amount
+          transform: 'translateZ(0)', // Optimize for blur rendering
+        }}
+      ></div>
 
+      {/* Blurred Shape 2 */}
+      <div
+        className="absolute opacity-40"
+        style={{
+          bottom: '18%', // Adjust position as needed
+          right: '5%', // Adjust position as needed
+          width: '400px', // Adjust size
+          height: '400px', // Adjust size
+          borderRadius: '50%', // Make it circular
+          background: '#7D73C39E', // Purple with transparency
+          filter: 'blur(1000px)', // The desired blur amount
+          transform: 'translateZ(0)', // Optimize for blur rendering
+        }}
+      ></div>
         <div className="relative z-10 mx-auto flex flex-col items-center px-4 pt-18 text-center lg:max-w-4xl">
           <h1 className="mb-6 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.2rem] md:leading-[72px]">
             AI workers that handles the work, So you can handle what&apos;s next{" "}
             <br className="hidden md:block" />
           </h1>
-          <p className="px-4 py-2 font-normal lg:px-40 lg:text-2xl">
+          <p className="px-4 py-2 text-[#D9D9D9] font-normal lg:px-40 lg:text-lg">
             Build, grow, and scale your business with our AI workforce,
             custom-built for your business needs
           </p>
-          <Link href="/contact-us" passHref className="mt-12">
+          <Link href="/contact-us" passHref className="mt-12 cursor-pointer">
             <button className="text-md rounded-md bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-xl">
-              Book a Demo
+              Try DoubleU AI
             </button>
           </Link>
         </div>
@@ -146,7 +179,18 @@ const AboutPage = () => {
       </section>
 
       {/* 3. Our Impact by the Numbers Section (Adapted from previous Stats section) */}
-      <section className="bg-[#1a1a2e] px-14 py-16 text-white sm:px-6 lg:px-8">
+      <section className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 text-white">
+        {/* Blue Blurred Gradient */}
+        <div
+          className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] blur-[300px]"
+          aria-hidden="true"
+        ></div>
+
+        {/* Purple Blurred Gradient */}
+        <div
+          className="absolute top-1/2 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[300px]"
+          aria-hidden="true"
+        ></div>
         <div className="container mx-auto mb-12 text-center">
           <h2 className="mb-4 text-2xl font-bold text-white lg:text-4xl">
             Our Impact by the Numbers
@@ -167,7 +211,7 @@ const AboutPage = () => {
       </section>
 
       {/* 4. Our Revolutionary Approach Section */}
-      <section className="bg-white px-4 py-14 sm:px-6 lg:px-20">
+      <section className="bg-white px-4 py-24 sm:px-6 lg:px-20">
         <div className="container mx-auto mb-12 text-center">
           <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
             Our Revolutionary Approach
@@ -183,8 +227,8 @@ const AboutPage = () => {
               key={index}
               className="flex items-center gap-x-8 px-3 text-center lg:p-4"
             >
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-[#7D73C3] p-4 lg:p-4">
-                <step.icon size={32} className="text-[#fff]" />{" "}
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] p-4 lg:p-4">
+                <step.icon size={30} className="" />{" "}
               </div>
               <div className="text-left">
                 <h3 className="text-md mb-2 font-medium text-[#0B0A0A] lg:text-xl">
@@ -208,33 +252,33 @@ const AboutPage = () => {
         </div>
         <div className="container mx-auto grid max-w-4xl grid-cols-1 items-center justify-between gap-12 text-center md:grid-cols-1">
           {teamMembers.map((member, index) => (
-           <div
-  key={index}
-  className={`flex flex-col items-center gap-x-12 p-6 md:flex-row md:items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
->
-  <Image
-    src={member.imageSrc}
-    alt={member.imageAlt}
-    width={350}
-    height={150}
-    className="object-fit mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0 md:w-w-1/2"
-  />
-  <div className="mx-auto text-center md:text-left  md:w-w-1/2">
-    <h3 className="mb-1 text-2xl font-semibold text-[#222831]">
-      {member.name}
-    </h3>
-    <p className="mb-3 text-lg text-[#404040]">{member.role}</p>
-    <p className="text-justify text-base leading-relaxed text-gray-700">
-      {member.bio}
-    </p>
-  </div>
-</div>
+            <div
+              key={index}
+              className={`flex flex-col items-center gap-x-12 p-6 md:flex-row md:items-start ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+            >
+              <Image
+                src={member.imageSrc}
+                alt={member.imageAlt}
+                width={350}
+                height={150}
+                className="object-fit md:w-w-1/2 mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0"
+              />
+              <div className="md:w-w-1/2 mx-auto text-center md:text-left">
+                <h3 className="mb-1 text-2xl font-semibold text-[#222831]">
+                  {member.name}
+                </h3>
+                <p className="mb-3 text-lg text-[#404040]">{member.role}</p>
+                <p className="text-justify text-base leading-relaxed text-gray-700">
+                  {member.bio}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
 
       {/* 7. Testimonials Section */}
-      <section className="bg-white py-8 sm:px-6 lg:px-18">
+      <section className="bg-white py-20 sm:px-6 lg:px-18">
         <div className="container mx-auto mb-12 max-w-xl px-4 text-center">
           <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
             We handle the boring stuff so you can focus on real work.
@@ -243,7 +287,7 @@ const AboutPage = () => {
             What our clients has to say about us
           </p>
         </div>
-        <div className="container mx-auto grid grid-cols-1 gap-8 bg-gray-50 py-8 md:grid-cols-3 md:px-0 md:py-0">
+        <div className="container mx-auto grid grid-cols-1 gap-8 py-8 md:grid-cols-3 md:px-0 md:py-0">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -273,7 +317,7 @@ const AboutPage = () => {
       </section>
 
       {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white shadow-xl sm:px-6 md:my-18 lg:mx-auto lg:px-2">
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white shadow-xl sm:px-6 md:my-18 lg:mx-auto lg:px-2">
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
             Take a smarter approach to AI in your business today.
@@ -284,8 +328,7 @@ const AboutPage = () => {
             faster, better, and easier
           </p>
           <Link href="/contact-us" passHref className="mt-14">
-            <button 
-            className="rounded-md cursor-pointer bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+            <button className="cursor-pointer rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
               Get Started Now
             </button>
           </Link>

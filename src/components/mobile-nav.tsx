@@ -62,7 +62,7 @@ export default function MobileNav() {
             ))}
             <a
               href="/contact"
-              className="mt-4 cursor-pointer rounded-md border border-[#7D73C3] bg-[#7D73C3] px-6 py-4 text-xl text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
+              className="cursor-pointer rounded-md border border-[#7D73C3] bg-[#7D73C3] px-8 py-3 text-lg text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
             >
               Book a Demo
             </a>
