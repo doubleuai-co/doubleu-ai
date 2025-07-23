@@ -81,7 +81,7 @@ export default function Workforce() {
             paradigm in operational efficiency.
           </p>
           <Link href="/contact-us" passHref>
-            <button className="mt-8 rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+            <button className="mt-12 rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
               Book a Demo
             </button>
           </Link>

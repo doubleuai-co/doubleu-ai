@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const TermsofService = () => {
   const termsAndConditions = [
     {
@@ -62,35 +66,58 @@ const TermsofService = () => {
     },
     {
       title: "13. Contact Us",
-      description: `For any questions about these terms, please contact us using the following information:
-Email Address: info@doubleuai.com
-Postal Address: Toronto, CA and Lagos, NG`,
+      description: `For any questions about these terms, please contact us using the following information:\nEmail Address: info@doubleuai.com\nPostal Address: Toronto, CA and Lagos, NG`,
     },
   ];
 
   return (
     <div className="min-h-screen bg-white py-18">
-      <main className="mx-auto max-w-3xl px-8 sm:px-6 lg:px-8">
-        <div className="mb-8 flex-row items-center md:pb-8 pb-4 pt-20">
-          <h1 className="text-3xl md:text-4xl mr-40 md:mr-0 font-bold text-[#000000]">
+      <main className="mx-auto max-w-5xl px-8 sm:px-6 md:px-8">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-8 flex-row items-center pt-20 pb-4 md:pb-8"
+        >
+          <h1 className="mr-4 text-3xl font-bold text-[#000000] md:mr-0 md:text-4xl">
             Terms of service for DoubleU AI
           </h1>
-          <p className="pt-2 text-[#404040]">
-            Last updated July 01, 2025{" "}
-          </p>
-        </div>
-        <div className="space-y-8 md:pt-2">
+          <p className="pt-2 text-[#404040]">Last updated July 01, 2025</p>
+        </motion.div>
+
+        {/* Terms List */}
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+          className="space-y-8 md:pt-2"
+        >
           {termsAndConditions.map((section, index) => (
-            <div key={index}>
-              <h2 className="mb-2 text-2xl font-bold text-gray-900">
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <h2 className="mb-2 text-2xl font-bold text-[#000000]">
                 {section.title}
               </h2>
               <p className="text-base whitespace-pre-line text-[#404040]">
                 {section.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </main>
     </div>
   );
