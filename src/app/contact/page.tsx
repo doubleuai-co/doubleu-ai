@@ -1,10 +1,7 @@
-
-
 "use client";
 
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
-
 
 // 1. Define the form values interface
 interface ContactFormValues {
@@ -33,14 +30,16 @@ const validationSchema = Yup.object({
   company: Yup.string().required("Company is required"),
   role: Yup.string().required("Role is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
-  message: Yup.string().min(10, "Message must be at least 10 characters").required("Message is required"),
+  message: Yup.string()
+    .min(10, "Message must be at least 10 characters")
+    .required("Message is required"),
 });
 
 // 4. Contact component
 const Contact = () => {
   const handleSubmit = (
     values: ContactFormValues,
-    { resetForm }: FormikHelpers<ContactFormValues>
+    { resetForm }: FormikHelpers<ContactFormValues>,
   ) => {
     console.log("Form values:", values);
     resetForm();
@@ -51,7 +50,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white px-4 pt-36 pb-8 text-[#222831] sm:px-6 lg:px-8">
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
-          <h1 className="mb-6 pt-10 text-[40px] font-black text-[#222831] md:text-[4rem] leading-tight">
+          <h1 className="mb-6 pt-10 text-[40px] leading-tight font-black text-[#222831] md:text-[4rem]">
             Talk with our team
           </h1>
           <p className="max-w-sm px-4 text-lg text-gray-600 md:text-xl">
@@ -73,7 +72,10 @@ const Contact = () => {
                 {/* Name Fields */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
                       First Name
                     </label>
                     <Field
@@ -82,11 +84,18 @@ const Contact = () => {
                       placeholder="Enter first name"
                       className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-[#7D73C3]"
                     />
-                    <ErrorMessage name="firstName" component="div" className="text-sm text-red-600 mt-1" />
+                    <ErrorMessage
+                      name="firstName"
+                      component="div"
+                      className="mt-1 text-sm text-red-600"
+                    />
                   </div>
 
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
                       Last Name
                     </label>
                     <Field
@@ -95,13 +104,20 @@ const Contact = () => {
                       placeholder="Enter last name"
                       className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-[#7D73C3]"
                     />
-                    <ErrorMessage name="lastName" component="div" className="text-sm text-red-600 mt-1" />
+                    <ErrorMessage
+                      name="lastName"
+                      component="div"
+                      className="mt-1 text-sm text-red-600"
+                    />
                   </div>
                 </div>
 
                 {/* Company */}
                 <div>
-                  <label htmlFor="company" className="block text-sm font-semibold text-gray-700">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-semibold text-gray-700"
+                  >
                     Company
                   </label>
                   <Field
@@ -110,12 +126,19 @@ const Contact = () => {
                     placeholder="Enter company name"
                     className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-[#7D73C3]"
                   />
-                  <ErrorMessage name="company" component="div" className="text-sm text-red-600 mt-1" />
+                  <ErrorMessage
+                    name="company"
+                    component="div"
+                    className="mt-1 text-sm text-red-600"
+                  />
                 </div>
 
                 {/* Role */}
                 <div>
-                  <label htmlFor="role" className="block text-sm font-semibold text-gray-700">
+                  <label
+                    htmlFor="role"
+                    className="block text-sm font-semibold text-gray-700"
+                  >
                     Role
                   </label>
                   <Field
@@ -124,12 +147,19 @@ const Contact = () => {
                     placeholder="Enter your role"
                     className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-[#7D73C3]"
                   />
-                  <ErrorMessage name="role" component="div" className="text-sm text-red-600 mt-1" />
+                  <ErrorMessage
+                    name="role"
+                    component="div"
+                    className="mt-1 text-sm text-red-600"
+                  />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold text-gray-700"
+                  >
                     Email
                   </label>
                   <Field
@@ -138,12 +168,19 @@ const Contact = () => {
                     placeholder="Enter email"
                     className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-[#7D73C3]"
                   />
-                  <ErrorMessage name="email" component="div" className="text-sm text-red-600 mt-1" />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="mt-1 text-sm text-red-600"
+                  />
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-gray-700"
+                  >
                     Message
                   </label>
                   <Field
@@ -153,7 +190,11 @@ const Contact = () => {
                     placeholder="Leave us a message..."
                     className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-[#7D73C3]"
                   />
-                  <ErrorMessage name="message" component="div" className="text-sm text-red-600 mt-1" />
+                  <ErrorMessage
+                    name="message"
+                    component="div"
+                    className="mt-1 text-sm text-red-600"
+                  />
                 </div>
 
                 {/* Submit Button */}

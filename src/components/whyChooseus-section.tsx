@@ -98,7 +98,7 @@ export default function WhyChooseUsSection() {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 gap-8 gap-x-12 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-14">
+      <div className="container mx-auto grid grid-cols-1 gap-8 gap-x-12 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-28">
         {features.map((feature, index) => (
           <div
             key={index}

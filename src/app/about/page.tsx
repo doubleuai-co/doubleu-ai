@@ -208,27 +208,27 @@ const AboutPage = () => {
         </div>
         <div className="container mx-auto grid max-w-4xl grid-cols-1 items-center justify-between gap-12 text-center md:grid-cols-1">
           {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center gap-x-8 p-6 md:flex-row md:items-start"
-            >
-              <Image
-                src={member.imageSrc}
-                alt={member.imageAlt}
-                width={350}
-                height={150}
-                className="object-fit mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0"
-              />
-              <div className="mx-auto text-center md:text-left">
-                <h3 className="mb-1 text-2xl font-semibold text-[#222831]">
-                  {member.name}
-                </h3>
-                <p className="mb-3 text-lg text-[#404040]">{member.role}</p>
-                <p className="text-justify text-base leading-relaxed text-gray-700">
-                  {member.bio}
-                </p>
-              </div>
-            </div>
+           <div
+  key={index}
+  className={`flex flex-col items-center gap-x-12 p-6 md:flex-row md:items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+>
+  <Image
+    src={member.imageSrc}
+    alt={member.imageAlt}
+    width={350}
+    height={150}
+    className="object-fit mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0 md:w-w-1/2"
+  />
+  <div className="mx-auto text-center md:text-left  md:w-w-1/2">
+    <h3 className="mb-1 text-2xl font-semibold text-[#222831]">
+      {member.name}
+    </h3>
+    <p className="mb-3 text-lg text-[#404040]">{member.role}</p>
+    <p className="text-justify text-base leading-relaxed text-gray-700">
+      {member.bio}
+    </p>
+  </div>
+</div>
           ))}
         </div>
       </section>
