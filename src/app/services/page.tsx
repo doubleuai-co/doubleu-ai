@@ -8,12 +8,12 @@ const Services = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for Services Page */}
-      <section className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 text-white">
+      <section className="relative w-full overflow-hidden bg-[#0B0A0A] py-2 text-white">
         {/* Purple Blurred Gradient */}
         <div
           className="absolute top-1/4 left-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full"
           style={{
-            background: "#7D73C39E",
+            background: "#00B4D89E",
             filter: "blur(400px)",
           }}
           aria-hidden="true"
@@ -23,7 +23,7 @@ const Services = () => {
         <div
           className="absolute top-1/2 right-0 h-[400px] w-[400px] translate-x-1/2 rounded-full"
           style={{
-            background: "#00B4D89E",
+            background: "#7D73C39E",
             filter: "blur(400px)",
           }}
           aria-hidden="true"

@@ -16,7 +16,18 @@ export const footerQuickLinks = [
 export default function Footer() {
   return (
     // Main footer container with a subtle gradient background
-    <footer className="lg;pt-18 bg-gradient-to-l from-[#1a1a2e] to-[#0d0d1a] px-6 pt-14 pb-8 text-gray-300 md:px-8 lg:px-28">
+    <footer className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 lg:pt-18 bg-gradient-to-l from-[#1a1a2e] to-[#0d0d1a] px-6 pt-14 pb-8 text-gray-300 md:px-8 lg:px-28">
+        {/* Blue Blurred Gradient */}
+        <div
+          className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] blur-[300px]"
+          aria-hidden="true"
+        ></div>
+
+        {/* Purple Blurred Gradient */}
+        <div
+          className="absolute top-1/2 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[300px]"
+          aria-hidden="true"
+        ></div>
       <div className="container md:pr-30 pr-8 text-justify mx-auto mb-8 grid grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">
         {/* Column 1: Logo, Description, and Contact Info */}
         <div className="flex flex-col space-y-4">

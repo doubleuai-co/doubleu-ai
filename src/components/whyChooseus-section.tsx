@@ -1,86 +1,60 @@
 import React from "react";
-
 import Link from "next/link";
-
 import Image from "next/image"; // Import Next.js Image component
 
 export default function WhyChooseUsSection() {
   const features = [
     {
       title: "Faster Task Execution",
-
       description:
         "DoubleU AI handles repetitive tasks at lightning speed, cutting your turnaround time from hours to seconds, so your team can focus on what truly matters.",
-
       imageSrc: "/new-img/thunderbolt.png", // Replace with your actual image path for the icon
-
       imageAlt: "Bolt icon",
-
       highlight: false,
     },
 
     {
       title: "Custom-Built AI Workers",
-
       description:
         "Tailored to fit your brand's exact workflow, tone of voice, and business goals, so it feels like an in-house teammate, not just another tool.",
-
       imageSrc: "/new-img/puzzle.png", // Replace with your actual image path for the icon
-
       imageAlt: "Puzzle icon",
-
       highlight: true, // This card has a dark background
     },
 
     {
       title: "Always-On Support",
-
       description:
         "Your AI agents never sleep, never miss a task, and never burn out, providing round-the-clock assistance so nothing falls through the cracks.",
-
       imageSrc: "/new-img/boat.png", // Replace with your actual image path for the icon
-
       imageAlt: "Boat icon",
-
       highlight: false,
     },
 
     {
       title: "Plug & Play Integration",
-
       description:
         "Seamlessly connects with your existing tools, apps, and systems. No complicated setup, no learning curve, just instant productivity.",
-
       imageSrc: "/new-img/plug.png", // Replace with your actual image path for the icon
-
       imageAlt: "Plug icon",
-
       highlight: false,
     },
 
     {
       title: "Scales As You Grow",
-
       description:
         "Whether you're a small team or a growing enterprise, the DoubleU workforce evolves with you, adapting to your scale, speed, and changing needs.",
-
       imageSrc: "/new-img/charts.png", // Replace with your actual image path for the icon
-
       imageAlt: "Charts icon",
-
       highlight: false,
     },
 
     {
       title: "Cost-Efficient Results",
-
       description:
         "Get enterprise-level output without expanding your team, save time, cut costs, and increase ROI with smart automation that pays for itself.",
-
       imageSrc: "/new-img/coins.png", // Replace with your actual image path for the icon
-
       imageAlt: "Coins icon",
-
       highlight: false,
     },
   ];
@@ -88,7 +62,7 @@ export default function WhyChooseUsSection() {
   return (
     <section className="bg-white px-8 py-16 text-[#0B0A0A] sm:px-6 lg:px-8">
       <div className="container mx-auto mb-12 text-center">
-        <h2 className="mb-4 text-2xl font-bold text-[#222831] lg:text-4xl">
+        <h2 className="mb-4 text-2xl px-6 font-bold text-[#222831] lg:text-4xl">
           Why top brands choose DoubleU AI
         </h2>
 
@@ -98,7 +72,7 @@ export default function WhyChooseUsSection() {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 gap-8 gap-x-12 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-28">
+      <div className="container mx-auto grid grid-cols-1 gap-8 gap-x-12 md:grid-cols-2 lg:grid-cols-3 lg:px-28">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -115,7 +89,7 @@ export default function WhyChooseUsSection() {
               className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-md transition-colors duration-300 ease-in-out ${
                 feature.highlight
                   ? "bg-gray-50" // Icon background color for highlighted
-                  : "bg-gradient-to-r from-[#7e73c3b7] to-[#00b4d85f] group-hover:bg-[#6a5acd] hover:bg-white" // Icon background for regular, changes on hover
+                  : "bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] group-hover:bg-[#6a5acd] hover:bg-white" // Icon background for regular, changes on hover
               } `}
             >
               {/* Using Next.js Image component for icons */}
@@ -130,7 +104,7 @@ export default function WhyChooseUsSection() {
             </div>
 
             <h3
-              className={`mb-2 text-xl font-semibold transition-colors duration-300 ease-in-out ${feature.highlight ? "text-white" : "text-[#222831] group-hover:text-white"}`}
+              className={`mb-2 text-md md:text-xl font-medium transition-colors duration-300 ease-in-out ${feature.highlight ? "text-white" : "text-[#222831] group-hover:text-white"}`}
             >
               {feature.title}
             </h3>
@@ -146,7 +120,7 @@ export default function WhyChooseUsSection() {
 
       <div className="mt-16 text-center">
         <Link href="/workforce" passHref>
-          <button className="text-md rounded-md bg-[#6a5acd] px-8 py-4 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+          <button className="cursor-pointer text-md rounded-md bg-[#6a5acd] px-8 py-4 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
             Explore AI Workers
           </button>
         </Link>

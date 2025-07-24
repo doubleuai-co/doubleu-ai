@@ -227,7 +227,7 @@ export default function Workforce() {
       </section>
 
       {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:my-18 lg:mx-auto lg:px-2">
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white shadow-xl sm:px-6 md:my-18 lg:mx-auto lg:px-2">
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
             Take a smarter approach to AI in your business today.
@@ -238,7 +238,7 @@ export default function Workforce() {
             faster, better, and easier
           </p>
           <Link href="/contact-us" passHref className="mt-14">
-            <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+            <button className="cursor-pointer rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
               Get Started Now
             </button>
           </Link>

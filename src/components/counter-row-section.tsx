@@ -32,7 +32,7 @@ export default function CounterRowSection() {
   // ];
 
   return (
-    <section className="bg-white px-4 md:py-18 py-12 text-gray-800 sm:px-6 md:px-8">
+    <section className="bg-white px-4 md:py-12 py-4 text-gray-800 sm:px-6 md:px-8">
       {/* Statistics Section */}
       <div className="container mx-auto mb-20 grid grid-cols-1 gap-8 px-4 text-left md:grid-cols-2 md:px-0 lg:grid-cols-4 lg:text-center">
         {stats.map((stat, index) => (
@@ -51,7 +51,7 @@ export default function CounterRowSection() {
       </div>
 
       {/* Trusted by Brands Section */}
-      <div className="container mx-auto hidden text-center md:block">
+      <div className="container mx-auto hidden md:block text-center">
         <h2 className="mb-12 text-xl font-medium text-[#0B0A0A]">
           Trusted by the brands shaping the future with AI
         </h2>

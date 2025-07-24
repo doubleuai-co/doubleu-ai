@@ -40,7 +40,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="bg-white px-0 py-8 text-[#0B0A0A] md:py-12">
+    <section className="bg-white px-0 py-16 text-[#0B0A0A] md:py-12">
       <div className="container mx-auto mb-2 px-4 text-center md:mb-8">
         <h2 className="mb-4 text-2xl font-medium lg:text-4xl">Services</h2>
       </div>
@@ -60,10 +60,10 @@ export default function ServicesSection() {
                 height={200}
                 className="w-max object-cover p-0"
               />
-              <h3 className="mb-2 px-4 pt-8 text-xl font-semibold text-[#222831]">
+              <h3 className="mb-2 px-6 pt-8 text-xl font-semibold text-[#222831]">
                 {singleService.title}
               </h3>
-              <p className="px-4 pb-8 text-justify text-base text-gray-700 md:px-12">
+              <p className="px-6 pb-8 text-justify text-base text-gray-700 md:px-12">
                 {singleService.description}
               </p>
             </div>
@@ -75,19 +75,19 @@ export default function ServicesSection() {
           {singleServices.slice(3, 5).map((singleService, index) => (
             <div
               key={index}
-              className="mx-10 flex flex-col items-center rounded-xl border border-gray-100 text-center shadow-sm"
+              className="mx-6 flex flex-col overflow-hidden rounded-xl border border-gray-100 text-left shadow-sm md:text-center"
             >
               <Image
                 src={singleService.image}
                 alt={singleService.alt}
                 width="1000"
                 height={200}
-                className="rounded-lg object-contain p-0"
+                className="w-fit rounded-lg object-contain p-0"
               />
-              <h3 className="mb-2 pt-8 text-xl font-semibold text-[#222831]">
+              <h3 className="mb-2 px-6 pt-8 text-xl font-semibold text-[#222831]">
                 {singleService.title}
               </h3>
-              <p className="px-12 pb-8 text-base text-gray-700">
+              <p className="px-6 pb-8 text-justify text-base text-gray-700 md:px-12">
                 {singleService.description}
               </p>
             </div>

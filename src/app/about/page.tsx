@@ -95,6 +95,8 @@ const AboutPage = () => {
     },
   ];
 
+  
+
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for About Page */}
@@ -104,7 +106,8 @@ const AboutPage = () => {
         // Reference the image directly from the public folder
         backgroundImage: `url('dots-bg.png')`,
         backgroundRepeat: 'no-repeat', // Assuming you want the pattern to repeat
-        backgroundSize: 'cover', // Or 'contain', 'cover', or a specific size like '20px 20px'
+        backgroundSize: 'cover', 
+        backgroundPosition:'center center' // Or 'contain', 'cover', or a specific size like '20px 20px'
                                // 'auto' will use the natural size of the image, adjust as needed.
       }}
     >

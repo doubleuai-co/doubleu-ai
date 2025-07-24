@@ -1,4 +1,3 @@
-
 import { LucideBot, LucideSettings, LucideUsers } from "lucide-react";
 
 export default function HowSection() {
@@ -24,50 +23,52 @@ export default function HowSection() {
   ];
 
   return (
-    <div className="w-full px-4 py-0 bg-white">
-      <section className="py-20 bg-white">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
-          How DoubleU AI works
-        </h2>
-        <p className="mt-2 text-gray-500">
-          Plug in your business needs, and watch our AI agents do the work.
-        </p>
-      </div>
+    <div className="w-full bg-white px-4 py-2">
+      <section className="bg-white">
+        <div className="mb-16 text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">
+            How DoubleU AI works
+          </h2>
+          <p className="mt-2 text-gray-500 px-12">
+            Plug in your business needs, and watch our AI agents do the work.
+          </p>
+        </div>
 
-      <div className="relative mx-auto max-w-3xl px-4 md:px-0">
-        <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gray-300 transform md:-translate-x-1/2"></div>
+        <div className="relative mx-auto max-w-6xl px-4 md:px-0">
+          <div className="absolute top-0 left-4 h-full w-0.5 transform bg-gray-200 md:left-1/2 md:-translate-x-1/2"></div>
 
-        <div className="space-y-14 md:space-y-20">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="relative flex flex-col md:flex-row items-start md:items-center"
-            >
-              {/* Dot for timeline */}
-              <div className="absolute left-3.5 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-indigo-500 border-4 border-white rounded-full z-10"></div>
-
-              {/* Card */}
+          <div className="space-y-14 md:space-y-20">
+            {steps.map((step, index) => (
               <div
-                className={`mt-4 md:mt-0 md:w-1/2 ${index % 2 === 1 ? 'md:ml-auto md:text-left' : 'md:mr-auto md:text-right'}`}
+                key={index}
+                className="relative flex flex-col items-start md:flex-row md:items-center"
               >
-                <div className="bg-gray-50 rounded-xl shadow-sm p-6">
-                  <div className="mb-3 w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500">
-                    {step.icon}
-                  </div>
-                  <div>
-                  <h3 className="text-base font-semibold mb-2 text-gray-800">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{step.description}</p>
+                {/* Dot for timeline */}
+                <div className="absolute -left-2 z-10 h-5 w-5 transform rounded-full border-4 border-white bg-[#7D73C3] md:left-1/2 md:-translate-x-1/2"></div>
+
+                {/* Card */}
+                <div
+                  className={`mt-2 px-4 md:px-18 md:mt-0 md:w-1/2 ${index % 2 === 1 ? "md:ml-auto md:text-start" : "md:mr-auto md:text-start"}`}
+                >
+                  <div className="rounded-xl bg-gray-50 p-6 shadow-sm flex items-start justify-around gap-x-8 ">
+                    <div className="mb-3 flex h-8 w-14 items-center justify-center rounded-full bg-[#7D73C3]">
+                      {step.icon}
+                    </div>
+                    <div>
+                      <h3 className="mb-2 text-base font-semibold text-gray-800">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 text-justify">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }

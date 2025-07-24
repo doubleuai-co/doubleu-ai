@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-screen overflow-hidden bg-[#0B0A0A] bg-gradient-to-b from-[#0B0A0A] to-[#045161a8] px-8 pt-36 text-white sm:px-6 lg:px-8 lg:pt-22">
+    <section className="relative w-screen overflow-hidden bg-[#0B0A0A] bg-gradient-to-b from-[#0B0A0A] to-[#00b4d89d] pt-36 text-white px-4 md:px-8 lg:pt-22">
       {/* Background elements - subtle blurs/gradients as seen in the design */}
       {/* These will need to be carefully positioned and styled to match exactly */}
       {/* <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-30 mix-blend-screen blur-3xl filter"></div> */}

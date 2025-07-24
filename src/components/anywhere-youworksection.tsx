@@ -26,7 +26,7 @@ export default function AnywhereYouworkSection() {
   ];
 
   return (
-    <section className="bg-white px-0 py-16 text-[#0B0A0A] lg:px-8">
+    <section className="bg-white px-0 py-2 text-[#0B0A0A] lg:px-8">
       <div className="container mx-auto mb-12 text-center">
         <h2 className="mb-4 text-2xl font-bold lg:text-4xl px-12 max-w-lg mx-auto">
           DoubleU AI, anywhere you work
@@ -38,7 +38,7 @@ export default function AnywhereYouworkSection() {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-3 px-26">
+      <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-3 md:px-26 px-4 ">
         {platforms.map((platform, index) => (
           <div
             key={index}
@@ -53,10 +53,10 @@ export default function AnywhereYouworkSection() {
               className="rounded-lg object-contain w-full"
             />
 
-            <h3 className="mb-2 px-2 pt-6 text-xl font-medium text-[#0B0A0A] md:px-6">
+            <h3 className="mb-2 px-4 pt-6 text-xl font-medium text-[#0B0A0A] md:px-6">
               {platform.title}
             </h3>
-            <p className="px-2 pb-4 text-base text-gray-700 md:px-6">
+            <p className="px-4 pb-6 text-base text-gray-700 md:px-6">
               {platform.description}
             </p>
           </div>

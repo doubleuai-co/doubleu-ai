@@ -90,7 +90,7 @@ export default function Neo() {
 
       {/* 2. Who is Neo? Section */}
       <section className="bg-white px-6 py-8 sm:px-6 md:py-16 lg:px-8">
-        <div className="container mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+        <div className="container pt-6 mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
             <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
@@ -125,11 +125,11 @@ export default function Neo() {
 
       {/* 3. What Neo can do for you Section */}
       <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-4 lg:px-8">
-        <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 px-28 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
+        <div className="container mx-auto mb-12 max-w-md text-center">
+          <h2 className="mb-4 px-8 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
             What Neo can do for you
           </h2>
-          <p className="px-14 text-[#404040] md:px-0">
+          <p className="px-4 text-[#404040] md:px-0">
             Skilled, specialized, and always ready, these AI agents are built to
             work for you.
           </p>
