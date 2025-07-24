@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { backOut, easeOut, motion } from "framer-motion";
 
 // Animation variants
 const containerVariants = {
@@ -25,7 +25,7 @@ const fadeInUp = {
     y: 0,
     transition: { 
       duration: 0.8,
-      ease: "easeOut"
+      ease: easeOut,
     }
   }
 };
@@ -37,7 +37,7 @@ const slideInFromBottom = {
     y: 0,
     transition: { 
       duration: 1,
-      ease: "easeOut",
+      ease: easeOut,
       delay: 0.6
     }
   }
@@ -51,7 +51,7 @@ const starAnimation = {
     transition: {
       delay: i * 0.1,
       duration: 0.5,
-      ease: "backOut"
+      ease: backOut,
     }
   })
 };
@@ -71,7 +71,7 @@ const featureItemVariants = {
     x: 0,
     transition: { 
       duration: 0.6,
-      ease: "easeOut"
+      ease: easeOut,
     }
   }
 };

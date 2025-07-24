@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 export default function AnywhereYouworkSection() {
   const platforms = [
@@ -33,7 +33,7 @@ export default function AnywhereYouworkSection() {
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+      transition: { delay: i * 0.2, duration: 0.6, ease: easeOut },
     }),
   };
 
