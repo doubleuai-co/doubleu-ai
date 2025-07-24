@@ -91,7 +91,7 @@ export default function WhyChooseUsSection() {
             className={`group transform rounded-xl border px-8 py-14 text-center shadow-md transition-all duration-300 ease-in-out hover:scale-[1.01] ${
               feature.highlight
                 ? "border-[#1a1a2e] bg-[#1a1a2e] text-white"
-                : "border-gray-100 bg-gray-50 text-gray-800 hover:border-[#6a5acd] hover:bg-[#2a2a4e] hover:text-white"
+                : "border-gray-100 bg-gray-50 text-gray-800"
             }`}
             custom={index}
             initial="hidden"
@@ -123,7 +123,7 @@ export default function WhyChooseUsSection() {
               className={`mb-2 text-md md:text-xl font-medium transition-colors duration-300 ease-in-out ${
                 feature.highlight
                   ? "text-white"
-                  : "text-[#222831] group-hover:text-white"
+                  : "text-[#222831] "
               }`}
             >
               {feature.title}
@@ -133,7 +133,7 @@ export default function WhyChooseUsSection() {
               className={`text-base transition-colors duration-300 ease-in-out ${
                 feature.highlight
                   ? "text-gray-300"
-                  : "text-gray-700 group-hover:text-white"
+                  : "text-gray-700 "
               }`}
             >
               {feature.description}
