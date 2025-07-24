@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Star, Lightbulb, Target, Rocket, User } from "lucide-react";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   // Data for "Our Impact by the Numbers" section
@@ -95,139 +97,178 @@ const AboutPage = () => {
     },
   ];
 
-  
+  // Framer Motion variants for animations
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8 } },
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for About Page */}
-      <section  className="relative bg-center inset-0 overflow-hidden py-24"
-      style={{
-        background: '#0B0A0A', // Main dark background
-        // Reference the image directly from the public folder
-        backgroundImage: `url('dots-bg.png')`,
-        backgroundRepeat: 'no-repeat', // Assuming you want the pattern to repeat
-        backgroundSize: 'cover', 
-        backgroundPosition:'center center' // Or 'contain', 'cover', or a specific size like '20px 20px'
-                               // 'auto' will use the natural size of the image, adjust as needed.
-      }}
-    >
-      {/* Blurred Shape 1 */}
-      <div
-        className="absolute opacity-40"
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="relative bg-center inset-0 overflow-hidden py-24"
         style={{
-          top: '18%', // Adjust position as needed
-          left: '4%', // Adjust position as needed
-          width: '500px', // Adjust size
-          height: '500px', // Adjust size
-          borderRadius: '50%', // Make it circular for a blob-like effect
-          background: '#7D73C39E', // Purple with transparency
-          filter: 'blur(100px)', // The desired blur amount
-          transform: 'translateZ(0)', // Optimize for blur rendering
+          background: '#0B0A0A',
+          backgroundImage: `url('dots-bg.png')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center'
         }}
-      ></div>
+      >
+        {/* Blurred Shape 1 */}
+        <div
+          className="absolute opacity-40"
+          style={{
+            top: '18%',
+            left: '4%',
+            width: '500px',
+            height: '500px',
+            borderRadius: '50%',
+            background: '#7D73C39E',
+            filter: 'blur(100px)',
+            transform: 'translateZ(0)',
+          }}
+        ></div>
 
-      {/* Blurred Shape 2 */}
-      <div
-        className="absolute opacity-40"
-        style={{
-          bottom: '18%', // Adjust position as needed
-          right: '5%', // Adjust position as needed
-          width: '400px', // Adjust size
-          height: '400px', // Adjust size
-          borderRadius: '50%', // Make it circular
-          background: '#7D73C39E', // Purple with transparency
-          filter: 'blur(1000px)', // The desired blur amount
-          transform: 'translateZ(0)', // Optimize for blur rendering
-        }}
-      ></div>
-        <div className="relative z-10 mx-auto flex flex-col items-center px-4 pt-18 text-center lg:max-w-4xl">
-          <h1 className="mb-6 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.2rem] md:leading-[72px]">
+        {/* Blurred Shape 2 */}
+        <div
+          className="absolute opacity-40"
+          style={{
+            bottom: '18%',
+            right: '5%',
+            width: '400px',
+            height: '400px',
+            borderRadius: '50%',
+            background: '#7D73C39E',
+            filter: 'blur(1000px)',
+            transform: 'translateZ(0)',
+          }}
+        ></div>
+        <motion.div variants={staggerContainer} className="relative z-10 mx-auto flex flex-col items-center px-4 py-18 text-center lg:max-w-4xl">
+          <motion.h1 variants={fadeInUp} className="mb-6 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.2rem] md:leading-[72px]">
             AI workers that handles the work, So you can handle what&apos;s next{" "}
             <br className="hidden md:block" />
-          </h1>
-          <p className="px-4 py-2 text-[#D9D9D9] font-normal lg:px-40 lg:text-lg">
+          </motion.h1>
+          <motion.p variants={fadeInUp} className="px-4 py-2 text-[#D9D9D9] font-normal lg:px-40 lg:text-lg">
             Build, grow, and scale your business with our AI workforce,
             custom-built for your business needs
-          </p>
-          <Link href="/contact-us" passHref className="mt-12 cursor-pointer">
-            <button className="text-md rounded-md bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-xl">
-              Try DoubleU AI
-            </button>
-          </Link>
-        </div>
-      </section>
+          </motion.p>
+          <motion.div variants={fadeInUp}>
+            <Link href="/contact-us" passHref className="cursor-pointer">
+              <button className="text-md rounded-md mt-12 bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-xl">
+                Try DoubleU AI
+              </button>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
       {/* 2. Our Mission & Vision Section */}
-      <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={staggerContainer}
+        className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+      >
         <div className="container mx-auto max-w-4xl px-2 py-12 text-justify lg:px-6 lg:text-center">
-          <h2 className="mb-8 text-2xl font-medium text-[#0B0A0A] lg:text-4xl">
+          <motion.h2 variants={fadeInUp} className="mb-8 text-2xl font-medium text-[#0B0A0A] lg:text-4xl">
             Our Mission
-          </h2>
-          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[##404040] lg:mb-12 lg:text-lg">
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-sm leading-relaxed text-[##404040] lg:mb-12 lg:text-lg">
             Our mission is to empower businesses of all sizes to thrive in the
             AI era by providing cutting-edge, custom-built AI workforce
             solutions that automate tedious tasks, streamline operations, and
             unlock unprecedented levels of productivity and innovation.
-          </p>
-          <h2 className="mb-8 pt-12 text-2xl font-medium text-[#0B0A0A] lg:text-4xl">
+          </motion.p>
+          <motion.h2 variants={fadeInUp} className="mb-8 pt-12 text-2xl font-medium text-[#0B0A0A] lg:text-4xl">
             Our Vision
-          </h2>
-          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[##404040] lg:text-lg">
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-sm leading-relaxed text-[##404040] lg:text-lg">
             We envision a future where every business, regardless of its scale,
             leverages intelligent AI workers to achieve its full potential,
             fostering growth, efficiency, and a focus on human creativity and
             strategic thinking.
-          </p>
+          </motion.p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* 3. Our Impact by the Numbers Section (Adapted from previous Stats section) */}
-      <section className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 text-white">
-        {/* Blue Blurred Gradient */}
+      {/* 3. Our Impact by the Numbers Section */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+        className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 text-white"
+      >
         <div
           className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] blur-[300px]"
           aria-hidden="true"
         ></div>
-
-        {/* Purple Blurred Gradient */}
         <div
           className="absolute top-1/2 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[300px]"
           aria-hidden="true"
         ></div>
         <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 text-2xl font-bold text-white lg:text-4xl">
+          <motion.h2 variants={fadeInUp} className="mb-4 text-2xl font-bold text-white lg:text-4xl">
             Our Impact by the Numbers
-          </h2>
+          </motion.h2>
         </div>
-        <div className="container mx-auto grid grid-cols-1 gap-8 px-12 text-center md:grid-cols-2 lg:grid-cols-4">
+        <motion.div variants={staggerContainer} className="container mx-auto grid grid-cols-1 gap-8 px-12 text-center md:grid-cols-2 lg:grid-cols-4">
           {impactStats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center py-2">
+            <motion.div variants={fadeInUp} key={index} className="flex flex-col items-center py-2">
               <h4 className="mb-2 text-3xl font-medium text-white lg:text-5xl">
                 {stat.number}
               </h4>
               <p className="mx-auto max-w-4xl text-sm text-gray-300 lg:text-base">
                 {stat.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* 4. Our Revolutionary Approach Section */}
-      <section className="bg-white px-4 py-24 sm:px-6 lg:px-20">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer}
+        className="bg-white px-4 py-24 sm:px-6 lg:px-20"
+      >
         <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
+          <motion.h2 variants={fadeInUp} className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
             Our Revolutionary Approach
-          </h2>
-          <p className="mx-auto max-w-2xl text-sm text-gray-600 lg:text-lg">
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-sm text-gray-600 lg:text-lg">
             Our systematic approach ensures a seamless transition to an
             AI-powered workforce, tailored to your success.
-          </p>
+          </motion.p>
         </div>
-        <div className="container mx-auto mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <motion.div variants={staggerContainer} className="container mx-auto mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {approachSteps.map((step, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeInUp}
               className="flex items-center gap-x-8 px-3 text-center lg:p-4"
             >
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] p-4 lg:p-4">
@@ -241,32 +282,39 @@ const AboutPage = () => {
                   {step.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* 5. Our Team Section */}
-      <section className="bg-white px-4 py-4 sm:px-6 lg:px-8">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer}
+        className="bg-white px-4 py-4 sm:px-6 lg:px-8"
+      >
         <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
+          <motion.h2 variants={fadeInUp} className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
             Meet Our Team
-          </h2>
+          </motion.h2>
         </div>
-        <div className="container mx-auto grid max-w-4xl grid-cols-1 items-center justify-between gap-12 text-center md:grid-cols-1">
+        <div className="container grid grid-cols-1 items-center justify-between gap-12 text-center md:grid-cols-1">
           {teamMembers.map((member, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`flex flex-col items-center gap-x-12 p-6 md:flex-row md:items-start ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+              variants={fadeInUp}
+              className={`flex flex-col mx-auto max-w-[60rem] items-center gap-x-12 p-6 md:flex-row md:items-start ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
             >
               <Image
                 src={member.imageSrc}
                 alt={member.imageAlt}
                 width={350}
                 height={150}
-                className="object-fit md:w-w-1/2 mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0"
+                className="object-fit mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0"
               />
-              <div className="md:w-w-1/2 mx-auto text-center md:text-left">
+              <div className=" mx-auto text-center md:text-left">
                 <h3 className="mb-1 text-2xl font-semibold text-[#222831]">
                   {member.name}
                 </h3>
@@ -275,25 +323,32 @@ const AboutPage = () => {
                   {member.bio}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* 7. Testimonials Section */}
-      <section className="bg-white py-20 sm:px-6 lg:px-18">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer}
+        className="bg-white py-20 sm:px-6 lg:px-18"
+      >
         <div className="container mx-auto mb-12 max-w-xl px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
+          <motion.h2 variants={fadeInUp} className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl">
             We handle the boring stuff so you can focus on real work.
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-lg text-gray-600">
             What our clients has to say about us
-          </p>
+          </motion.p>
         </div>
-        <div className="container mx-auto grid grid-cols-1 gap-8 py-8 md:grid-cols-3 md:px-0 md:py-0">
+        <motion.div variants={staggerContainer} className="container mx-auto grid grid-cols-1 gap-8 py-8 md:grid-cols-3 md:px-0 md:py-0">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeInUp}
               className="mx-4 flex h-full flex-col rounded-xl border border-gray-300 bg-white px-6 py-8 shadow-sm"
             >
               <div className="justify-left mb-4 flex space-x-1 text-orange-400">
@@ -314,13 +369,19 @@ const AboutPage = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
-      {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white shadow-xl sm:px-6 md:my-18 lg:mx-auto lg:px-2">
+      {/* 8. Bottom CTA Banner */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={fadeIn}
+        className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white shadow-xl sm:px-6 md:my-18 lg:mx-auto lg:px-2"
+      >
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
             Take a smarter approach to AI in your business today.
@@ -331,12 +392,15 @@ const AboutPage = () => {
             faster, better, and easier
           </p>
           <Link href="/contact-us" passHref className="mt-14">
-            <button className="cursor-pointer rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+            <motion.button
+             whileHover={{ scale: 1.05 }}
+             whileTap={{ scale: 0.95 }}
+             className="cursor-pointer rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
               Get Started Now
-            </button>
+            </motion.button>
           </Link>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
