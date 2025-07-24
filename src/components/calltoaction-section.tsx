@@ -1,16 +1,25 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function CallToActionSection() {
   return (
     <section className="relative lg:mx-auto mx-6 my-10 md:my-20 max-w-6xl overflow-hidden rounded-3xl bg-[#7D73C3] px-4 py-12 text-white shadow-sm sm:px-6 lg:px-8">
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         {/* Text Content */}
-        <div className="pt-4 lg:pt-0 px-8 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:text-left">
+        <motion.div
+          className="pt-4 lg:pt-0 px-8 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:text-left"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2 className="mb-4 text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl">
             Why work harder when your AI can
-            do it cooler?<br className="hidden sm:block" /> 
+            do it cooler?<br className="hidden sm:block" />
           </h2>
           <p className="mb-8 text-base text-gray-200 sm:text-lg">
             One AI! all your platforms, always on.
@@ -20,18 +29,24 @@ export default function CallToActionSection() {
               Get Started Now
             </button>
           </Link>
-        </div>
+        </motion.div>
 
         {/* Image Content */}
-        <div className="relative top-13 flex w-full justify-center md:w-1/2 md:justify-end items-end">
+        <motion.div
+          className="relative top-13 flex w-full justify-center md:w-1/2 md:justify-end items-end"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           <Image
-            src="/new-img/cta-robot.png" 
+            src="/new-img/cta-robot.png"
             alt="AI and human interaction illustration"
-            width={450} 
-            height={300} 
+            width={450}
+            height={300}
             className="object-fit object-bottom"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
