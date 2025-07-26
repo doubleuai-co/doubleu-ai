@@ -78,19 +78,16 @@ const featureItemVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="relative w-screen overflow-hidden bg-[#0B0A0A] bg-gradient-to-b from-[#0B0A0A] to-[#00b4d89d] pt-36 text-white px-4 md:px-8 lg:pt-22">
+    <section className="relative w-screen overflow-hidden pt-36 text-white bg-[#0B0A0A] px-4 md:px-8 lg:pt-22">
       {/* Background elements */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.3, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-30 mix-blend-screen blur-3xl filter"
+        className="animate-blob animation-delay-2000 absolute -bottom-30 right-[2%] h-80 w-full rounded-full bg-[#00bcd4] opacity-50 mix-blend-screen blur-3xl filter"
       />
       <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.1, scale: 1 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
-        className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-10 mix-blend-screen blur-3xl filter"
+        className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#0B0A0A] opacity-10 mix-blend-screen blur-3xl filter"
       />
 
       <motion.div 
