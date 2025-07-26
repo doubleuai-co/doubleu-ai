@@ -1,3 +1,4 @@
+
 // import EmblaCarousel from "@/components/card-parrallex";
 // import { EmblaOptionsType } from "embla-carousel";
 // import { Button } from "@/components/ui/button";
@@ -109,6 +110,7 @@ export default function Workforce() {
                   className="group relative w-full overflow-hidden"
                 >
                   {/* Agent Icons */}
+
                   <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#1D0B0B] font-bold">
                     <Image
                       src={agent.icon}
@@ -117,7 +119,9 @@ export default function Workforce() {
                       height={300}
                     />
                   </div>
+
                   {/* Agent Image */}
+
                   <Image
                     src={agent.image}
                     alt={agent.name}
@@ -125,10 +129,15 @@ export default function Workforce() {
                     height={300}
                     className="h-auto w-full rounded-t-xl object-cover md:w-fit"
                   />
+
                   {/* Name and Role Overlay */}
+
                   {/* <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
+
         <h3 className="text-xl font-semibold">{agent.name}</h3>
+
         <p className="text-sm text-gray-300">{agent.role}</p>
+
       </div> */}
                 </div>
               </Link>
