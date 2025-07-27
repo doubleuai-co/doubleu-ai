@@ -84,7 +84,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.3, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        className="animate-blob animation-delay-2000 absolute -bottom-30 right-[2%] h-80 w-full rounded-full bg-[#00bcd4] opacity-50 mix-blend-screen blur-3xl filter"
+        className="animate-blob animation-delay-2000 absolute -bottom-30 right-[2%] h-100 w-full rounded-full bg-[#00bcd4] opacity-50 mix-blend-screen blur-3xl filter"
       />
       <motion.div 
         className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#0B0A0A] opacity-10 mix-blend-screen blur-3xl filter"

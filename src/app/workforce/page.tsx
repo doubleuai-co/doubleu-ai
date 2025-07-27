@@ -1,10 +1,10 @@
-
 // import EmblaCarousel from "@/components/card-parrallex";
 // import { EmblaOptionsType } from "embla-carousel";
 // import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
+import ButtonAnimate from "@/components/workforce/button-anim";
+import { agents } from "@/lib/agentsData";
 // import "../embla.css";
 
 // const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
@@ -12,36 +12,7 @@ import Link from "next/link";
 // const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Workforce() {
-  const agents = [
-    {
-      name: "Mylo",
-      role: "Product Sale Worker",
-      image: "/new-img/mylo.svg",
-      icon: "/new-img/solar_arrow-up-linear.svg",
-      access: "/workforce/mylo",
-    },
-    {
-      name: "Ehiz",
-      role: "Hiring Manager",
-      image: "/new-img/ehiz.svg",
-      icon: "/new-img/solar_arrow-up-linear.svg",
-      access: "/workforce/ehiz",
-    },
-    {
-      name: "Neo",
-      role: "Sales Service Worker",
-      image: "/new-img/neo.svg",
-      icon: "/new-img/solar_arrow-up-linear.svg",
-      access: "/workforce/neo",
-    },
-    {
-      name: "Agora",
-      role: "Event Manager",
-      image: "/new-img/agora.svg",
-      icon: "/new-img/solar_arrow-up-linear.svg",
-      access: "/workforce/agora",
-    },
-  ];
+
 
   // Data for "Our Workers general features" section
   const generalFeatures = [
@@ -57,35 +28,45 @@ export default function Workforce() {
     <main className="bg-white">
       {/* 1. Hero Section for Workforce Page */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black text-white">
-        {/* Background Image */}
-        {/* <Image
-          src="/hero-img.svg" // Make sure this is the correct filename you uploaded
-          alt="Background Graphic"
-          layout="fill"
-          objectFit="cover"
-          className="pointer-events-none opacity-40 select-none"
-        /> */}
+        {/* Blurred Shape 1 */}
+        <div className="absolute top-[5px] left-0 h-[412.3px] w-[80px] translate-z-0 rotate-[137.15deg] transform-gpu rounded-full bg-[#7D73C34D] opacity-40 blur-[40px] md:left-[362px] md:w-[122px]"></div>
+
+        {/* Blurred Shape 2 */}
+        <div className="absolute -top-[7px] right-0 h-[412.3px] w-[80px] translate-z-0 rotate-[42.85deg] transform-gpu rounded-full bg-[#7D73C34D] opacity-40 blur-[40px] md:right-[23%] md:w-[122px]"></div>
 
         {/* Overlay Glow (if any) */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/30 to-black/90" />
+        {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/30 to-black/90" /> */}
 
         {/* Main Content */}
-        <div className="relative z-20 mx-auto max-w-5xl px-4 text-center">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 py-18 text-center">
           <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
             Workforce built specifically
             <br />
             for business needs
           </h1>
-          <p className="mt-6 text-base text-gray-300">
-            AI workforce represents the beginning of a transformative
-            <br />
-            paradigm in operational efficiency.
+          <p className="mx-auto mt-6 max-w-lg text-lg text-gray-300">
+            AI workforce represents the beginning of a transformative paradigm
+            in operational efficiency.
           </p>
           <Link href="/contact-us" passHref>
-            <button className="mt-12 rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
-              Book a Demo
+            <button className="mt-14 rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+              Try DoubleU AI
             </button>
           </Link>
+          <Image
+            src="/new-img/workforce-pattern.svg"
+            alt="Pattern background"
+            width={400}
+            height={300}
+            className="absolute top-[28rem] -left-[2rem] w-[200px] object-cover md:top-[18rem] md:-left-[28rem] md:w-[400px]"
+          />
+          <Image
+            src="/new-img/workforce-pattern.svg"
+            alt="Pattern background"
+            width={400}
+            height={300}
+            className="absolute top-[28rem] -right-[2rem] w-[200px] scale-x-[-1] object-cover md:top-[18rem] md:-right-[26rem] md:w-[400px] md:scale-x-[-1]"
+          />
         </div>
       </section>
 
@@ -111,13 +92,8 @@ export default function Workforce() {
                 >
                   {/* Agent Icons */}
 
-                  <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#1D0B0B] font-bold">
-                    <Image
-                      src={agent.icon}
-                      alt={agent.name}
-                      width={250}
-                      height={300}
-                    />
+                  <div className="absolute top-8 left-8 z-10 flex h-8 w-8 items-center justify-center">
+                      <ButtonAnimate agent={agent} />
                   </div>
 
                   {/* Agent Image */}

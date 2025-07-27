@@ -25,7 +25,7 @@ export default function Footer() {
 
         {/* Purple Blurred Gradient */}
         <div
-          className="absolute top-1/2 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[300px]"
+          className="absolute top-1/4 right-48 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[200px]"
           aria-hidden="true"
         ></div>
       <div className="container md:pr-30 pr-8 text-justify mx-auto mb-8 grid grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">

@@ -46,7 +46,7 @@ export default function Ehiz() {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for Ehiz Page */}
-      <section className="relative overflow-hidden bg-[#0B0A0A] px-4 py-0 text-white sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0B0A0A] px-4 md:pt-24 text-white sm:px-6 lg:px-8">
         {/* Background elements - subtle blurs/gradients */}
         {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
         <div className="animate-blob animation-delay-2000 absolute top-1/4 right-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
@@ -65,7 +65,7 @@ export default function Ehiz() {
               team.
             </p>
             <Link href="/" passHref>
-              <button className="rounded-md bg-[#7D73C3] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+              <button className="rounded-md bg-[#7D73C3] px-8 py-4 text-md font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
                 Try DoubleU AI
               </button>
             </Link>

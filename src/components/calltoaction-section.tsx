@@ -24,8 +24,8 @@ export default function CallToActionSection() {
           <p className="mb-8 text-base text-gray-200 sm:text-lg">
             One AI! all your platforms, always on.
           </p>
-          <Link href="/" passHref>
-            <button className="rounded-full bg-white px-8 py-3 text-base font-semibold text-[#7D73C3] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+          <Link href="/contact" passHref>
+            <button className="cursor-pointer rounded-full bg-white px-8 py-3 text-base font-semibold text-[#7D73C3] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
               Get Started Now
             </button>
           </Link>

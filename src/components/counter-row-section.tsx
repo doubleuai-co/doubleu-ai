@@ -115,7 +115,7 @@ export default function CounterRowSection() {
                 height={brand.height}
                 className="object-contain"
               />
-              <h3 className="text-xl md:text-md font-medium">{brand.label}</h3>
+              <h3 className="text-md font-medium">{brand.label}</h3>
             </motion.div>
           ))}
         </motion.div>
@@ -129,12 +129,12 @@ export default function CounterRowSection() {
         <motion.div
           className="flex gap-x-12 px-4"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
         >
           {[...brands, ...brands].map((brand, index) => (
             <div
               key={index}
-              className="flex min-w-max items-center gap-x-2 text-[#0B0A0A]"
+              className="flex min-w-max items-center gap-x-4 text-[#0B0A0A]"
             >
               <Image
                 src={brand.src}
@@ -143,7 +143,7 @@ export default function CounterRowSection() {
                 height={brand.height}
                 className="object-contain"
               />
-              <h3 className="text-base font-medium">{brand.label}</h3>
+              <h3 className="text-lg font-medium">{brand.label}</h3>
             </div>
           ))}
         </motion.div>
