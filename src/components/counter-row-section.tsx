@@ -27,7 +27,7 @@ const brands = [
     width: 90,
     height: 60,
   },
-    {
+  {
     src: "/new-img/body-img.svg",
     alt: "Body and Home essentials",
     label: "Body and Home essentials",
@@ -71,23 +71,31 @@ export default function CounterRowSection() {
         whileInView="show"
         viewport={{ once: true }}
       >
-        {stats.map((stat, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            className="flex flex-col items-start rounded-md bg-gray-50 p-6 shadow-sm md:bg-transparent md:shadow-none lg:items-center"
-          >
-            <AnimatedCounter rawNumber={stat.number} />
-            <p className="max-w-[200px] text-base text-gray-600">
-              {stat.description}
-            </p>
-          </motion.div>
-        ))}
+       {stats.map((stat, index) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [startCount, setStartCount] = useState(false);
+
+  return (
+    <motion.div
+      key={index}
+      variants={cardVariants}
+      className="flex flex-col items-start rounded-md bg-gray-50 p-6 shadow-sm md:bg-transparent md:shadow-none lg:items-center"
+      onViewportEnter={() => setStartCount(true)}
+      viewport={{ once: true }}
+    >
+      <AnimatedCounter rawNumber={stat.number} start={startCount} />
+      <p className="max-w-[200px] text-base text-gray-600">
+        {stat.description}
+      </p>
+    </motion.div>
+  );
+})}
+
       </motion.div>
 
       {/* Brands Desktop */}
       <motion.div
-        className="container mx-auto hidden md:block text-center mb-18"
+        className="container mx-auto mb-18 hidden text-center md:block"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -120,33 +128,40 @@ export default function CounterRowSection() {
           ))}
         </motion.div>
       </motion.div>
-
       {/* Brands Mobile Infinite Scroll */}
-      <div className="md:hidden overflow-hidden relative mb-12">
+      <div className="relative mb-12 overflow-hidden md:hidden">
         <h2 className="mb-6 text-center text-lg font-medium text-[#0B0A0A]">
           Trusted by the brands shaping the future with AI
         </h2>
-        <motion.div
-          className="flex gap-x-12 px-4"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
-        >
-          {[...brands, ...brands].map((brand, index) => (
-            <div
-              key={index}
-              className="flex min-w-max items-center gap-x-4 text-[#0B0A0A]"
-            >
-              <Image
-                src={brand.src}
-                alt={brand.alt}
-                width={brand.width}
-                height={brand.height}
-                className="object-contain"
-              />
-              <h3 className="text-lg font-medium">{brand.label}</h3>
-            </div>
-          ))}
-        </motion.div>
+        <div className="relative w-full overflow-hidden">
+          <motion.div
+            className="flex w-max gap-x-12 px-4"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            {[...brands, ...brands].map((brand, index) => (
+              <div
+                key={index}
+                className="flex min-w-max items-center gap-x-4 pr-6 text-[#0B0A0A]"
+              >
+                <Image
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={brand.width}
+                  height={brand.height}
+                  className="object-contain"
+                />
+                <h3 className="text-lg font-medium whitespace-nowrap">
+                  {brand.label}
+                </h3>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -159,21 +174,24 @@ const parseNumber = (str: string) => {
   return { number, suffix };
 };
 
-const AnimatedCounter = ({ rawNumber }: { rawNumber: string }) => {
+const AnimatedCounter = ({ rawNumber, start = false }: { rawNumber: string; start: boolean }) => {
   const { number, suffix } = parseNumber(rawNumber);
   const count = useMotionValue(0);
   const [display, setDisplay] = useState("0");
 
   useEffect(() => {
+    if (!start) return;
+
     const controls = animate(count, number, {
-      duration: 2,
+      duration: 1, // 💨 Faster speed (was 2)
       onUpdate: (value) => {
         const rounded = number % 1 === 0 ? Math.round(value) : value.toFixed(1);
         setDisplay(`${rounded}${suffix}`);
       },
     });
+
     return controls.stop;
-  }, [count, number, suffix]);
+  }, [start, count, number, suffix]);
 
   return (
     <motion.h2

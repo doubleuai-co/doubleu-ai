@@ -2,8 +2,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Star, Lightbulb, Target, Rocket, User } from "lucide-react";
 import { motion } from "framer-motion";
+import { Star, User } from "lucide-react";
+
 
 const AboutPage = () => {
   // Data for "Our Impact by the Numbers" section
@@ -20,37 +21,31 @@ const AboutPage = () => {
   // Data for "Our Revolutionary Approach" section
   const approachSteps = [
     {
-      icon: Lightbulb,
       title: "True Autonomy",
       description:
         "Our system operates independently, handling routine tasks without the need for constant oversight.",
     },
     {
-      icon: Target,
       title: "End-to-End Mastery",
       description:
         "We own the complete process from the first interaction to the final outcome, through an integrated solution.",
     },
     {
-      icon: Rocket,
       title: "Results Over Rhetoric",
       description:
         "We're not here for show. We measure success by the real-world impact we deliver.",
     },
     {
-      icon: Rocket,
       title: "Task-Based Value",
       description:
         "Every dollar you invest translates directly into efficient, measurable outcomes.",
     },
     {
-      icon: Rocket,
       title: "Smart Integration",
       description:
         "By merging cutting-edge analytics with next-gen data management, we empower smarter and faster.",
     },
     {
-      icon: Rocket,
       title: "Human Empowerment",
       description:
         "We liberate you from the mundane, so you can focus on what fuels your business.",
@@ -119,6 +114,7 @@ const AboutPage = () => {
   };
 
   return (
+    <>
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for About Page */}
       <motion.section
@@ -271,8 +267,8 @@ const AboutPage = () => {
               variants={fadeInUp}
               className="flex items-center gap-x-8 px-3 text-center lg:p-4"
             >
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] p-4 lg:p-4">
-                <step.icon size={30} className="" />{" "}
+              <div className="mb-4 flex h-12 w-14 items-center justify-center rounded-lg bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] p-4 lg:p-4">
+                {/* <step.icon size={30} className="" />{" "} */}
               </div>
               <div className="text-left">
                 <h3 className="text-md mb-2 font-medium text-[#0B0A0A] lg:text-xl">
@@ -361,7 +357,7 @@ const AboutPage = () => {
               </p>
               <div className="mt-auto flex items-center">
                 <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-gray-300 text-gray-600">
-                  <User size={20} /> {/* Generic user icon for avatar */}
+                  <User size={20} /> 
                 </div>
                 <div>
                   <p className="font-semibold text-[#222831]">
@@ -402,7 +398,9 @@ const AboutPage = () => {
         </div>
       </motion.section>
     </div>
+    </>
   );
 };
 
 export default AboutPage;
+

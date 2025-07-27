@@ -8,6 +8,7 @@ import FAQSection from "@/components/faq-section";
 import CallToActionSection from "@/components/calltoaction-section";
 import WhyChooseUsSection from "@/components/whyChooseus-section";
 
+
 export default function Home() {
   return (
     <main className="flex-1">

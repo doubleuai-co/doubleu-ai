@@ -62,7 +62,7 @@ export default function AnywhereYouworkSection() {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-3 md:px-26 px-4">
+      <div className="container mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-3">
         {platforms.map((platform, index) => (
           <motion.div
             key={index}
