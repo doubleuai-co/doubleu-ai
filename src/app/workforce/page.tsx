@@ -73,7 +73,7 @@ export default function Workforce() {
       <section>
         {/* 2. Meet our AI workforce Section */}
         <section className="bg-white px-2 py-24 text-gray-800 sm:px-2 lg:px-8">
-          <div className="container mx-auto text-center md:mb-20">
+          <div className="container mx-auto text-center md:mb-20 mb-8">
             <h2 className="mb-4 text-2xl font-bold text-[#222831] md:text-4xl">
               Meet our AI workforce
             </h2>
@@ -85,14 +85,14 @@ export default function Workforce() {
 
           <div className="container mx-auto grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-8 px-6 sm:grid-cols-2 sm:px-4 md:max-w-2xl md:px-0 lg:grid-cols-2">
             {agents.map((agent, index) => (
-              <Link key="" href={agent.access} passHref>
+              // <Link key="" href="" passHref>
                 <div
                   key={index}
                   className="group relative w-full overflow-hidden"
                 >
                   {/* Agent Icons */}
 
-                  <div className="absolute top-8 left-8 z-10 flex h-8 w-8 items-center justify-center">
+                  <div className="absolute top-10 left-10 z-10 flex h-6 w-6 items-center justify-center">
                       <ButtonAnimate agent={agent} />
                   </div>
 
@@ -116,7 +116,7 @@ export default function Workforce() {
 
       </div> */}
                 </div>
-              </Link>
+              // </Link>
             ))}
           </div>
         </section>
