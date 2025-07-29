@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function LogoNav({
-  width = 130,
-  height = 100,
+  width = 100,
+  height = 80,
 }: {
   width?: number;
   height?: number;

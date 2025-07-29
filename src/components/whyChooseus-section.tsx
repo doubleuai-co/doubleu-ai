@@ -67,7 +67,7 @@ export default function WhyChooseUsSection() {
   };
 
   return (
-    <section className="bg-white px-8 py-16 text-[#0B0A0A] sm:px-6 lg:px-8">
+    <section className="bg-white px-6 py-12 text-[#0B0A0A] sm:px-6 lg:px-8">
       <motion.div
         className="container mx-auto mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -75,22 +75,22 @@ export default function WhyChooseUsSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="mb-4 text-2xl px-6 font-bold text-[#222831] lg:text-4xl">
+        <h2 className="mb-4 max-w-xl mx-auto text-2xl px-6 font-bold text-[#0B0A0A] lg:text-4xl">
           Why top brands choose DoubleU AI
         </h2>
-        <p className="text-md mx-auto max-w-2xl text-gray-600 lg:text-lg">
+        <p className="text-md mx-auto max-w-sm text-gray-600 lg:text-lg">
           It&apos;s more than automation, it&apos;s smarter work, seamless
           integration, and real results.
         </p>
       </motion.div>
 
-      <div className="container mx-auto grid grid-cols-1 gap-8 gap-x-12 md:grid-cols-2 lg:grid-cols-3 lg:px-28">
+      <div className="container mx-auto max-w-6xl md:px-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className={`group transform rounded-xl border px-8 py-14 text-center shadow-md transition-all duration-300 ease-in-out hover:scale-[1.01] ${
+            className={`group transform rounded-xl border px-6 py-10 text-center shadow-sm transition-all duration-300 ease-in-out hover:scale-[1.01] ${
               feature.highlight
-                ? "border-[#1a1a2e] bg-[#1a1a2e] text-white"
+                ? "border-[#1a1a2e] bg-[#1a1a2e] text-[#F0F0F0]"
                 : "border-gray-100 bg-gray-50 text-gray-800"
             }`}
             custom={index}
@@ -120,7 +120,7 @@ export default function WhyChooseUsSection() {
             </div>
 
             <h3
-              className={`mb-2 text-md md:text-xl font-medium transition-colors duration-300 ease-in-out ${
+              className={`mb-2 text-md md:text-lg font-medium transition-colors duration-300 ease-in-out ${
                 feature.highlight
                   ? "text-white"
                   : "text-[#222831] "
@@ -130,7 +130,7 @@ export default function WhyChooseUsSection() {
             </h3>
 
             <p
-              className={`text-base transition-colors duration-300 ease-in-out ${
+              className={`text-sm md:text-md transition-colors duration-300 ease-in-out ${
                 feature.highlight
                   ? "text-gray-300"
                   : "text-gray-700 "
@@ -150,7 +150,7 @@ export default function WhyChooseUsSection() {
         transition={{ delay: 0.3, duration: 0.6 }}
       >
         <Link href="/workforce" passHref>
-          <button className="cursor-pointer text-md rounded-md bg-[#6a5acd] px-8 py-4 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+          <button className="cursor-pointer text-sm rounded-md bg-[#6a5acd] px-8 py-4 text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
             Explore AI Workers
           </button>
         </Link>

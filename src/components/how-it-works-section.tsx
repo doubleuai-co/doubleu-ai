@@ -23,13 +23,13 @@ export default function HowSection() {
   ];
 
   return (
-    <div className="w-full bg-white px-4 py-2">
+    <div className="w-full bg-white px-4 -my-18 md:-my-0">
       <section className="bg-white">
         <div className="mb-16 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">
             How DoubleU AI works
           </h2>
-          <p className="mt-2 px-12 text-gray-500">
+          <p className="mt-2 px-8 text-[#404040]">
             Plug in your business needs, and watch our AI agents do the work.
           </p>
         </div>
@@ -37,18 +37,18 @@ export default function HowSection() {
         <div className="relative mx-auto max-w-6xl px-4 md:px-0">
           <div className="absolute top-0 left-4 h-full w-0.5 transform bg-[#C7C7C7] md:left-1/2 md:-translate-x-1/2"></div>
 
-          <div className="space-y-8 md:space-y-14">
+          <div className="space-y-8 md:space-y-8">
             {steps.map((step, index) => (
               <div
                 key={index}
                 className="relative flex flex-col items-start md:flex-row md:items-center"
               >
                 {/* Dot for timeline */}
-                <div className="absolute top-12 -left-2 z-10 h-5 w-5 transform md:top-18 md:left-1/2 md:-translate-x-1/2">
+                <div className="absolute top-12 w-fit -left-2 z-10 transform md:top-18 md:left-1/2 md:-translate-x-1/2">
                   <Image
                     src="/new-img/dot.svg"
-                    height={200}
-                    width={400}
+                    height={15}
+                    width={15}
                     alt=""
                     className="object-fit"
                   />
@@ -56,25 +56,25 @@ export default function HowSection() {
 
                 {/* Card */}
                 <div
-                  className={`mt-2 pl-6 md:mt-0 md:w-1/2 md:px-18 ${index % 2 === 1 ? "md:ml-auto md:text-start" : "md:mr-auto md:text-start"}`}
+                  className={`mt-2 pl-6 md:mt-0 md:w-1/2 md:px-20 ${index % 2 === 1 ? "md:ml-auto md:text-start" : "md:mr-auto md:text-start"}`}
                 >
-                  <div className="flex items-start justify-between gap-x-8 rounded-xl bg-gray-50 p-4 md:py-8 md:pr-12 shadow-sm">
-                    <div className="mb-3 flex h-14 w-36 items-center justify-center">
+                  <div className="flex items-start justify-between gap-x-2 rounded-xl bg-gray-50 p-4 md:py-8 md:md:px-3 shadow-sm">
+                    <div className="mb-3 flex items-center justify-center">
                       <Image
                         src= {step.icon}
-                        height={200}
-                        width={400}
+                        height={120}
+                        width={120}
                         alt=""
-                        className="object-fit w-full"
+                        className="object-fit"
                       />
 
                      
                     </div>
-                    <div>
-                      <h3 className="mb-2 text-base font-semibold text-gray-800">
+                    <div className="px-2">
+                      <h3 className="mb-2 md:mb-0 mb:pb-4 text-base font-semibold text-[#0B0A0A]">
                         {step.title}
                       </h3>
-                      <p className="text-justify text-sm text-gray-600">
+                      <p className="text-justify text-sm text-[#404040]">
                         {step.description}
                       </p>
                     </div>

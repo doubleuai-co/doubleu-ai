@@ -89,14 +89,14 @@ export default function Agora() {
       </section>
 
       {/* 2. Who is Agora? Section */}
-      <section className="bg-white px-6 py-8 sm:px-6 md:py-16 lg:px-8">
+      <section className="bg-white px-6 py-8 sm:px-6 md:py-14 lg:px-8">
         <div className="container mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
             <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
               Who is Agora?
             </h2>
-            <p className="text-md mb-4 text-justify leading-relaxed text-gray-700">
+            <p className="text-md mb-4 leading-relaxed text-gray-700">
               Agora isn’t just a digital tool, he’s your event partner, built to
               streamline planning and enhance guest experiences. From corporate
               conferences to weddings and private parties, Agora ensures every
@@ -199,7 +199,7 @@ export default function Agora() {
           </p>
           <Link href="/contact-us" passHref className="mt-14">
             <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
-              Get Started Now
+             Explore AI Workers
             </button>
           </Link>
         </div>

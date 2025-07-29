@@ -99,7 +99,7 @@ export default function HeroSection() {
         {/* Star Rating */}
         <motion.div 
           variants={fadeInUp}
-          className="mb-16 flex items-center justify-center text-orange-400"
+          className="md:mb-8 mb-4 flex items-center justify-center text-orange-400"
         >
           {[...Array(4)].map((_, i) => (
             <motion.div
@@ -129,16 +129,16 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="ml-2 text-sm text-gray-400"
+            className="ml-2 text-sm text-white"
           >
-            Rated by users
+            -Rated by users
           </motion.span>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1 
           variants={fadeInUp}
-          className="font-satoshi pb-8 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.5rem] md:leading-[72px]"
+          className="font-satoshi pb-8 px-2 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.5rem] md:leading-[72px]"
         >
           Your business, boosted by <br className="hidden md:block" /> AI that
           actually gets it
@@ -147,7 +147,7 @@ export default function HeroSection() {
         {/* Sub-paragraph */}
         <motion.p 
           variants={fadeInUp}
-          className="text-md mb-8 max-w-2xl text-center leading-[28px] -tracking-wide text-gray-300 md:text-2xl md:leading-[34px] lg:text-xl"
+          className="text-md mb-8 max-w-2xl px-8 text-center leading-[28px] -tracking-wide text-gray-300 md:text-2xl md:leading-[34px] lg:text-xl"
         >
           Build, grow, and scale your business with our AI workforce,{" "}
           <br className="hidden md:block" /> custom-built for your business
@@ -254,7 +254,7 @@ export default function HeroSection() {
         variants={slideInFromBottom}
         initial="hidden"
         animate="visible"
-        className="relative z-0 mt-12 flex justify-center md:mt-8"
+        className="relative z-0 pt-6 md:pt-12 flex justify-center md:mt-8"
       >
         <motion.div 
           className="flex w-full max-w-5xl items-center justify-center shadow-2xl"

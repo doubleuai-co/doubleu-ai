@@ -62,10 +62,10 @@ const brandVariants = {
 // Main Component
 export default function CounterRowSection() {
   return (
-    <section className="bg-white px-4 py-8 text-gray-800 sm:px-6 md:px-8 md:py-12">
+    <section className="bg-white md:text-center text-left px-2 py-10 text-gray-800 sm:px-6 md:px-8 md:py-12">
       {/* Statistics Section */}
       <motion.div
-        className="container mx-auto mb-20 grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-4"
+        className="container mx-auto mb-20 grid grid-cols-1 gap-4 md:gap-8 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -79,12 +79,12 @@ export default function CounterRowSection() {
     <motion.div
       key={index}
       variants={cardVariants}
-      className="flex flex-col items-start rounded-md bg-gray-50 p-6 shadow-sm md:bg-transparent md:shadow-none lg:items-center"
+      className="flex flex-col items-start rounded-md bg-gray-50 p-4 shadow-sm md:bg-transparent md:shadow-none lg:items-center"
       onViewportEnter={() => setStartCount(true)}
       viewport={{ once: true }}
     >
-      <AnimatedCounter rawNumber={stat.number} start={startCount} />
-      <p className="max-w-[200px] text-base text-gray-600">
+      <AnimatedCounter rawNumber={stat.number} start={startCount}  />
+      <p className="md:max-w-[200px] md:pt-4 text-sm md:text-base text-[#404040]">
         {stat.description}
       </p>
     </motion.div>
@@ -95,13 +95,13 @@ export default function CounterRowSection() {
 
       {/* Brands Desktop */}
       <motion.div
-        className="container mx-auto mb-18 hidden text-center md:block"
+        className="container mx-auto mb-18 hidden text-center md:hidden"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
         <motion.h2
-          className="mb-12 text-xl font-medium text-[#0B0A0A]"
+          className="mb-12 text-xl font-medium text-[#404040]"
           variants={brandVariants}
         >
           Trusted by the brands shaping the future with AI
@@ -128,8 +128,8 @@ export default function CounterRowSection() {
           ))}
         </motion.div>
       </motion.div>
-      {/* Brands Mobile Infinite Scroll */}
-      <div className="relative mb-12 overflow-hidden md:hidden">
+      {/* Brands Infinite Scroll */}
+      <div className="relative mb-12 overflow-hidden hidden md:block">
         <h2 className="mb-6 text-center text-lg font-medium text-[#0B0A0A]">
           Trusted by the brands shaping the future with AI
         </h2>
@@ -183,7 +183,7 @@ const AnimatedCounter = ({ rawNumber, start = false }: { rawNumber: string; star
     if (!start) return;
 
     const controls = animate(count, number, {
-      duration: 1, // 💨 Faster speed (was 2)
+      duration: 1, // 
       onUpdate: (value) => {
         const rounded = number % 1 === 0 ? Math.round(value) : value.toFixed(1);
         setDisplay(`${rounded}${suffix}`);
@@ -195,7 +195,7 @@ const AnimatedCounter = ({ rawNumber, start = false }: { rawNumber: string; star
 
   return (
     <motion.h2
-      className="mb-2 text-2xl font-extrabold text-[#0B0A0A] lg:text-5xl"
+      className="text-2xl text-[#0B0A0A] lg:text-5xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >

@@ -38,10 +38,9 @@ export default function Workforce() {
         {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/30 to-black/90" /> */}
 
         {/* Main Content */}
-        <div className="relative z-20 mx-auto max-w-5xl px-4 py-18 text-center">
-          <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 py-1 text-center">
+          <h1 className="text-3xl leading-tight font-bold sm:text-5xl md:text-6xl">
             Workforce built specifically
-            <br />
             for business needs
           </h1>
           <p className="mx-auto mt-6 max-w-lg text-lg text-gray-300">
@@ -49,7 +48,7 @@ export default function Workforce() {
             in operational efficiency.
           </p>
           <Link href="/contact-us" passHref>
-            <button className="mt-14 rounded-md bg-[#6a5acd] px-8 py-4 text-lg font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+            <button className="mt-14 rounded-md bg-[#6a5acd] px-8 py-4 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-md">
               Try DoubleU AI
             </button>
           </Link>
@@ -58,26 +57,26 @@ export default function Workforce() {
             alt="Pattern background"
             width={400}
             height={300}
-            className="absolute top-[28rem] -left-[2rem] w-[200px] object-cover md:top-[18rem] md:-left-[28rem] md:w-[400px]"
+            className="absolute top-[22rem] -left-[0.5rem] w-[150px] object-cover md:top-[12rem] md:-left-[28rem] md:w-[400px]"
           />
           <Image
             src="/new-img/workforce-pattern.svg"
             alt="Pattern background"
             width={400}
             height={300}
-            className="absolute top-[28rem] -right-[2rem] w-[200px] scale-x-[-1] object-cover md:top-[18rem] md:-right-[26rem] md:w-[400px] md:scale-x-[-1]"
+            className="absolute top-[22rem] -right-[0.5rem] w-[150px] scale-x-[-1] object-cover md:top-[12rem] md:-right-[26rem] md:w-[400px] md:scale-x-[-1]"
           />
         </div>
       </section>
 
       <section>
         {/* 2. Meet our AI workforce Section */}
-        <section className="bg-white px-2 py-24 text-gray-800 sm:px-2 lg:px-8">
-          <div className="container mx-auto text-center md:mb-20 mb-8">
-            <h2 className="mb-4 text-2xl font-bold text-[#222831] md:text-4xl">
+        <section className="bg-white px-2 py-18 text-[#0B0A0A] sm:px-2 lg:px-8">
+          <div className="container mx-auto text-center md:my-20 mb-8">
+            <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] md:text-4xl">
               Meet our AI workforce
             </h2>
-            <p className="text-md mx-auto max-w-lg px-6 text-center leading-[1.75rem] font-normal -tracking-wide md:text-xl md:leading-[150%]">
+            <p className="text-[#404040] text-sm mx-auto max-w-lg px-6 text-center leading-[1.4rem] font-normal -tracking-wide md:text-xl md:leading-[150%]">
               Skilled, specialized, and always ready, these AI agents are built
               to work for you.
             </p>
@@ -122,11 +121,11 @@ export default function Workforce() {
         </section>
 
         {/* 3. Our Workers General Features Section */}
-        <section className="bg-white px-6 py-16 sm:px-6 md:px-4 lg:px-8">
+        <section className="bg-white px-6 py-0 md:py-16 sm:px-6 md:px-4 lg:px-8">
           <div className="container mx-auto hidden max-w-7xl grid-cols-1 bg-[#F9F9F9] md:grid md:grid-cols-2">
             {/* Left Column: Features List */}
             <div className="flex flex-col space-y-6 p-6 md:p-12">
-              <h2 className="mb-4 pb-2 text-center text-2xl font-bold text-[#222831] md:text-start md:text-4xl">
+              <h2 className="mb-4 pb-2 text-center text-2xl font-bold text-[#0B0A0A] md:text-start md:text-4xl">
                 Our Workers general features
               </h2>
               <p className="max-w-sm pb-4 text-center text-[#404040] md:text-start">
@@ -142,11 +141,11 @@ export default function Workforce() {
                     <Image
                       src="/new-img/bullet.svg"
                       alt=""
-                      width="20"
-                      height="20"
+                      width="30"
+                      height="30"
                       className="h-auto object-cover"
                     />
-                    <p className="text-sm text-gray-700 md:text-lg">
+                    <p className="text-sm text-[#0B0A0A] font-bold md:text-lg">
                       {feature}
                     </p>
                   </li>
@@ -165,25 +164,26 @@ export default function Workforce() {
               />
             </div>
           </div>
+
           {/* Mobile */}
           <div className="container mx-auto grid max-w-7xl grid-cols-1 bg-[#F9F9F9] md:hidden md:grid-cols-2">
             {/* Left Column: Features List */}
-            <div className="flex flex-col space-y-6 p-6 md:p-12">
-              <h2 className="mb-4 pb-2 text-center text-2xl font-bold text-[#222831] md:text-start md:text-4xl">
+            <div className="flex flex-col space-y-6 md:p-12">
+              <h2 className="mb-4 pb-2 text-center px-6 text-2xl font-bold text-[0B0A0A] md:text-start md:text-4xl">
                 Our Workers general features
               </h2>
-              <p className="max-w-sm pb-4 text-center text-[#404040] md:text-start">
+              <p className="max-w-sm pb-4 px-6 text-sm text-center text-[#404040] md:text-start">
                 Skilled, specialized, and always ready, these AI agents are
                 built to work for you.
               </p>
 
-              <div className="m-0 flex items-center justify-end overflow-hidden p-0">
+              <div className="m-0 flex items-center justify-end overflow-hidden pb-4">
                 <Image
                   src="/new-img/woman-phone.svg"
                   alt="User interacting with AI"
                   width={450}
                   height={250}
-                  className="h-full w-fit object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
 
@@ -200,7 +200,7 @@ export default function Workforce() {
                       height="20"
                       className="h-auto object-cover"
                     />
-                    <p className="text-xs text-gray-700 md:text-lg">
+                    <p className="text-xs text-[#0B0A0A] font-bold md:text-lg">
                       {feature}
                     </p>
                   </li>
@@ -212,7 +212,7 @@ export default function Workforce() {
       </section>
 
       {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white shadow-xl sm:px-6 md:my-18 lg:mx-auto lg:px-2">
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white sm:px-6 md:my-18 lg:mx-auto lg:px-2">
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
             Take a smarter approach to AI in your business today.

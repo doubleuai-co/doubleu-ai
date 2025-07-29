@@ -15,23 +15,23 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
   return (
     <div className="border-b border-gray-700 py-2 md:py-4">
       <button
-        className="flex w-full items-center justify-between text-left focus:outline-none"
+        className="cursor-pointer flex w-full items-center justify-between text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-lg font-medium text-white">{question}</span>
+        <span className="text-sm pr-10 md:text-lg font-medium text-white">{question}</span>
         {isOpen ? (
-          <div className="p-1 bg-[#fff] rounded-lg opacity-80">
-            <Minus size={20} className="text-black" />
+          <div className="p-1 bg-white rounded-lg opacity-80">
+            <Minus size={18} className="text-black" />
           </div>
         ) : (
-          <Plus size={20} className="text-white" />
+          <Plus size={18} className="text-white" />
         )}
       </button>
 
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            className="overflow-hidden pr-8 text-justify text-gray-400"
+            className="overflow-hidden pr-8  text-gray-400"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

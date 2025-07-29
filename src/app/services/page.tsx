@@ -11,7 +11,7 @@ const Services = () => {
       <section className="relative w-full overflow-hidden bg-[#0B0A0A] py-2 text-white">
         {/* Purple Blurred Gradient */}
         <div
-          className="absolute top-1/4 left-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full"
+          className="absolute top-1/4 left-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full opacity-50"
           style={{
             background: "#00B4D89E",
             filter: "blur(400px)",
@@ -21,7 +21,7 @@ const Services = () => {
 
         {/* Blue Blurred Gradient */}
         <div
-          className="absolute top-1/2 right-0 h-[400px] w-[400px] translate-x-1/2 rounded-full"
+          className="absolute top-1/4 right-0 h-[400px] w-[400px] translate-x-1/2 rounded-full opacity-50"
           style={{
             background: "#7D73C39E",
             filter: "blur(400px)",
@@ -29,16 +29,15 @@ const Services = () => {
           aria-hidden="true"
         ></div>
         <div className="relative z-10 mx-auto my-48 flex max-w-4xl flex-col items-center px-8 text-center">
-          <h1 className="font-montserrat mb-6 text-center text-[40px] leading-[46px] font-black -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
+          <h1 className="mb-6 text-center text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
             Our AI-Powered Business Solutions
           </h1>
-          <p className="mb-8 max-w-2xl text-center text-lg leading-[28px] -tracking-wide text-gray-300 md:text-2xl md:leading-[34px]">
-            Unlock efficiency, innovation, and growth with our intelligent AI
-            workforce solutions.
+          <p className="mb-8 max-w-2xl text-center text-md leading-[28px] -tracking-wide text-gray-300 md:text-2xl md:leading-[34px]">
+            Leverage AI to streamline processes, reduce costs, and drive growth.
           </p>
           <Link href="/contact-us" passHref>
             <button className="text-md mt-2 rounded-md bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-xl lg:text-lg">
-              Book a Demo
+              Try DoubleU AI
             </button>
           </Link>
         </div>

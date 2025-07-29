@@ -77,19 +77,19 @@ export default function MeetWorkersSection() {
   };
 
   return (
-    <section className="bg-white px-4 py-32 text-gray-800 sm:px-6 lg:px-8">
-      <div className="container mx-auto mb-12 text-center">
-        <h2 className="mb-4 text-2xl md:text-4xl font-bold text-[#222831]">
+    <section className="bg-white px-4 pt-36 text-gray-800 sm:px-6 lg:px-8">
+      <div className="container mx-auto mb-12 md:mb-8 text-center">
+        <h2 className="mb-4 text-2xl md:text-4xl font-bold text-[#0B0A0A]">
           Meet our AI workforce
         </h2>
-        <p className="mx-auto max-w-md text-lg text-gray-600">
+        <p className="mx-auto max-w-md text-md md:text-lg text-gray-600">
           Skilled, specialized, and always ready, these AI workers are built to
           work for you.
         </p>
       </div>
 
       {/* Desktop Grid Layout (lg and up) */}
-      <div className="container mx-auto hidden grid-cols-1 gap-8 sm:grid-cols-2 lg:grid lg:grid-cols-4 max-w-7xl">
+      <div className="container mx-auto hidden grid-cols-1 gap-8 sm:grid-cols-2 lg:grid lg:grid-cols-4 max-w-6xl">
         {agents.map((agent, index) => (
           <Link key="" href={agent.access} passHref className="mt-12">
             <div
@@ -134,7 +134,7 @@ export default function MeetWorkersSection() {
             {agents.map((agent, index) => (
               <div
                 key={index}
-                className="relative mx-2 w-1/2 flex-shrink-0 overflow-hidden rounded-xl"
+                className="relative mx-2 w-3/4 flex-shrink-0 overflow-hidden rounded-xl"
               >
                 {/* Agent ID Circle */}
                 {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
@@ -166,7 +166,7 @@ export default function MeetWorkersSection() {
               <button
                 key={index}
                 onClick={() => goToSlideGroup(index)}
-                className={`h-3 w-3 rounded-full transition-colors duration-300 ${
+                className={`cursor-pointer h-3 w-3 rounded-full transition-colors duration-300 ${
                   currentSlideGroupIndex === index
                     ? "bg-[#6a5acd]"
                     : "bg-gray-300 hover:bg-gray-400"

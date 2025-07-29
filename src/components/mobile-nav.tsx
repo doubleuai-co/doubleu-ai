@@ -12,7 +12,7 @@ export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-gray-700 bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50">
+    <div className="fixed top-0 z-50 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50">
       {/* Logo */}
       <LogoNav />
 
@@ -54,18 +54,18 @@ export default function MobileNav() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="transition duration-300 ease-in-out text-xl font-light text-[#A2A2A2] hover:text-[#7D73C3]"
+                className="transition duration-300 ease-in-out text-md font-light text-[#A2A2A2] hover:text-[#7D73C3]"
                 onClick={() => setOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <a
+            <Link
               href="/contact"
-              className="cursor-pointer rounded-md border border-[#7D73C3] bg-[#7D73C3] px-8 py-3 text-lg text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
+              className="cursor-pointer text-md rounded-md border border-[#7D73C3] bg-[#7D73C3] px-8 py-2 text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
             >
-              Book a Demo
-            </a>
+              <span className="-mt-4">Contact Us</span>
+            </Link>
           </nav>
         </SheetContent>
       </Sheet>

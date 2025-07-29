@@ -96,7 +96,7 @@ export default function Neo() {
             <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
               Who is Neo?
             </h2>
-            <p className="text-md mb-4 text-justify leading-relaxed text-gray-700">
+            <p className="text-md mb-4 leading-relaxed text-gray-700">
               Neo is your 24/7 brand advocate, built to deliver clear, engaging,
               and accurate information about your services. From answering
               inquiries to guiding potential clients and sparking meaningful
@@ -124,7 +124,7 @@ export default function Neo() {
       </section>
 
       {/* 3. What Neo can do for you Section */}
-      <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-4 lg:px-8">
+      <section className="mx-auto max-w-[85rem] bg-white px-8 py-8 sm:px-6 md:px-4 lg:px-8">
         <div className="container mx-auto mb-12 max-w-md text-center">
           <h2 className="mb-4 px-8 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
             What Neo can do for you
@@ -192,9 +192,9 @@ export default function Neo() {
             revolutionize the way you connect with prospects and grow your
             brand.
           </p>
-          <Link href="/contact-us" passHref className="mt-14">
+          <Link href="/contact-us" passHref className="mt-12">
             <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
-              Get Started Now
+              Explore AI Workers
             </button>
           </Link>
         </div>

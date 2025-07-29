@@ -89,14 +89,14 @@ export default function Ehiz() {
       </section>
 
       {/* 2. Who is Ehiz? Section */}
-      <section className="bg-white px-6 py-8 sm:px-6 md:py-16 lg:px-8">
+      <section className="bg-white px-6 py-8 sm:px-6 md:py-14 lg:px-8">
         <div className="container mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
             <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
               Who is Ehiz?
             </h2>
-            <p className="text-md mb-4 text-justify leading-relaxed text-gray-700">
+            <p className="text-md mb-4  leading-relaxed text-gray-700">
               Ehiz isn’t just a hiring tool, it’s your recruitment partner,
               built to streamline every stage of talent acquisition. From
               screening applicants to scheduling interviews and managing
@@ -199,7 +199,7 @@ export default function Ehiz() {
           </p>
           <Link href="/contact-us" passHref className="mt-14">
             <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
-              Get Started Now
+              Explore AI Workers
             </button>
           </Link>
         </div>

@@ -38,7 +38,7 @@ export default function AnywhereYouworkSection() {
   };
 
   return (
-    <section className="bg-white px-0 py-2 text-[#0B0A0A] lg:px-8">
+    <section className="bg-white px-0 py-18 text-[#0B0A0A] lg:px-8">
       {/* Section Header */}
       <motion.div
         className="container mx-auto mb-12 text-center"
@@ -51,7 +51,7 @@ export default function AnywhereYouworkSection() {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h2 className="mb-4 text-2xl font-bold lg:text-4xl px-12 max-w-lg mx-auto">
+        <h2 className="mb-4 text-xl font-bold lg:text-4xl max-w-lg mx-auto">
           DoubleU AI, anywhere you work
         </h2>
         <p className="text-md mx-auto max-w-xl px-8 text-gray-600 lg:text-lg">
@@ -62,7 +62,7 @@ export default function AnywhereYouworkSection() {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="container mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="container mx-auto px-6 max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-3">
         {platforms.map((platform, index) => (
           <motion.div
             key={index}
@@ -71,7 +71,7 @@ export default function AnywhereYouworkSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeUp} 
-            className="mx-4 flex flex-col rounded-xl border border-gray-100 text-justify shadow-sm md:text-start"
+            className=" flex flex-col rounded-xl border border-gray-100 text-justify shadow-sm md:text-start"
           >
             <Image
               src={platform.image}
@@ -81,10 +81,10 @@ export default function AnywhereYouworkSection() {
               className="rounded-lg object-contain w-full"
             />
 
-            <h3 className="mb-2 px-4 pt-6 text-xl font-medium text-[#0B0A0A] md:px-6">
+            <h3 className="mb-2 px-4 pt-6 text-xl text-[#0B0A0A] md:px-6">
               {platform.title}
             </h3>
-            <p className="px-4 pb-6 text-base text-gray-700 md:px-6">
+            <p className="px-4 pb-6 text-sm md:text-base text-gray-700 md:px-6">
               {platform.description}
             </p>
           </motion.div>

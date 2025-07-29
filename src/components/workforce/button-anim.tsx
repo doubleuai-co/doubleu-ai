@@ -43,7 +43,7 @@ export default function ButtonAnimate({ agent }: { agent: typeof agents[0] }) {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
                 onClick={handleButtonClick}
-                className="absolute inset-0 w-14 h-14 bg-[#1D0B0B] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+                className="absolute inset-0 w-12 h-12 bg-[#1D0B0B] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
               >
                 <ArrowUp color='white' size={30}/>
               </motion.button>

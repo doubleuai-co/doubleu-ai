@@ -5,65 +5,65 @@ export default function ServicesSection() {
     {
       title: "Business Automation",
       description:
-        "Automate repetitive tasks, data entry, and routine processes to free up your team for higher-value activities.",
+        "Eliminate repetitive tasks and streamline operations with AI-driven automation, allowing your team to focus on what truly matters - growth and innovation.",
       image: "/new-img/user-settings.png",
       alt: "Business Automation",
     },
     {
       title: "Workflow Optimization",
       description:
-        "Streamline complex workflows, reduce bottlenecks, and improve operational efficiency across departments.",
+        "Enhance efficiency by integrating AI into your processes, reducing bottlenecks, improving accuracy, and ensuring seamless collaboration across teams.",
       image: "/new-img/community-group.png",
       alt: "Workflow Optimization",
     },
     {
       title: "Customer Engagement",
       description:
-        "Enhance customer interactions with AI-powered chatbots, personalized support, and proactive communication.",
+        "Transform customer interactions with AI agents that provide instant responses, personalized recommendations, and 24/7 support, enhancing customer satisfaction.",
       image: "/new-img/aii.png",
       alt: "Customer Engagement",
     },
     {
       title: "Decision Making",
       description:
-        "Leverage AI-driven insights and analytics to make faster, more informed strategic and operational decisions.",
+        "Leverage AI to analyze vast amounts of data, uncover trends, and provide actionable insights that drive smarter, faster, and more business decisions.",
       image: "/new-img/chess-glass.png",
       alt: "Decision Making",
     },
     {
       title: "Scalable AI Solutions",
       description:
-        "Implement AI solutions that grow with your business, adapting to increasing demands and evolving needs.",
+        "As your business grows, so do our AI solutions. Our intelligent agents adapt to your evolving needs, ensuring long-term efficiency and success.",
       image: "/new-img/books.png",
       alt: "Scalable AI Solutions",
     },
   ];
 
   return (
-    <section className="bg-white px-0 py-16 text-[#0B0A0A] md:py-12">
+    <section className="bg-white px-0 py-10 text-[#0B0A0A] md:py-12">
       <div className="container mx-auto mb-2 px-4 text-center md:mb-8">
-        <h2 className="mb-4 text-2xl font-medium lg:text-4xl">Services</h2>
+        <h2 className="mb-4 text-2xl font-medium lg:text-4xl md:py-8">Our Services</h2>
       </div>
 
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto py-8 max-w-6xl">
         {/* First Row: 3 items */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-3">
           {singleServices.slice(0, 3).map((service, index) => (
             <div
               key={index}
-              className="mx-6 flex flex-col overflow-hidden rounded-xl border border-gray-100 text-left shadow-sm md:text-center"
+              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-xs md:text-center"
             >
               <Image
                 src={service.image}
                 alt={service.alt}
                 width={450}
-                height={200}
-                className="w-full object-fit" // removed padding
+                height={250}
+                className="mx-auto object-contain"
               />
-              <h3 className="mb-2 px-6 pt-6 text-xl font-semibold text-[#222831]">
+              <h3 className="mb-2 px-6 pt-6 font-semibold text-[#000000] md:text-xl">
                 {service.title}
               </h3>
-              <p className="px-6 pb-8 text-justify text-base text-gray-700 md:px-12">
+              <p className="px-6 pb-8 text-sm text-[#404040] md:px-12 md:text-base">
                 {service.description}
               </p>
             </div>
@@ -71,23 +71,23 @@ export default function ServicesSection() {
         </div>
 
         {/* Second Row: 2 items centered on large screens */}
-        <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center gap-8 lg:flex-row lg:justify-center">
+        <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center gap-8 px-6 lg:flex-row lg:justify-center">
           {singleServices.slice(3, 5).map((service, index) => (
             <div
               key={index}
-              className="mx-6 flex flex-col overflow-hidden rounded-xl border border-gray-100 text-left shadow-sm md:text-center"
+              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-xs md:text-center"
             >
               <Image
                 src={service.image}
                 alt={service.alt}
                 width={1000}
                 height={200}
-                className="w-full object-cover" // uniform style
+                className="w-full object-cover"
               />
-              <h3 className="mb-2 px-6 pt-6 text-xl font-semibold text-[#222831]">
+              <h3 className="mb-2 px-6 pt-6 font-semibold text-[#000000] md:text-xl">
                 {service.title}
               </h3>
-              <p className="px-6 pb-8 text-justify text-base text-gray-700 md:px-12">
+              <p className="px-6 pb-8 text-sm text-[#404040] md:px-12 md:text-base">
                 {service.description}
               </p>
             </div>
