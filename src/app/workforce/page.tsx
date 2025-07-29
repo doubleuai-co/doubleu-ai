@@ -57,14 +57,14 @@ export default function Workforce() {
             alt="Pattern background"
             width={400}
             height={300}
-            className="absolute top-[22rem] -left-[0.5rem] w-[150px] object-cover md:top-[12rem] md:-left-[28rem] md:w-[400px]"
+            className="absolute top-[22rem] -left-[0.5rem] w-[150px] object-cover md:top-[12rem] md:-left-[20rem] md:w-[400px]"
           />
           <Image
             src="/new-img/workforce-pattern.svg"
             alt="Pattern background"
             width={400}
             height={300}
-            className="absolute top-[22rem] -right-[0.5rem] w-[150px] scale-x-[-1] object-cover md:top-[12rem] md:-right-[26rem] md:w-[400px] md:scale-x-[-1]"
+            className="absolute top-[22rem] -right-[0.5rem] w-[150px] scale-x-[-1] object-cover md:top-[12rem] md:-right-[20rem] md:w-[400px] md:scale-x-[-1]"
           />
         </div>
       </section>
