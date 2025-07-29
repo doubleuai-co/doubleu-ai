@@ -181,7 +181,7 @@ const AboutPage = () => {
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="mx-auto max-w-xl text-sm md:text-md leading-relaxed text-[#404040] lg:mb-12"
+              className="mx-auto max-w-md text-sm md:text-md leading-relaxed text-[#404040] lg:mb-12"
             >
               To bring personalized AI agents to businesses of all sizes,
               helping teams cut time on tasks, automate the boring stuff, and
@@ -195,7 +195,7 @@ const AboutPage = () => {
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="mx-auto max-w-3xl text-sm leading-relaxed text-[##404040]"
+              className="mx-auto max-w-xl text-sm leading-relaxed text-[##404040]"
             >
               The future of work isn&apos;t on the horizon, it&apos;s already
               here. With the AI Workforce, businesses no longer have to imagine
@@ -306,7 +306,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white px-0 py-4 sm:px-6 md:mx-auto lg:px-8"
+          className="bg-white px-0 py-4 sm:px-6 md:mx-auto grid place-items-center lg:px-8"
         >
           <div className="container mx-auto mb-12 text-center">
             <motion.h2
@@ -334,10 +334,10 @@ const AboutPage = () => {
                 </div>
 
                 <div className="mx-auto text-left md:text-left">
-                  <h3 className="mb-1 text-2xl font-semibold text-[#0B0A0A]">
+                  <h3 className="mb-1 text-[26px] leading-[48px] font-bold text-[#0B0A0A]">
                     {member.name}
                   </h3>
-                  <p className="mb-3 py-2 text-md md:text-lg text-[#404040]">
+                  <p className=" py-2 text-md md:text-xl text-[#404040]">
                     {member.role}
                   </p>
                   <p className="py-2 text-sm md:text-base leading-relaxed text-[#404040]">
@@ -357,7 +357,7 @@ const AboutPage = () => {
           variants={staggerContainer}
           className="bg-white py-10 md:py-20"
         >
-          <div className="container mx-auto mb-8 md:mb-14 max-w-xl px-4 text-center sm:px-6 lg:px-18">
+          <div className="container mx-auto mb-8 md:mb-14 max-w-3xl px-4 text-center sm:px-6 lg:px-18">
             <motion.h2
               variants={fadeInUp}
               className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl"

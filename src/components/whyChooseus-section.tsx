@@ -84,14 +84,14 @@ export default function WhyChooseUsSection() {
         </p>
       </motion.div>
 
-      <div className="container mx-auto max-w-6xl md:px-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto max-w-6xl md:px-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className={`group transform rounded-xl border px-6 py-10 text-center shadow-sm transition-all duration-300 ease-in-out hover:scale-[1.01] ${
+            className={`group transform rounded-xl px-6 py-10 text-center shadow-sm transition-all duration-300 ease-in-out hover:scale-[1.01] ${
               feature.highlight
-                ? "border-[#1a1a2e] bg-[#1a1a2e] text-[#F0F0F0]"
-                : "border-gray-100 bg-gray-50 text-gray-800"
+                ? "bg-[#1a1a2e] text-[#F0F0F0]"
+                : "border border-gray-100 bg-gray-50 text-gray-800"
             }`}
             custom={index}
             initial="hidden"

@@ -40,14 +40,14 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="bg-white px-0 py-10 text-[#0B0A0A] md:py-12">
+    <section className="bg-white py-10 text-[#0B0A0A] md:py-12">
       <div className="container mx-auto mb-2 px-4 text-center md:mb-8">
         <h2 className="mb-4 text-2xl font-medium lg:text-4xl md:py-8">Our Services</h2>
       </div>
 
       <div className="container mx-auto py-8 max-w-6xl">
         {/* First Row: 3 items */}
-        <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 px-6 lg:grid-cols-3">
           {singleServices.slice(0, 3).map((service, index) => (
             <div
               key={index}
@@ -71,7 +71,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Second Row: 2 items centered on large screens */}
-        <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center gap-8 px-6 lg:flex-row lg:justify-center">
+        <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center gap-5 px-6 lg:flex-row lg:justify-center">
           {singleServices.slice(3, 5).map((service, index) => (
             <div
               key={index}

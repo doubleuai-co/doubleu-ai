@@ -89,7 +89,7 @@ export default function MeetWorkersSection() {
       </div>
 
       {/* Desktop Grid Layout (lg and up) */}
-      <div className="container mx-auto hidden grid-cols-1 gap-8 sm:grid-cols-2 lg:grid lg:grid-cols-4 max-w-6xl">
+      <div className="container mx-auto hidden grid-cols-1 gap-5 sm:grid-cols-2 lg:grid lg:grid-cols-4 max-w-6xl">
         {agents.map((agent, index) => (
           <Link key="" href={agent.access} passHref className="mt-12">
             <div
