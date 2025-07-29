@@ -71,19 +71,20 @@ export default function Mylo() {
             </Link>
           </div>
 
-          {/* Right Column: Mylo Image with Overlays */}
-          <div className="relative m-0 flex w-full items-end justify-end p-0 md:w-1/2">
-            <Image
-              src="/new-img/mylo-m.svg" // Placeholder for Mylo's image
-              alt="Mylo AI Worker"
-              width={400} // Adjust based on actual image dimensions
-              height={500} // Adjust based on actual image dimensions
-              className="h-full w-full object-contain"
-            />
-            {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
-      <div className="absolute top-1/3 right-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">Sales Agent</div>
-   */}{" "}
-          </div>
+           {/* Right Column: Ehiz Image with Overlays */}
+                <div className="relative m-0 flex w-full items-end justify-end p-0 md:w-1/2">
+                  <Image
+                    src="/new-img/mylo-m.svg" // Placeholder for Ehiz's image
+                    alt="Ehiz AI Worker"
+                    width={400} // Adjust based on actual image dimensions
+                    height={500} // Adjust based on actual image dimensions
+                    className="object-contain h-full w-full"
+                  />
+                  {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
+                  {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
+            <div className="absolute top-1/3 right-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">Sales Agent</div>
+         */}{" "}
+                </div>
         </div>
       </section>
 
