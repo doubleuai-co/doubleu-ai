@@ -321,15 +321,15 @@ const AboutPage = () => {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className={`md:items mx-auto flex max-w-4xl flex-col justify-items-end gap-x-12 px-6 md:flex-row ${index % 2 === 1 ? "items-end justify-items-end md:flex-row-reverse" : ""}`}
+                className={`md:items mx-auto flex max-w-4xl flex-col justify-items-end gap-x-12 px-6 md:flex-row ${index % 2 === 1 ? "items-end justify-items-end md:flex-row-reverse" : "items-end justify-items-end"}`}
               >
-                <div className="min-w-xs">
+                <div className="min-w-sm">
                   <Image
                     src={member.imageSrc}
                     alt={member.imageAlt}
                     width={350}
                     height={150}
-                    className="object-fit mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0"
+                    className="object-fit w-full mb-6 flex-shrink-0 object-cover md:mr-6 md:mb-0"
                   />
                 </div>
 
@@ -340,7 +340,7 @@ const AboutPage = () => {
                   <p className=" py-2 text-md md:text-xl text-[#404040]">
                     {member.role}
                   </p>
-                  <p className="py-2 text-sm md:text-base leading-relaxed text-[#404040]">
+                  <p className="py-2 text-sm md:text-[15px] leading-relaxed text-[#404040]">
                     {member.bio}
                   </p>
                 </div>

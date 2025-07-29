@@ -90,9 +90,57 @@ const Contact = () => {
           >
             {({ isSubmitting }) => (
               <Form className="space-y-6">
+                {/* Name Fields Row */}
+                <motion.div
+                  custom={0}
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="grid grid-cols-2 gap-4 md:grid-cols-2"
+                >
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
+                      First Name
+                    </label>
+                    <Field
+                      type="text"
+                      name="firstName"
+                      placeholder="Enter first name"
+                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
+                    />
+                    <ErrorMessage
+                      name="firstName"
+                      component="div"
+                      className="mt-1 text-sm text-red-600"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
+                      Last Name
+                    </label>
+                    <Field
+                      type="text"
+                      name="lastName"
+                      placeholder="Enter last name"
+                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
+                    />
+                    <ErrorMessage
+                      name="lastName"
+                      component="div"
+                      className="mt-1 text-sm text-red-600"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Other Fields */}
                 {[
-                  { name: 'firstName', label: 'First Name', type: 'text' },
-                  { name: 'lastName', label: 'Last Name', type: 'text' },
                   { name: 'company', label: 'Company', type: 'text' },
                   { name: 'role', label: 'Role', type: 'text' },
                   { name: 'email', label: 'Email', type: 'email' },
@@ -100,7 +148,7 @@ const Contact = () => {
                 ].map((field, index) => (
                   <motion.div
                     key={field.name}
-                    custom={index}
+                    custom={index + 1}
                     variants={fadeUp}
                     initial="hidden"
                     animate="visible"

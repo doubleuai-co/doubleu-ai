@@ -51,19 +51,19 @@ export default function ServicesSection() {
           {singleServices.slice(0, 3).map((service, index) => (
             <div
               key={index}
-              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-xs md:text-center"
+              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-md md:text-left"
             >
               <Image
                 src={service.image}
                 alt={service.alt}
                 width={450}
                 height={250}
-                className="mx-auto object-contain"
+                className="mx-auto object-cover object-center w-full h-64"
               />
               <h3 className="mb-2 px-6 pt-6 font-semibold text-[#000000] md:text-xl">
                 {service.title}
               </h3>
-              <p className="px-6 pb-8 text-sm text-[#404040] md:px-12 md:text-base">
+              <p className="px-6 pb-8 text-sm text-[#404040] md:px-6 md:text-base">
                 {service.description}
               </p>
             </div>
@@ -75,19 +75,19 @@ export default function ServicesSection() {
           {singleServices.slice(3, 5).map((service, index) => (
             <div
               key={index}
-              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-xs md:text-center"
+              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-md md:text-left"
             >
-              <Image
+               <Image
                 src={service.image}
                 alt={service.alt}
-                width={1000}
-                height={200}
-                className="w-full object-cover"
+                width={450}
+                height={250}
+                className="mx-auto object-cover object-center w-full h-64"
               />
-              <h3 className="mb-2 px-6 pt-6 font-semibold text-[#000000] md:text-xl">
+              <h3 className="mb-2 px-6 pt-6 text-lg text-[#000000] md:text-xl">
                 {service.title}
               </h3>
-              <p className="px-6 pb-8 text-sm text-[#404040] md:px-12 md:text-base">
+              <p className="px-6 pb-8 text-sm text-[#404040] md:px-6 md:text-base">
                 {service.description}
               </p>
             </div>
