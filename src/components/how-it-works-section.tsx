@@ -37,9 +37,9 @@ export default function HowSection() {
         <div className="relative mx-auto max-w-6xl px-4 md:px-0">
            {/* Vertical & Horizontal Lines */}
             <div className="absolute top-0 left-4 h-full w-0.5 transform bg-[#C7C7C7] md:left-1/2 md:-translate-x-1/2"></div>
-          <div className="absolute top-6.5 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-4"></div>
-          <div className="absolute top-52.5 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-12.5"></div>
-          <div className="absolute top-99 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-16"></div>
+          <div className="absolute md:top-6.5 top-6.5 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-4"></div>
+          <div className="absolute md:top-53 top-67 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-12.5"></div>
+          <div className="absolute md:top-99 top-127 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-16"></div>
 
 
           <div className="space-y-8 md:space-y-8">
@@ -79,7 +79,7 @@ export default function HowSection() {
                       <h3 className="mb-2 md:mb-0 mb:pb-4 text-base font-semibold text-[#0B0A0A]">
                         {step.title}
                       </h3>
-                      <p className="text-justify text-sm text-[#404040]">
+                      <p className="text-xs md:text-sm text-[#404040]">
                         {step.description}
                       </p>
                     </div>
