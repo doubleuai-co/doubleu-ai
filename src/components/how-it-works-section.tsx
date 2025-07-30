@@ -37,9 +37,9 @@ export default function HowSection() {
         <div className="relative mx-auto max-w-6xl px-4 md:px-0">
            {/* Vertical & Horizontal Lines */}
             <div className="absolute top-0 left-4 h-full w-0.5 transform bg-[#C7C7C7] md:left-1/2 md:-translate-x-1/2"></div>
-          <div className="absolute md:top-6.5 top-6.5 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-4"></div>
-          <div className="absolute md:top-53 top-67 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-12.5"></div>
-          <div className="absolute md:top-99 top-127 left-12 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-16"></div>
+          <div className="absolute translate-x-8 translate-y-7 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-10.5"></div>
+          <div className="absolute translate-x-8 translate-y-59 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-65"></div>
+          <div className="absolute translate-x-8 translate-y-105 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-115"></div>
 
 
           <div className="space-y-8 md:space-y-8">

@@ -21,15 +21,15 @@ export default function Navbar() {
   return (
     <>
       {isDesktop ? (
-        <nav className="h-[99px] border-b-[1px] border-gray-700 bg-[#0B0A0A] px-[120px] pt-6 text-white shadow-md">
+        <nav className="h-[99px] w-full flex items-center justify-between border-b-[2px] border-[#FFFFFF12] bg-[#0B0A0A] px-[120px] py-2 text-white shadow-md">
           <div className="container mx-auto flex items-center justify-between">
             {/* Logo Section */}
             <div className="mx-12 flex items-center justify-center">
-              <Logo width={180} height={80} />
+              <Logo width={160} height={40} />
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden items-center space-x-10 md:flex md:text-lg">
+            <div className="hidden items-center space-x-8 md:flex text-[#E3E3E3] md:text-md">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -41,7 +41,7 @@ export default function Navbar() {
               ))}
               <a 
               href="/contact"
-              className="rounded-lg bg-[#7D73C3] px-6 py-3 text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
+              className="rounded-lg bg-[#7D73C3] px-6 py-3 text-md text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
                 Contact Us
               </a>
             </div>
