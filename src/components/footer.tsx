@@ -28,7 +28,7 @@ export default function Footer() {
           className="absolute top-1/2 md:top-1/4 opacity-50 right-48 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[200px]"
           aria-hidden="true"
         ></div>
-      <div className="container max-w-7xl text-justify items-start mx-auto mb-8 grid place-items-center grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">
+      <div className="container max-w-7xl items-center pr-8 justify-between mx-auto mb-8 grid md:place-items-start grid-cols-1 gap-8 border-b border-spacing-2 border-gray-700 pb-8 md:grid-cols-3 gap-x-8">
         {/* Column 1: Logo, Description, and Contact Info */}
         <div className="flex flex-col space-y-6">
           {/* Logo */}

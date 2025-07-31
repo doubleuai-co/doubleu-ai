@@ -142,21 +142,21 @@ const AboutPage = () => {
           >
             <motion.h1
               variants={fadeInUp}
-              className="mb-6 text-center text-3xl leading-[44px] font-medium -tracking-wide text-white md:text-[3.9rem] md:leading-[72px]"
+              className="mb-6 text-center text-3xl leading-[36px] font-medium -tracking-wide text-white md:text-[3.9rem] md:leading-[72px]"
             >
               AI workers that handles the work, So you can handle what&apos;s
               next <br className="hidden md:block" />
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="px-4 py-2 font-normal text-[#D9D9D9] lg:px-40 lg:text-lg"
+              className="px-4 md:px-2 py-2 font-normal text-[#D9D9D9] lg:px-40 md:text-lg text-sm"
             >
               Build, grow, and scale your business with our AI workforce,
               custom-built for your business needs
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <Link href="/contact-us" passHref className="cursor-pointer">
-                <button className="text-md mt-8 cursor-pointer rounded-md bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-md">
+              <Link href="/contact" passHref className="cursor-pointer">
+                <button className="text-sm mt-8 cursor-pointer rounded-md bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-md">
                   Try DoubleU AI
                 </button>
               </Link>
@@ -323,7 +323,7 @@ const AboutPage = () => {
                 variants={fadeInUp}
                 className={`md:items mx-auto flex max-w-4xl flex-col justify-items-end gap-x-12 px-6 md:flex-row ${index % 2 === 1 ? "items-end justify-items-end md:flex-row-reverse" : "items-end justify-items-end"}`}
               >
-                <div className="min-w-sm">
+                <div className="w-full md:min-w-xs">
                   <Image
                     src={member.imageSrc}
                     alt={member.imageAlt}
