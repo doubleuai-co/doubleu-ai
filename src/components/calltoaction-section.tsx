@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function CallToActionSection() {
   return (
-    <section className="relative mx-6 my-10 max-w-6xl overflow-hidden rounded-3xl bg-[#7D73C3] px-4 py-12 md:py-6 text-white shadow-sm sm:px-6 md:my-20 lg:mx-auto lg:px-8">
+    <section className="relative mx- my-10 max-w-6xl overflow-hidden rounded-3xl bg-[#7D73C3] px-4 py-12 md:py-6 text-white shadow-sm sm:px-6 md:my-20 md:mx-[120px]">
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         {/* Text Content */}
         <motion.div

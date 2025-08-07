@@ -23,13 +23,13 @@ export default function HowSection() {
   ];
 
   return (
-    <div className="w-full bg-white px-4 -my-18 md:-my-0">
+    <div className="w-full bg-white px-4 py-12">
       <section className="bg-white">
         <div className="mb-16 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">
             How DoubleU AI works
           </h2>
-          <p className="mt-2 px-8 text-[#404040]">
+          <p className="mt-6 px-8 text-[#404040]">
             Plug in your business needs, and watch our AI agents do the work.
           </p>
         </div>
@@ -38,8 +38,8 @@ export default function HowSection() {
            {/* Vertical & Horizontal Lines */}
             <div className="absolute top-0 left-4 h-full w-0.5 transform bg-[#C7C7C7] md:left-1/2 md:-translate-x-1/2"></div>
           <div className="absolute xs:translate-x-8 xs:translate-y-6.5 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-10.5"></div>
-          <div className="absolute xs:translate-x-8 xs:translate-y-67 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-65"></div>
-          <div className="absolute xs:translate-x-8 xs:translate-y-127 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-115"></div>
+          <div className="absolute xs:translate-x-8 xs:translate-y-67 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-67"></div>
+          <div className="absolute xs:translate-x-8 xs:translate-y-127 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-119"></div>
 
 
           <div className="space-y-8 md:space-y-8">
@@ -64,7 +64,7 @@ export default function HowSection() {
                 <div
                   className={`mt-2 pl-6 md:mt-0 md:w-1/2 md:px-20 ${index % 2 === 1 ? "md:ml-auto md:text-start" : "md:mr-auto md:text-start"}`}
                 >
-                  <div className="flex items-start justify-between gap-x-2 rounded-xl bg-gray-50 p-4 md:py-8 md:md:px-3 shadow-sm">
+                  <div className="flex items-start justify-between gap-x-2 rounded-xl bg-[#F9FAFC] p-4 md:py-8 md:md:px-3 shadow-sm">
                     <div className="mb-3 flex items-center justify-center">
                       <Image
                         src= {step.icon}
@@ -77,7 +77,7 @@ export default function HowSection() {
                      
                     </div>
                     <div className="px-2">
-                      <h3 className="mb-2 md:mb-0 mb:pb-4 text-base font-semibold text-[#0B0A0A]">
+                      <h3 className="mb-2 md:mb-0 md:pb-2 text-base font-semibold text-[#0B0A0A]">
                         {step.title}
                       </h3>
                       <p className="text-xs md:text-sm text-[#404040]">

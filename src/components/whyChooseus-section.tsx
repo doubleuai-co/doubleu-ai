@@ -67,7 +67,7 @@ export default function WhyChooseUsSection() {
   };
 
   return (
-    <section className="bg-white px-6 py-12 text-[#0B0A0A] sm:px-6 lg:px-8">
+    <section className="bg-white px-6 py-12 text-[#0B0A0A] sm:px-6 md:px-[120px]">
       <motion.div
         className="container mx-auto mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -84,11 +84,11 @@ export default function WhyChooseUsSection() {
         </p>
       </motion.div>
 
-      <div className="container mx-auto max-w-6xl md:px-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto max-w-6xl grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className={`group transform rounded-xl px-6 py-10 text-center shadow-sm transition-all duration-300 ease-in-out hover:scale-[1.01] ${
+            className={`group transform rounded-xl px-6 py-10 text-center shadow-xs transition-all duration-300 ease-in-out hover:scale-[1.01] ${
               feature.highlight
                 ? "bg-[#1a1a2e] text-[#F0F0F0]"
                 : "border border-gray-100 bg-gray-50 text-gray-800"
@@ -103,7 +103,7 @@ export default function WhyChooseUsSection() {
               className={`mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-md transition-colors duration-300 ease-in-out ${
                 feature.highlight
                   ? "bg-gray-50"
-                  : "bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] group-hover:bg-[#6a5acd]"
+                  : "bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)]"
               }`}
             >
               <Image
@@ -143,14 +143,14 @@ export default function WhyChooseUsSection() {
       </div>
 
       <motion.div
-        className="mt-16 text-center"
+        className="mt-16 mb-18 text-center"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
         <Link href="/workforce" passHref>
-          <button className="cursor-pointer text-sm rounded-md bg-[#6a5acd] px-8 py-4 text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+          <button className="cursor-pointer text-sm rounded-md bg-[#6a5acd] px-8 py-4 text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#7b68ee]">
             Explore AI Workers
           </button>
         </Link>

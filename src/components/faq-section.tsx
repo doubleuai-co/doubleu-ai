@@ -13,7 +13,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-700 py-2 md:py-4">
+    <div className="border-b border-[#F3F3F333] py-2 md:py-4">
       <button
         className="cursor-pointer flex w-full items-center justify-between text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
@@ -31,7 +31,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            className="overflow-hidden pr-8  text-gray-400"
+            className="overflow-hidden pr-8  text-[#F0F0F0]"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -81,13 +81,13 @@ export default function FAQSection() {
 
   return (
     <motion.section
-      className="bg-[#0B0A0A] px-4 py-20 text-white sm:px-6 lg:px-8"
+      className="bg-[#0B0A0A] px-4 py-20 text-white sm:px-6 md:px-[120px]"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto max-w-sm lg:max-w-3xl">
+      <div className="container mx-auto max-w-sm lg:max-w-7xl">
         <h2 className="mb-22 lg:mb-12 text-center text-2xl lg:text-4xl font-bold text-white">
           FREQUENTLY ASKED <br /> QUESTIONS
         </h2>

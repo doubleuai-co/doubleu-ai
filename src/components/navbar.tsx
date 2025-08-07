@@ -21,11 +21,11 @@ export default function Navbar() {
   return (
     <>
       {isDesktop ? (
-        <nav className="h-[99px] w-full flex items-center justify-between border-b-[2px] border-[#FFFFFF12] bg-[#0B0A0A] px-[120px] py-2 text-white shadow-md">
-          <div className="container mx-auto flex items-center justify-between">
+        <nav className="h-[99px] w-full border-b-[2px] border-[#FFFFFF12] bg-[#0B0A0A] px-[120px] pb-[22px] pt-[30px] text-white shadow-md">
+          <div className="mx-auto flex items-center justify-between">
             {/* Logo Section */}
-            <div className="mx-12 flex items-center justify-center">
-              <Logo width={160} height={40} />
+            <div className="block">
+              <Logo width={120} height={40} />
             </div>
 
             {/* Navigation Links */}

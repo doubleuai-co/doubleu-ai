@@ -38,7 +38,7 @@ export default function AnywhereYouworkSection() {
   };
 
   return (
-    <section className="bg-white px-0 py-18 text-[#0B0A0A] lg:px-8">
+    <section className="bg-white px-0 text-[#0B0A0A] md:px-[120px] py-12">
       {/* Section Header */}
       <motion.div
         className="container mx-auto mb-12 text-center"
@@ -62,7 +62,7 @@ export default function AnywhereYouworkSection() {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="container mx-auto px-6 max-w-6xl grid grid-cols-1 gap-5 md:grid-cols-3">
+      <div className="container mx-auto max-w-6xl grid grid-cols-1 gap-5 md:grid-cols-3">
         {platforms.map((platform, index) => (
           <motion.div
             key={index}

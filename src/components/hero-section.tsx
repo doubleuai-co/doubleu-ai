@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -13,34 +13,34 @@ const containerVariants = {
   visible: {
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 };
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { 
+    transition: {
       duration: 0.8,
       ease: easeOut,
-    }
-  }
+    },
+  },
 };
 
 const slideInFromBottom = {
   hidden: { opacity: 0, y: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { 
+    transition: {
       duration: 1,
       ease: easeOut,
-      delay: 0.6
-    }
-  }
+      delay: 0.6,
+    },
+  },
 };
 
 const starAnimation = {
@@ -52,54 +52,52 @@ const starAnimation = {
       delay: i * 0.1,
       duration: 0.5,
       ease: backOut,
-    }
-  })
+    },
+  }),
 };
 
 const buttonHover = {
-  hover: { 
+  hover: {
     scale: 1.05,
-    transition: { duration: 0.2 }
+    transition: { duration: 0.2 },
   },
-  tap: { scale: 0.98 }
+  tap: { scale: 0.98 },
 };
 
 const featureItemVariants = {
   hidden: { opacity: 0, x: -20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
-    transition: { 
+    transition: {
       duration: 0.6,
       ease: easeOut,
-    }
-  }
+    },
+  },
 };
 
 export default function HeroSection() {
   return (
-    <section className="relative w-screen overflow-hidden pt-36 text-white bg-[#0B0A0A] px-4 md:px-8 lg:pt-22">
+    <section className="relative w-screen overflow-hidden bg-[#0B0A0A] px-4 pt-36 text-white md:px-8 lg:pt-22">
       {/* Background elements */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.3, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        className="animate-blob animation-delay-2000 absolute -bottom-30 right-[2%] h-100 w-full rounded-full bg-[#00bcd4] opacity-50 mix-blend-screen blur-3xl filter"
+        className="animate-blob animation-delay-2000 absolute right-[2%] -bottom-30 h-100 w-full rounded-full bg-[#00B4D8] opacity-50 mix-blend-screen blur-3xl filter"
       />
-      <motion.div 
-        className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#0B0A0A] opacity-10 mix-blend-screen blur-3xl filter"
-      />
+      <motion.div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#0B0A0A] opacity-0 mix-blend-screen blur-3xl filter" />
 
-      <motion.div 
+      <motion.div
         className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Star Rating */}
-        <motion.div 
+        <motion.div
           variants={fadeInUp}
-          className="md:mb-8 mb-4 flex items-center justify-center text-orange-400"
+          className="mb-4 flex items-center justify-center text-orange-400 md:mb-8"
         >
           {[...Array(4)].map((_, i) => (
             <motion.div
@@ -125,7 +123,7 @@ export default function HeroSection() {
               strokeWidth={0}
             />
           </motion.div>
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
@@ -136,16 +134,16 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Main Heading */}
-        <motion.h1 
+        <motion.h1
           variants={fadeInUp}
-          className="font-satoshi pb-8 px-2 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[4.5rem] md:leading-[72px]"
+          className="font-satoshi px-2 pb-8 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[64px] md:leading-[72px]"
         >
           Your business, boosted by <br className="hidden md:block" /> AI that
           actually gets it
         </motion.h1>
 
         {/* Sub-paragraph */}
-        <motion.p 
+        <motion.p
           variants={fadeInUp}
           className="text-md mb-8 max-w-2xl px-8 text-center leading-[28px] -tracking-wide text-gray-300 md:text-2xl md:leading-[34px] lg:text-xl"
         >
@@ -162,8 +160,7 @@ export default function HeroSection() {
               whileHover="hover"
               whileTap="tap"
             >
-              <Button className="rounded-2 mb-12 cursor-pointer bg-[#7D73C3] px-8 py-6 text-sm font-normal
-               text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#9747FF] md:py-8 md:text-xl lg:text-lg">
+              <Button className="rounded-2 mb-12 mt-8 cursor-pointer bg-[#7D73C3] px-8 py-6 text-sm font-normal text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#9747FF] md:py-8 md:text-xl lg:text-lg">
                 Try DoubleU AI
               </Button>
             </motion.div>
@@ -171,16 +168,16 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Feature Highlights - Desktop */}
-        <motion.div 
+        <motion.div
           variants={fadeInUp}
-          className="hidden items-center justify-center gap-6 text-gray-300 md:flex md:flex-row md:gap-12"
+          className="hidden items-center justify-center text-gray-300 md:flex md:flex-row md:gap-12"
         >
           {[
             { text: "Always Available Workforce" },
             { text: "Cloud-Based & Secure" },
-            { text: "AI Solution" }
+            { text: "AI Solution" },
           ].map((feature, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial="hidden"
               animate="visible"
@@ -197,29 +194,27 @@ export default function HeroSection() {
                 <Image
                   src="/new-img/icon-check.svg"
                   alt="Check icon"
-                  width={30}
-                  height={30}
+                  width={24}
+                  height={24}
                   className="object-cover"
                 />
               </motion.div>
-              <span className="text-sm lg:text-base">
-                {feature.text}
-              </span>
+              <span className="text-sm md:text-base">{feature.text}</span>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Feature Highlights - Mobile */}
-        <motion.div 
+        <motion.div
           variants={fadeInUp}
-          className="flex md:hidden flex-row flex-wrap items-center justify-center gap-3 text-center text-gray-300 md:flex-col md:gap-6"
+          className="flex flex-row flex-wrap items-center justify-center gap-3 text-center text-gray-300 md:hidden md:flex-col md:gap-6"
         >
           {[
             { text: "Always Available" },
             { text: "Cloud & Secure" },
-            { text: "AI Solution" }
+            { text: "AI Solution" },
           ].map((feature, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial="hidden"
               animate="visible"
@@ -241,26 +236,24 @@ export default function HeroSection() {
                   className="object-cover"
                 />
               </motion.div>
-              <span className="text-xs sm:text-sm">
-                {feature.text}
-              </span>
+              <span className="text-xs sm:text-sm">{feature.text}</span>
             </motion.div>
           ))}
         </motion.div>
       </motion.div>
 
       {/* Hero Image */}
-      <motion.div 
+      <motion.div
         variants={slideInFromBottom}
         initial="hidden"
         animate="visible"
-        className="relative z-0 pt-6 md:pt-12 flex justify-center md:mt-8"
+        className="relative z-0 flex justify-center pt-6 md:mt-8 md:pt-3"
       >
-        <motion.div 
+        <motion.div
           className="flex w-full max-w-5xl items-center justify-center shadow-2xl"
-          whileHover={{ 
+          whileHover={{
             scale: 1.02,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <Image
@@ -268,7 +261,7 @@ export default function HeroSection() {
             alt="DoubleU AI Chat Interface"
             width={1271}
             height={554}
-            className="object-cover w-full"
+            className="w-full object-cover"
           />
         </motion.div>
       </motion.div>
