@@ -114,7 +114,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
           >
-            <FontAwesomeIcon icon={faXTwitter} size="xl" />{" "}
+            <FontAwesomeIcon icon={faXTwitter} size="lg" />{" "}
           </a>
           <a
             href="https://linkedin.com/"
@@ -125,7 +125,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faLinkedin}
               className="text-[#fff]"
-              size="xl"
+              size="lg"
             />{" "}
             {/* LinkedIn icon */}
           </a>
@@ -138,7 +138,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faFacebook}
               className="text-[#fff]"
-              size="xl"
+              size="lg"
             />{" "}
             {/* LinkedIn icon */}
           </a>
@@ -152,7 +152,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faInstagram}
               className="text-[#fff]"
-              size="xl"
+              size="lg"
             />
             {/* Instagram icon */}
           </a>

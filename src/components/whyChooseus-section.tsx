@@ -67,7 +67,7 @@ export default function WhyChooseUsSection() {
   };
 
   return (
-    <section className="bg-white px-6 py-12 text-[#0B0A0A] sm:px-6 md:px-[120px]">
+    <section className="bg-white px-6 py-8 text-[#0B0A0A] sm:px-6 md:px-[120px]">
       <motion.div
         className="container mx-auto mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ export default function WhyChooseUsSection() {
         <h2 className="mb-4 max-w-xl mx-auto text-2xl px-6 font-bold text-[#0B0A0A] lg:text-4xl">
           Why top brands choose DoubleU AI
         </h2>
-        <p className="text-md mx-auto max-w-sm text-gray-600 lg:text-lg">
+        <p className="text-sm mx-auto max-w-sm text-gray-600 md:text-lg">
           It&apos;s more than automation, it&apos;s smarter work, seamless
           integration, and real results.
         </p>
@@ -143,14 +143,14 @@ export default function WhyChooseUsSection() {
       </div>
 
       <motion.div
-        className="mt-16 mb-18 text-center"
+        className="mt-8 md:mt-16 mb-18 text-center"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
         <Link href="/workforce" passHref>
-          <button className="cursor-pointer text-sm rounded-md bg-[#6a5acd] px-8 py-4 text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+          <button className="cursor-pointer text-sm rounded-md bg-[#6a5acd] px-8 py-3 text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#7b68ee]">
             Explore AI Workers
           </button>
         </Link>
