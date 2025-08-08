@@ -45,6 +45,7 @@ export default function Workforce() {
 
         {/* Main Content */}
         <div className="relative mx-auto max-w-[52rem] px-4 py-20 text-center">
+          
           <h1 className="text-3xl leading-tight font-bold sm:text-5xl md:text-6xl">
             Workforce built specifically for business needs
           </h1>

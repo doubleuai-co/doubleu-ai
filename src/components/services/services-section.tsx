@@ -51,7 +51,7 @@ export default function ServicesSection() {
           {singleServices.slice(0, 3).map((service, index) => (
             <div
               key={index}
-              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-md md:text-left"
+              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-xs md:text-left"
             >
               <Image
                 src={service.image}
@@ -75,7 +75,7 @@ export default function ServicesSection() {
           {singleServices.slice(3, 5).map((service, index) => (
             <div
               key={index}
-              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-md md:text-left"
+              className="mx-auto flex flex-col overflow-hidden rounded-xl text-left shadow-xs md:text-left"
             >
                <Image
                 src={service.image}
