@@ -62,7 +62,7 @@ const brandVariants = {
 // Main Component
 export default function CounterRowSection() {
   return (
-    <section className="bg-white md:text-center text-left px-2 py-10 text-gray-800 sm:px-6 md:px-[120px] md:py-12">
+    <section className="bg-white md:text-center text-left px-2 md:py-10 text-gray-800 sm:px-6 md:px-[120px]">
       {/* Statistics Section */}
       <motion.div
         className="container mx-auto justify-between mb-20 grid grid-cols-1 gap-4 md:gap-8 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-4"

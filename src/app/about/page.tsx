@@ -109,12 +109,12 @@ const AboutPage = () => {
         >
           {/* Blurred Shape 1 */}
           <div
-            className="absolute opacity-20"
+            className="absolute opacity-50"
             style={{
-              top: "18%",
-              left: "4%",
-              width: "500px",
-              height: "500px",
+              top: "50%",
+              left: "6%",
+              width: "350px",
+              height: "350px",
               borderRadius: "50%",
               background: "#7D73C39E",
               filter: "blur(100px)",
@@ -124,15 +124,15 @@ const AboutPage = () => {
 
           {/* Blurred Shape 2 */}
           <div
-            className="absolute opacity-20"
+            className="absolute opacity-30"
             style={{
-              bottom: "18%",
-              right: "5%",
+              bottom: "30%",
+              right: "8%",
               width: "400px",
               height: "400px",
               borderRadius: "50%",
               background: "#7D73C39E",
-              filter: "blur(1000px)",
+              filter: "blur(100px)",
               transform: "translateZ(0)",
             }}
           ></div>
@@ -144,7 +144,7 @@ const AboutPage = () => {
               variants={fadeInUp}
               className="mb-6 text-center text-3xl leading-[36px] font-medium -tracking-wide text-white md:text-[3.9rem] md:leading-[72px]"
             >
-              AI workers that handles the work, So you can handle what&apos;s
+              AI workers that handles the work, So you can handle whats
               next <br className="hidden md:block" />
             </motion.h1>
             <motion.p
@@ -156,7 +156,7 @@ const AboutPage = () => {
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Link href="/contact" passHref className="cursor-pointer">
-                <button className="text-sm mt-8 cursor-pointer rounded-md bg-[#7D73C3] px-8 py-4 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-md">
+                <button className="text-sm mt-8 cursor-pointer rounded-md bg-[#7D73C3] px-8 py-3 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:text-md">
                   Try DoubleU AI
                 </button>
               </Link>
@@ -195,7 +195,7 @@ const AboutPage = () => {
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="mx-auto max-w-xl text-sm leading-relaxed text-[##404040]"
+              className="mx-auto max-w-xl text-sm leading-relaxed text-[#404040]"
             >
               The future of work isn&apos;t on the horizon, it&apos;s already
               here. With the AI Workforce, businesses no longer have to imagine
@@ -215,11 +215,11 @@ const AboutPage = () => {
           className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 text-white"
         >
           <div
-            className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] blur-[150px]"
+            className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] blur-[400px] opacity-60"
             aria-hidden="true"
           ></div>
           <div
-            className="absolute top-1/4 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[150px]"
+            className="absolute top-1/4 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] blur-[400px] opacity-60"
             aria-hidden="true"
           ></div>
           <div className="container mx-auto mb-18 text-center z-20">
@@ -243,7 +243,7 @@ const AboutPage = () => {
                 <h4 className="mb-2 text-3xl font-bold text-white lg:text-5xl">
                   {stat.number}
                 </h4>
-                <p className="mx-auto max-w-xl text-sm text-white lg:text-base">
+                <p className="mx-auto max-w-xl text-sm text-[#D9D9D9] lg:text-base">
                   {stat.description}
                 </p>
               </motion.div>
@@ -257,7 +257,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white px-4 py-24 sm:px-6 lg:px-20"
+          className="bg-white py-24 md:px-[120px]"
         >
           <div className="container mx-auto mb-12 text-center">
             <motion.h2
@@ -306,7 +306,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white px-0 py-4 sm:px-6 md:mx-auto grid place-items-center lg:px-8"
+          className="bg-white px-0 py-0 sm:px-6 md:mx-auto grid place-items-center lg:px-8"
         >
           <div className="container mx-auto mb-12 text-center">
             <motion.h2
@@ -321,9 +321,9 @@ const AboutPage = () => {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className={`md:items mx-auto flex max-w-4xl flex-col justify-items-end gap-x-12 px-6 md:flex-row ${index % 2 === 1 ? "items-end justify-items-end md:flex-row-reverse" : "items-end justify-items-end"}`}
+                className={`md:items-end mx-auto flex-col md:flex max-w-4xl justify-items-end gap-x-16 px-6 md:flex-row ${index % 2 === 1 ? "items-end justify-items-end md:flex-row-reverse" : "items-end justify-items-end"}`}
               >
-                <div className="w-full md:min-w-xs">
+                <div className="w-full md:min-w-sm">
                   <Image
                     src={member.imageSrc}
                     alt={member.imageAlt}
@@ -355,9 +355,9 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white py-10 md:py-20"
+          className="bg-white md:pt-24 pt-14"
         >
-          <div className="container mx-auto mb-8 md:mb-14 max-w-3xl px-4 text-center sm:px-6 lg:px-18">
+          <div className="container mx-auto mb-8 md:mb-14 max-w-3xl px-4 text-center sm:px-6 md:px-18">
             <motion.h2
               variants={fadeInUp}
               className="mb-4 text-2xl font-bold text-[#0B0A0A] lg:text-4xl"
@@ -413,7 +413,7 @@ const AboutPage = () => {
               </motion.div>
             ))}
           </motion.div> */}
-          <div className="w-full bg-[#F9F9F9] sm:px-6 lg:px-18">
+          <div className="w-full bg-[#F9F9F9] sm:px-6 lg:px-36">
            <TestimonialsGrid/>
            </div>
         </motion.section>
@@ -424,14 +424,13 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={fadeIn}
-          className="relative mx-4 mb-6 md:my-10 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white sm:px-6 lg:mx-auto lg:px-2"
+          className="relative flex justify-center items-center mx-4 md:mx-[120px] mb-6 md:my-16 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 md:px-[120px] py-18 text-white"
         >
-          <div className="container mx-auto flex max-w-3xl flex-col items-center  text-center">
-            <h2 className="mb-4 text-2xl leading-tight px-4 font-medium sm:text-4xl lg:text-5xl">
+          <div className="md:container mx-auto flex md:max-w-3xl flex-col items-center  text-center">
+            <h2 className="mb-4 text-2xl leading-tight md:px-4 font-medium sm:text-4xl md:text-4xl md:max-w-lg">
               Take a smarter approach to AI in your business today.
-              <br className="hidden sm:block" />{" "}
             </h2>
-            <p className="px-3 md:px-0">
+            <p className="px-3 md:px-0 max-w-lg">
               Seamlessly connect ai to your everyday tools and start working
               faster, better, and easier
             </p>
@@ -439,7 +438,7 @@ const AboutPage = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="cursor-pointer mt-6 md:mt-12 rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100"
+                className="cursor-pointer mt-6 md:mt-12 rounded-md bg-white px-8 py-3 text-sm md:text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] hover:text-black"
               >
                 Get Started Now
               </motion.button>

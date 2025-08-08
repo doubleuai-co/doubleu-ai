@@ -62,7 +62,7 @@ export default function AnywhereYouworkSection() {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="container mx-auto max-w-6xl grid grid-cols-1 gap-5 md:grid-cols-3">
+      <div className="container mx-auto w-sm md:max-w-6xl grid grid-cols-1 gap-5 md:grid-cols-3">
         {platforms.map((platform, index) => (
           <motion.div
             key={index}
@@ -71,7 +71,7 @@ export default function AnywhereYouworkSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeUp} 
-            className=" flex flex-col rounded-xl text-justify shadow-sm md:text-start"
+            className=" px-4 flex flex-col rounded-xl text-justify shadow-sm md:text-start"
           >
             <Image
               src={platform.image}
@@ -81,7 +81,7 @@ export default function AnywhereYouworkSection() {
               className="rounded-lg object-contain w-full"
             />
 
-            <h3 className="mb-2 px-4 pt-6 text-xl text-[#0B0A0A] md:px-6">
+            <h3 className="mb-2 px-4 pt-6 text-xl tracking-[0.02em] text-[#0B0A0A] md:px-6">
               {platform.title}
             </h3>
             <p className="px-4 pb-6 text-sm md:text-base text-gray-700 md:px-6">

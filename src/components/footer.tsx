@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* Column 2: Quick Links */}
-        <div className="pt-4 md:pt-0">
+        <div className="pt-8 md:pt-0">
           <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
           <ul className="space-y-2">
             {footerQuickLinks.map((link) => (
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
 
         {/* Column 3: Contact Section */}
-        <div className="py-4 md:space-x-0 md:pt-0">
+        <div className="pt-8 md:space-x-0 md:pt-0">
           <h3 className="mb-4 text-lg font-semibold text-white">Contact</h3>
           <p className="mb-4 max-w-xs text-sm leading-relaxed">
             Have any feedback or questions? We&apos;d love to hear from you.

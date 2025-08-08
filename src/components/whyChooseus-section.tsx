@@ -90,7 +90,7 @@ export default function WhyChooseUsSection() {
             key={index}
             className={`group transform rounded-xl px-6 py-10 text-center shadow-xs transition-all duration-300 ease-in-out hover:scale-[1.01] ${
               feature.highlight
-                ? "bg-[#1a1a2e] text-[#F0F0F0]"
+                ? "bg-gradient-to-r from-[#00B4D852] to-[#7D73C359] bg-black text-[#F0F0F0]"
                 : "border border-gray-100 bg-gray-50 text-gray-800"
             }`}
             custom={index}

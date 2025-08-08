@@ -23,7 +23,7 @@ export default function HowSection() {
   ];
 
   return (
-    <div className="w-full bg-white px-4 py-12">
+    <div className="w-full bg-white px-4 md:py-12">
       <section className="bg-white">
         <div className="mb-16 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">
@@ -38,8 +38,8 @@ export default function HowSection() {
            {/* Vertical & Horizontal Lines */}
             <div className="absolute top-0 left-4 h-full w-0.5 transform bg-[#C7C7C7] md:left-1/2 md:-translate-x-1/2"></div>
           <div className="absolute xs:translate-x-8 xs:translate-y-6.5 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-10.5"></div>
-          <div className="absolute xs:translate-x-8 xs:translate-y-67 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-67"></div>
-          <div className="absolute xs:translate-x-8 xs:translate-y-127 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-119"></div>
+          <div className="absolute xs:translate-x-8 xs:translate-y-57 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:translate-x-11 md:h-19 md:w-0.5 md:translate-y-67"></div>
+          <div className="absolute xs:translate-x-8 xs:translate-y-119.5 h-14 w-0.5 transform rotate-90 bg-[#C7C7C7] md:left-1/2 md:-translate-x-11 md:h-19 md:w-0.5 md:translate-y-119"></div>
 
 
           <div className="space-y-8 md:space-y-8">

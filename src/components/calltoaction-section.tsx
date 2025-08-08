@@ -17,11 +17,11 @@ export default function CallToActionSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="mb-4 text-xl leading-tight sm:text-4xl md:text-3xl md:pr-12">
+          <h2 className="mb-4 text-xl leading-tight sm:text-4xl md:text-3xl md:pr-16">
             Why work harder when your AI can do it cooler?
             <br className="hidden sm:block" />
           </h2>
-          <p className="mb-8 text-sm text-[#F6F6F6] sm:text-lg md:text-base">
+          <p className="mb-8 text-sm text-[#D9D9D9] sm:text-lg md:text-base">
             One AI! all your platforms, always on.
           </p>
           <Link href="/contact" passHref>
