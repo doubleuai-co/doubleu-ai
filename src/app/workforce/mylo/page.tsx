@@ -72,13 +72,13 @@ export default function Mylo() {
           </div>
 
           {/* Right Column: Ehiz Image with Overlays */}
-          <div className="relative m-0 flex w-1/2 h-1/2 items-end justify-end p-0">
+          <div className="relative m-0 flex w-1/2 h-full items-end justify-end p-0">
             <Image
               src="/new-img/mylo-m.svg" // Placeholder for Ehiz's image
               alt="Ehiz AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="h-fit w-full "
+              className="min-h-screen"
             />
             {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
             {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
