@@ -46,39 +46,39 @@ export default function Ehiz() {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for Ehiz Page */}
-      <section className="relative overflow-hidden bg-[#0B0A0A] px-4 md:pt-24 text-white sm:px-6 lg:px-8">
+      <section className="relative md:px-[120px] overflow-hidden bg-[#0B0A0A] md:pt-24 text-white">
         {/* Background elements - subtle blurs/gradients */}
         {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
-        <div className="animate-blob animation-delay-2000 absolute top-1/4 right-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob animation-delay-2000 absolute top-[45%] right-40 h-120 w-120 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
         {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
 
-        <div className="max-h-7xl relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between md:flex-row md:items-center">
+        <div className="max-h-7xl gap-x-18 md:pt-32 relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between md:flex-row md:items-center">
           {/* Left Column: Text Content */}
           <div className="mt-48 flex flex-col items-center text-center md:mt-0 md:mb-0 md:w-1/2 md:items-start md:text-left">
-            <h1 className="mb-6 text-[40px] leading-[46px] font-black -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
+            <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
               Hi, I&apos;m Ehiz!
             </h1>
-            <p className="text-md mb-8 max-w-xl leading-[28px] -tracking-wide text-gray-300 md:text-xl md:leading-[34px]">
+            <p className="text-sm mb-8 max-w-xl leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
               I help you enhance your recruitment process by sourcing top
               talent, screening candidates, and simplifying hiring decisions.
               Let me handle the search while you focus on building your dream
               team.
             </p>
             <Link href="/" passHref>
-              <button className="rounded-md bg-[#7D73C3] px-8 py-4 text-md font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-xl">
+              <button className="rounded-md md:mb-18 bg-[#7D73C3] px-8 py-3 text-md font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-md">
                 Try DoubleU AI
               </button>
             </Link>
           </div>
 
           {/* Right Column: Ehiz Image with Overlays */}
-          <div className="relative m-0 flex w-full items-end justify-end p-0 md:w-1/2">
+          <div className="relative m-0 flex w-full h-full items-end justify-end p-0 md:w-[50%]">
             <Image
               src="/new-img/Ehiz-m.svg" // Placeholder for Ehiz's image
               alt="Ehiz AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="h-full w-full object-contain"
+              className="h-fir w-full object-fill"
             />
             {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
             {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
@@ -89,8 +89,8 @@ export default function Ehiz() {
       </section>
 
       {/* 2. Who is Ehiz? Section */}
-      <section className="bg-white px-6 py-8 sm:px-6 md:py-14 lg:px-8">
-        <div className="container mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+      <section className="bg-white px-6 py-8 sm:px-6 md:py-26 md:px-[120px]">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
             <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
@@ -124,7 +124,7 @@ export default function Ehiz() {
       </section>
 
       {/* 3. What Ehiz can do for you Section */}
-      <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-4 lg:px-8">
+      <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-[120px]">
         <div className="container mx-auto mb-12 text-center">
           <h2 className="mb-4 px-28 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
             What Ehiz can do for you
@@ -163,8 +163,8 @@ export default function Ehiz() {
 
       {/* 4. The future of AI-driven sales Section (CTA) */}
       <section className="relative w-screen overflow-hidden bg-[#0B0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
-        <div className="animate-blob animation-delay-2000 absolute top-1/2 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-30 mix-blend-screen blur-3xl filter"></div>
-        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-10 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob animation-delay-2000 absolute top-0 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-20 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
 
         <div className="container mx-0 max-w-4xl px-2 md:mx-auto">
           <h2 className="mb-4 px-14 text-2xl leading-tight font-bold md:px-0 md:text-4xl">
@@ -184,8 +184,8 @@ export default function Ehiz() {
         </div>
       </section>
 
-      {/* 5. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:my-18 lg:mx-auto lg:px-2">
+      {/* 5. Bottom CTA Banner */}
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:my-18 md:mx-[120px] md:px-14">
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
             Get Started with Ehiz Today
@@ -198,7 +198,7 @@ export default function Ehiz() {
             you connect with prospects and close sales.
           </p>
           <Link href="/contact-us" passHref className="mt-14">
-            <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
+            <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] cursor-pointer">
               Explore AI Workers
             </button>
           </Link>

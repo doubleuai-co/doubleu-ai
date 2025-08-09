@@ -26,13 +26,13 @@ export default function Footer() {
     <footer className="relative w-full overflow-hidden bg-[#0B0A0A] px-6 py-12 pt-14 pb-8 text-gray-300 md:px-[120px] lg:pt-18">
       {/* Blue Blurred Gradient */}
       <div
-        className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] opacity-50 blur-[300px]"
+        className="absolute top-1/4 left-90 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-[#00B4D852] opacity-50 blur-[300px]"
         aria-hidden="true"
       ></div>
 
       {/* Purple Blurred Gradient */}
       <div
-        className="absolute top-1/2 right-48 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] opacity-50 blur-[200px] md:top-1/4"
+        className="absolute top-1/2 right-90 h-[600px] w-[800px] translate-x-1/2 rounded-full bg-[#7D73C359] opacity-40 blur-[200px] md:top-0"
         aria-hidden="true"
       ></div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Column 2: Quick Links */}
         <div className="pt-8 md:pt-0">
-          <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+          <h3 className="mb-4 text-md font-semibold text-white">Quick Links</h3>
           <ul className="space-y-2">
             {footerQuickLinks.map((link) => (
               <li key={link.name}>
@@ -88,8 +88,8 @@ export default function Footer() {
 
         {/* Column 3: Contact Section */}
         <div className="pt-8 md:space-x-0 md:pt-0">
-          <h3 className="mb-4 text-lg font-semibold text-white">Contact</h3>
-          <p className="mb-4 max-w-xs text-sm leading-relaxed">
+          <h3 className="mb-4 text-md font-semibold text-white">Contact</h3>
+          <p className="mb-4 max-w-[15rem] text-sm leading-relaxed m">
             Have any feedback or questions? We&apos;d love to hear from you.
           </p>
           <Link
