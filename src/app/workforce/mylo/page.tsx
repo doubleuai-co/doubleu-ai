@@ -45,40 +45,40 @@ export default function Mylo() {
 
   return (
     <div className="bg-white text-gray-800">
-      {/* 1. Hero Section for Ehiz Page */}
-      <section className="relative md:px-[120px] overflow-hidden bg-[#0B0A0A] md:pt-24 text-white">
+      {/* 1. Hero Section for Mylo Page */}
+      <section className="relative overflow-hidden bg-[#0B0A0A] text-white md:px-[120px] md:pt-24">
         {/* Background elements - subtle blurs/gradients */}
         {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
         {/* <div className="animate-blob animation-delay-2000 absolute top-[45%] right-40 h-120 w-120 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div> */}
         {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
 
-        <div className="max-h-7xl gap-x-18 md:pt-32 relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between md:flex-row md:items-center">
+        <div className="max-h-7xl relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between gap-x-2 md:flex-row md:items-center md:pt-8">
           {/* Left Column: Text Content */}
-          <div className="mt-48 flex flex-col items-center text-center md:mt-0 md:mb-0 md:w-1/2 md:items-start md:text-left">
+          <div className="mt-30 flex flex-col items-center text-center md:mt-26 md:mb-0 md:w-1/2 md:items-start md:text-left">
             <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
-              Hi, I&apos;m Ehiz!
+              Hi, I&apos;m Mylo!
             </h1>
-            <p className="text-sm mb-8 max-w-xl leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
-              I help you enhance your recruitment process by sourcing top
-              talent, screening candidates, and simplifying hiring decisions.
-              Let me handle the search while you focus on building your dream
-              team.
+            <p className="mb-8 px-4 text-sm leading-[28px] -tracking-wide text-gray-300 md:-mr-40 md:px-0 md:text-lg md:leading-[34px]">
+              I help you enhance your sales and customer experience effortlessly
+              by automating outreach, optimizing campaigns, and driving
+              engagement. Let me handle the strategy while you focus on closing
+              deals.
             </p>
             <Link href="/" passHref>
-              <button className="rounded-md md:mb-18 bg-[#7D73C3] px-8 py-3 text-md font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-md">
+              <button className="text-md md:text-md rounded-md bg-[#7D73C3] px-8 py-3 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:mb-4">
                 Try DoubleU AI
               </button>
             </Link>
           </div>
 
-          {/* Right Column: Ehiz Image with Overlays */}
-          <div className="relative m-0 flex w-1/2 h-full items-end justify-end p-0">
+          {/* Right Column: Mylo Image with Overlays */}
+          <div className="h-md relative m-0 flex w-full justify-end md:items-end md:pl-40">
             <Image
-              src="/new-img/mylo-m.svg" // Placeholder for Ehiz's image
-              alt="Ehiz AI Worker"
+              src="/new-img/mylo-m.svg" // Placeholder for Mylo's image
+              alt="Mylo AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="min-h-screen"
+              className="h-full w-full"
             />
             {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
             {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
@@ -88,32 +88,32 @@ export default function Mylo() {
         </div>
       </section>
 
-      {/* 2. Who is Ehiz? Section */}
-      <section className="bg-white px-6 py-8 sm:px-6 md:py-26 md:px-[120px]">
+      {/* 2. Who is Mylo? Section */}
+      <section className="bg-white px-6 py-16 sm:px-6 md:px-[120px] md:py-26">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
             <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
-              Who is Ehiz?
+              Who is Mylo?
             </h2>
-            <p className="text-md mb-4  leading-relaxed text-gray-700">
-              Ehiz isn’t just a hiring tool, it’s your recruitment partner,
-              built to streamline every stage of talent acquisition. From
-              screening applicants to scheduling interviews and managing
-              communications, Ehiz makes the process efficient, personalized,
-              and effective. More than automation, Ehiz acts as a 24/7 extension
-              of your team, helping evaluate candidates, coordinate interviews,
-              and connect you with top talent. With Ehiz, you reduce
-              time-to-hire, improve candidate engagement, and make smarter
-              hiring decisions, while maintaining a strong, approachable
-              employer brand.
+            <p className="text-md mb-4 leading-relaxed text-gray-700">
+              Mylo is your always-on sales assistant, built to deliver warm,
+              attentive, and personalized service throughout the customer
+              journey. From handling inquiries to processing payments and
+              offering tailored support, Mylo makes every interaction efficient
+              and delightful. As a 24/7 extension of your sales team, she
+              enhances experiences, guides prospects, and seamlessly connects
+              users to real team members when needed. Integrating Mylo helps
+              streamline inquiries, reduce response times, and boost customer
+              satisfaction, while keeping your brand approachable and
+              professional.
             </p>
           </div>
 
           {/* Right Column: Illustration */}
           <div className="flex justify-center md:justify-end">
             <Image
-              src="/new-img/image-2.svg" // Placeholder for the sales illustration
+              src="/new-img/image.png" // Placeholder for the sales illustration
               alt="Sales process illustration"
               width={400}
               height={300}
@@ -123,13 +123,13 @@ export default function Mylo() {
         </div>
       </section>
 
-      {/* 3. What Ehiz can do for you Section */}
-      <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-[120px]">
+      {/* 3. What Mylo can do for you Section */}
+      <section className="mx-auto max-w-[85rem] bg-white px-8 py-8 sm:px-6 md:px-[120px]">
         <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 px-28 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
-            What Ehiz can do for you
+          <h2 className="mb-4 px-14 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
+            What Mylo can do for you
           </h2>
-          <p className="px-14 text-[#404040] md:px-0">
+          <p className="px-4 text-[#404040] md:px-0">
             Skilled, specialized, and always ready, these AI agents are built to
             work for you.
           </p>
@@ -164,31 +164,33 @@ export default function Mylo() {
       {/* 4. The future of AI-driven sales Section (CTA) */}
       <section className="relative w-screen overflow-hidden bg-[#0B0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
         <div className="animate-blob animation-delay-2000 absolute top-0 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-20 mix-blend-screen blur-3xl filter"></div>
-        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob absolute top-1/2 left-8 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter md:top-0 md:left-0"></div>
 
-        <div className="container mx-0 max-w-4xl px-2 md:mx-auto">
+        <div className="container mx-0 max-w-4xl md:mx-auto md:px-2">
           <h2 className="mb-4 px-14 text-2xl leading-tight font-bold md:px-0 md:text-4xl">
-            The Future of AI-Driven Business Solutions
+            The Future of AI-Driven Sales
           </h2>
-          <p className="text-md mx-auto text-justify leading-relaxed text-[#D9D9D9] md:text-center">
-            Ehiz redefines how organizations approach talent acquisition by
-            providing a balance between automation and human connection. It
-            ensures that every stage of recruitment is streamlined,
-            data-informed, and candidate-centric, making hiring managers
-            confident in their decisions and candidates impressed with their
-            experience. With AI-driven recruitment becoming essential for
-            competitive organizations, Ehiz offers a seamless, scalable, and
-            intelligent solution for engaging candidates and building
-            exceptional teams.
+          <p className="text-md mx-auto px-4 text-justify leading-relaxed text-[#D9D9D9] md:text-center">
+            Mylo redefines the way businesses engage with customers by providing
+            a balance between technological efficiency and genuine personal
+            service. She ensures that every interaction is informative,
+            engaging, and value-driven, making customers feel confident and
+            cared for throughout their buying journey. With AI-driven sales
+            becoming a must-have for modern businesses, Mylo offers a seamless,
+            scalable, and intelligent solution for enhancing customer
+            experiences and driving satisfaction. Whether customers are making a
+            quick purchase or researching a major investment, interacting with
+            Mylo enhances their shopping experience and strengthens their
+            connection with your brand.
           </p>
         </div>
       </section>
 
       {/* 5. Bottom CTA Banner */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:my-18 md:mx-[120px] md:px-14">
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:mx-[120px] md:my-18 md:px-14">
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
-            Get Started with Ehiz Today
+            Get Started with Mylo Today
             <br className="hidden sm:block" />{" "}
           </h2>
           <p className="px-4 md:px-0">
@@ -198,7 +200,7 @@ export default function Mylo() {
             you connect with prospects and close sales.
           </p>
           <Link href="/contact-us" passHref className="mt-14">
-            <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] cursor-pointer">
+            <button className="cursor-pointer rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF]">
               Explore AI Workers
             </button>
           </Link>

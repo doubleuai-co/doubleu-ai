@@ -58,7 +58,7 @@ export default function Ehiz() {
             <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
               Hi, I&apos;m Ehiz!
             </h1>
-            <p className="text-sm mb-8 max-w-xl leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
+            <p className="text-sm mb-8 max-w-xl px-4 md:px-0 leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
               I help you enhance your recruitment process by sourcing top
               talent, screening candidates, and simplifying hiring decisions.
               Let me handle the search while you focus on building your dream
@@ -72,7 +72,7 @@ export default function Ehiz() {
           </div>
 
           {/* Right Column: Ehiz Image with Overlays */}
-          <div className="relative m-0 flex w-full h-full items-end justify-end p-0 md:w-[50%]">
+          <div className="relative m-0 flex w-full mt-8 md:mt-0 px-4 md:px-0 h-full items-end justify-end p-0 md:w-[50%]">
             <Image
               src="/new-img/Ehiz-m.svg" // Placeholder for Ehiz's image
               alt="Ehiz AI Worker"
@@ -89,7 +89,7 @@ export default function Ehiz() {
       </section>
 
       {/* 2. Who is Ehiz? Section */}
-      <section className="bg-white px-6 py-8 sm:px-6 md:py-26 md:px-[120px]">
+      <section className="bg-white px-6 py-16 sm:px-6 md:py-26 md:px-[120px]">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
@@ -124,12 +124,12 @@ export default function Ehiz() {
       </section>
 
       {/* 3. What Ehiz can do for you Section */}
-      <section className="mx-auto max-w-[85rem] bg-white px-8 py-16 sm:px-6 md:px-[120px]">
+      <section className="mx-auto max-w-[85rem] bg-white px-8 py-8 sm:px-6 md:px-[120px]">
         <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 px-28 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
+          <h2 className="mb-4 px-18 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
             What Ehiz can do for you
           </h2>
-          <p className="px-14 text-[#404040] md:px-0">
+          <p className="px-2 text-[#404040] md:px-0 md:mx-auto max-w-md">
             Skilled, specialized, and always ready, these AI agents are built to
             work for you.
           </p>
@@ -166,11 +166,11 @@ export default function Ehiz() {
         <div className="animate-blob animation-delay-2000 absolute top-0 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-20 mix-blend-screen blur-3xl filter"></div>
         <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
 
-        <div className="container mx-0 max-w-4xl px-2 md:mx-auto">
-          <h2 className="mb-4 px-14 text-2xl leading-tight font-bold md:px-0 md:text-4xl">
+        <div className="container mx-0 max-w-4xl px-4 md:px-2 md:mx-auto">
+          <h2 className="mb-4 px-10 text-2xl leading-tight font-bold md:px-0 md:text-4xl">
             The Future of AI-Driven Business Solutions
           </h2>
-          <p className="text-md mx-auto text-justify leading-relaxed text-[#D9D9D9] md:text-center">
+          <p className="text-md mx-auto leading-relaxed text-[#D9D9D9] md:text-center">
             Ehiz redefines how organizations approach talent acquisition by
             providing a balance between automation and human connection. It
             ensures that every stage of recruitment is streamlined,
