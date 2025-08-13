@@ -4,8 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { backOut, easeOut, motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 // Animation variants
 const containerVariants = {
@@ -97,7 +97,7 @@ export default function HeroSection() {
         {/* Star Rating */}
         <motion.div
           variants={fadeInUp}
-          className="md:mt-20 mb-4 flex items-center justify-center text-orange-400 md:mb-8"
+          className="mb-4 flex items-center justify-center text-orange-400 md:mt-20 md:mb-8"
         >
           {[...Array(4)].map((_, i) => (
             <motion.div
@@ -127,7 +127,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="ml-2 text-xs md:text-sm text-white"
+            className="ml-2 text-xs text-white md:text-sm"
           >
             -Rated by users
           </motion.span>
@@ -136,7 +136,7 @@ export default function HeroSection() {
         {/* Main Heading */}
         <motion.h1
           variants={fadeInUp}
-          className="font-satoshi px-2 pb-8 md:pb-8 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:text-[64px] md:leading-[72px]"
+          className="font-satoshi px-2 pb-8 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:pb-8 md:text-[64px] md:leading-[72px]"
         >
           Your business, boosted by <br className="hidden md:block" /> AI that
           actually gets it
@@ -145,7 +145,7 @@ export default function HeroSection() {
         {/* Sub-paragraph */}
         <motion.p
           variants={fadeInUp}
-          className="text-md md:mb-8 mb-2 max-w-2xl px-8 text-center leading-[28px] -tracking-wide text-gray-300 md:text-2xl md:leading-[34px] lg:text-xl"
+          className="text-md mb-2 max-w-2xl px-8 text-center leading-[28px] -tracking-wide text-gray-300 md:mb-8 md:text-2xl md:leading-[34px] lg:text-xl"
         >
           Build, grow, and scale your business with our AI workforce,{" "}
           <br className="hidden md:block" /> custom-built for your business
@@ -160,9 +160,9 @@ export default function HeroSection() {
               whileHover="hover"
               whileTap="tap"
             >
-              <Button className="rounded-2 mb-12 mt-8 cursor-pointer bg-[#7D73C3] px-8 py-6 text-sm font-normal text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#9747FF] md:py-8 md:text-xl lg:text-lg">
-                Try DoubleU AI
-              </Button>
+              <button className="cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
+                Contact Us
+              </button>{" "}
             </motion.div>
           </Link>
         </motion.div>

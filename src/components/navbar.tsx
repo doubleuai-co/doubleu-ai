@@ -3,6 +3,7 @@
 import { Logo } from "./logo";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import MobileNav from "./mobile-nav";
+import Link from "next/link";
 
 export const navItems = [
   { name: "Home", href: "/" },
@@ -21,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       {isDesktop ? (
-        <nav className="fixed top-0 z-50 h-[99px] w-full border-b-[2px] border-[#FFFFFF12] bg-[#0B0A0A] px-[120px] pb-[22px] pt-[30px] text-white shadow-md">
+        <nav className="fixed top-0 z-50 h-[99px] w-full border-b-[2px] border-[#FFFFFF12] bg-[#0B0A0A] px-[120px] pt-[30px] pb-[22px] text-white shadow-md">
           <div className="mx-auto flex items-center justify-between">
             {/* Logo Section */}
             <div className="block">
@@ -29,7 +30,7 @@ export default function Navbar() {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden items-center space-x-8 md:flex text-[#E3E3E3] md:text-md">
+            <div className="md:text-md hidden items-center space-x-8 text-[#E3E3E3] md:flex">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -39,11 +40,12 @@ export default function Navbar() {
                   {item.name}
                 </a>
               ))}
-              <a 
-              href="/contact"
-              className="rounded-lg bg-[#7D73C3] px-6 py-3 text-md text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
-                Contact Us
-              </a>
+
+              <Link href="/contact">
+                <button className="cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </nav>
