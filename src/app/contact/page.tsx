@@ -62,9 +62,9 @@ const Contact = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative overflow-hidden bg-white px-4 pt-36 md:pb-8 text-[#0B0A0A] sm:px-6 lg:px-8"
+        className="relative overflow-hidden bg-white px-4 md:pt-36 pt-20 md:pb-8 text-[#0B0A0A] sm:px-6 lg:px-8"
       >
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
+        <div className="relative z-10 mx-auto md:pt-18 flex max-w-7xl flex-col items-center text-center">
           <h1 className="mb-6 pt-10 text-[35px] leading-tight font-medium text-[#0B0A0A] md:text-[4rem]">
             Talk with our team
           </h1>
@@ -81,7 +81,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="container mx-auto max-w-3xl rounded-lg bg-white p-8"
+          className="container mx-auto max-w-4xl rounded-lg bg-white p-8"
         >
           <Formik
             initialValues={initialValues}
@@ -141,10 +141,10 @@ const Contact = () => {
 
                 {/* Other Fields */}
                 {[
-                  { name: 'company', label: 'Company', type: 'text' },
-                  { name: 'role', label: 'Role', type: 'text' },
-                  { name: 'email', label: 'Email', type: 'email' },
-                  { name: 'message', label: 'Message', type: 'textarea' },
+                  { name: 'company', label: 'Company', type: 'text', placeholder:'Enter company name', },
+                  { name: 'role', label: 'Role', type: 'text',placeholder:'Enter your role at the company', },
+                  { name: 'email', label: 'Email', type: 'email', placeholder:'Enter email', },
+                  { name: 'message', label: 'Message', type: 'textarea', placeholder:'Leave us a message...' },
                 ].map((field, index) => (
                   <motion.div
                     key={field.name}
@@ -164,7 +164,7 @@ const Contact = () => {
                       as={field.type === 'textarea' ? 'textarea' : 'input'}
                       type={field.type}
                       name={field.name}
-                      placeholder={`Enter ${field.label.toLowerCase()}`}
+                      placeholder={field.placeholder} 
                       rows={field.type === 'textarea' ? 5 : undefined}
                       className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
                     />
