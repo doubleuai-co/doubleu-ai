@@ -23,7 +23,7 @@ export default function HowSection() {
   ];
 
   return (
-    <div className="w-full bg-white px-4 md:py-12">
+    <div className="w-full bg-white px-4 py-[49px] md:pb-[87px]">
       <section className="bg-white">
         <div className="mb-16 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">

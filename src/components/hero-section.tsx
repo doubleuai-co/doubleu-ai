@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { backOut, easeOut, motion } from "framer-motion";
-import { Button } from "./ui/button";
 
 // Animation variants
 const containerVariants = {
@@ -136,7 +135,7 @@ export default function HeroSection() {
         {/* Main Heading */}
         <motion.h1
           variants={fadeInUp}
-          className="font-satoshi px-2 pb-8 text-center text-[35px] leading-[46px] font-medium -tracking-wide text-white md:pb-8 md:text-[64px] md:leading-[72px]"
+          className="font-satoshi px-2 pb-6 text-center text-[35px] leading-[40px] font-medium -tracking-wide text-white md:pb-8 md:text-[64px] md:leading-[72px]"
         >
           Your business, boosted by <br className="hidden md:block" /> AI that
           actually gets it
@@ -160,9 +159,9 @@ export default function HeroSection() {
               whileHover="hover"
               whileTap="tap"
             >
-              <button className="cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
-                Contact Us
-              </button>{" "}
+              <button className="cursor-pointer m-6 md:mb-8 md:mt-0 rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
+               Try DoubleU AI 
+              </button>
             </motion.div>
           </Link>
         </motion.div>

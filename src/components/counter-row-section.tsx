@@ -62,10 +62,10 @@ const brandVariants = {
 // Main Component
 export default function CounterRowSection() {
   return (
-    <section className="bg-white md:text-center text-left px-2 md:py-10 text-gray-800 sm:px-6 md:px-[120px]">
+    <section className="bg-white md:text-center text-left py-[49px] md:py-[87px] text-gray-800 sm:px-6 md:px-[120px]">
       {/* Statistics Section */}
       <motion.div
-        className="container mx-auto justify-between mb-20 grid grid-cols-1 gap-4 md:gap-8 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-4"
+        className="container mx-auto justify-between grid grid-cols-1 gap-4 md:gap-8 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -101,7 +101,7 @@ export default function CounterRowSection() {
         viewport={{ once: true }}
       >
         <motion.h2
-          className="mb-12 text-xl font-medium text-[#404040]"
+          className="mb-12 text-xs font-medium mt-20 text-[#404040]"
           variants={brandVariants}
         >
           Trusted by the brands shaping the future with AI
@@ -129,7 +129,7 @@ export default function CounterRowSection() {
         </motion.div>
       </motion.div>
       {/* Brands Infinite Scroll */}
-      <div className="relative mb-12 overflow-hidden hidden md:block">
+      <div className="relative pt-[89px] overflow-hidden hidden md:block">
         <h2 className="mb-6 text-center text-lg text-[#404040]">
           Trusted by the brands shaping the future with AI
         </h2>
