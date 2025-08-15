@@ -40,9 +40,9 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="bg-white py-10 text-[#0B0A0A] md:py-12">
-      <div className="container mx-auto mb-2 px-4 text-center md:mb-8">
-        <h2 className="mb-4 text-2xl font-medium lg:text-4xl md:py-8">Our Services</h2>
+    <section className="bg-white py-10 text-[#0B0A0A] md:py-[47px]">
+      <div className="container mx-auto mb-4 px-4 text-center md:mb-8">
+        <h2 className="mb-4 text-2xl font-medium lg:text-4xl md:pt-20 pt-12">Our Services</h2>
       </div>
 
       <div className="container mx-auto py-8 max-w-6xl">
@@ -60,10 +60,10 @@ export default function ServicesSection() {
                 height={250}
                 className="mx-auto object-cover object-center w-full h-64"
               />
-              <h3 className="mb-2 px-6 pt-6 font-semibold text-[#000000] md:text-xl">
+              <h3 className="mb-2 px-6 pt-6 font-semibold text-[#000000] md:text-2xl">
                 {service.title}
               </h3>
-              <p className="px-6 pb-8 text-sm text-[#404040] md:px-6 md:text-base">
+              <p className="px-6 pb-8 text-sm text-[#404040] md:px-6 md:text-md">
                 {service.description}
               </p>
             </div>
@@ -84,10 +84,10 @@ export default function ServicesSection() {
                 height={250}
                 className="mx-auto object-cover object-center w-full h-64"
               />
-              <h3 className="mb-2 px-6 pt-6 text-lg text-[#000000] md:text-xl">
+              <h3 className="mb-2 px-6 pt-6 text-lg text-[#000000] md:text-2xl">
                 {service.title}
               </h3>
-              <p className="px-6 pb-8 text-sm text-[#404040] md:px-6 md:text-base">
+              <p className="px-6 pb-8 text-sm text-[#404040] md:px-6 md:text-md">
                 {service.description}
               </p>
             </div>

@@ -71,16 +71,16 @@ const TermsofService = () => {
   ];
 
   return (
-  <div className="min-h-screen bg-white py-18 md:pt-30 md:pb-50">
-          <main className="mx-auto max-w-7xl px-8 sm:px-6 md:px-8">
+    <div className="min-h-screen bg-white py-18 md:pt-30 md:pb-50">
+      <main className="mx-auto max-w-6xl px-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-8 flex-row items-center md:pb-10 md:mt-10 pb-4 pt-20"
+          className="mb-8 flex-row items-center pt-20 pb-4 md:mt-10 md:pb-10"
         >
-          <h1 className="text-3xl md:text-5xl mr-4 md:mr-0 font-bold text-[#000000]">
+          <h1 className="mr-4 text-3xl font-bold text-[#000000] md:mr-0 md:text-5xl">
             Terms of service for DoubleU AI
           </h1>
           <p className="pt-2 text-[#404040]">Last updated July 01, 2025</p>
@@ -109,7 +109,7 @@ const TermsofService = () => {
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <h2 className="mb-5 text-2xl md:text-3xl font-bold text-[#000000]">
+              <h2 className="mb-5 text-2xl font-bold text-[#000000] md:text-3xl">
                 {section.title}
               </h2>
               <p className="text-base whitespace-pre-line text-[#404040]">

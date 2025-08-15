@@ -165,7 +165,7 @@ const AboutPage = () => {
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Link href="/contact" passHref className="cursor-pointer">
-                <button className="md:text-md mt-8 cursor-pointer rounded-md bg-[#7D73C3] px-8 py-3 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
+                <button className="mt-8 cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
                   Try DoubleU AI
                 </button>
               </Link>

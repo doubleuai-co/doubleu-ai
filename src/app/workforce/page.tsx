@@ -25,7 +25,7 @@ export default function Workforce() {
   return (
     <main className="bg-white">
       {/* 1. Hero Section for Workforce Page */}
-      <section className="relative flex h-screen md:h-[120vh] items-center justify-center bg-black text-white">
+      <section className="relative flex h-screen items-center justify-center bg-black text-white md:h-[120vh]">
         <Image
           src="/new-img/workforce(2).png"
           alt=""
@@ -45,7 +45,6 @@ export default function Workforce() {
 
         {/* Main Content */}
         <div className="relative mx-auto max-w-[52rem] px-4 py-20 text-center">
-          
           <h1 className="text-3xl leading-tight font-bold sm:text-5xl md:text-6xl">
             Workforce built specifically for business needs
           </h1>
@@ -54,7 +53,7 @@ export default function Workforce() {
             in operational efficiency.
           </p>
           <Link href="/contact-us" passHref>
-            <button className="cursor-pointer md:text-md mt-14 rounded-md bg-[#6a5acd] px-8 py-3 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+            <button className="md:text-md mt-14 cursor-pointer rounded-md bg-[#6a5acd] px-8 py-3 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
               Try DoubleU AI
             </button>
           </Link>
@@ -63,21 +62,21 @@ export default function Workforce() {
             alt="Pattern background"
             width={100}
             height={80}
-            className="md:hidden absolute top-[26rem] -left-[1rem] w-[150px] object-cover md:top-[12rem] md:-left-[20rem] md:w-[400px]"
+            className="absolute top-[26rem] -left-[1rem] w-[150px] object-cover md:top-[12rem] md:-left-[20rem] md:hidden md:w-[400px]"
           />
           <Image
             src="/new-img/workforce-pattern.svg"
             alt="Pattern background"
             width={100}
             height={80}
-            className="md:hidden absolute top-[26rem] -right-[1rem] w-[150px] scale-x-[-1] object-cover md:top-[12rem] md:-right-[20rem] md:w-[400px] md:scale-x-[-1]"
+            className="absolute top-[26rem] -right-[1rem] w-[150px] scale-x-[-1] object-cover md:top-[12rem] md:-right-[20rem] md:hidden md:w-[400px] md:scale-x-[-1]"
           />
         </div>
       </section>
 
       <section>
         {/* 2. Meet our AI workforce Section */}
-        <section className="bg-white px-2 py-18 text-[#0B0A0A] sm:px-2 lg:px-8">
+        <section className="bg-white px-2 py-[47px] text-[#0B0A0A] sm:px-2 lg:px-8">
           <div className="container mx-auto mb-8 text-center md:my-20">
             <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] md:text-4xl">
               Meet our AI workforce
@@ -127,8 +126,8 @@ export default function Workforce() {
         </section>
 
         {/* 3. Our Workers General Features Section */}
-        <section className="bg-white px-6 py-0 sm:px-6 md:py-16 md:px-[120px]">
-          <div className="p-0 m-0 mx-auto hidden justify-between items-center max-w-7xl grid-cols-1 bg-[#F9F9F9] md:grid md:grid-cols-2">
+        <section className="bg-white px-6 py-0 sm:px-6 md:px-[120px] md:py-[47px]">
+          <div className="m-0 mx-auto hidden max-w-7xl grid-cols-1 items-center justify-between bg-[#F9F9F9] p-0 md:grid md:grid-cols-2">
             {/* Left Column: Features List */}
             <div className="flex flex-col space-y-8 p-4 pl-8">
               <h2 className="mb-4 pb-2 text-center text-xl font-bold text-[#0B0A0A] md:text-start md:text-3xl">
@@ -151,7 +150,7 @@ export default function Workforce() {
                       height="30"
                       className="h-auto object-cover"
                     />
-                    <p className="text-sm font-bold text-[#0B0A0A] md:text-md">
+                    <p className="md:text-md text-sm font-bold text-[#0B0A0A]">
                       {feature}
                     </p>
                   </li>
@@ -160,7 +159,7 @@ export default function Workforce() {
             </div>
 
             {/* Right Column: Image */}
-            <div className="m-0 flex items-center justify-end w-full h-full p-0">
+            <div className="m-0 flex h-full w-full items-center justify-end p-0">
               <Image
                 src="/new-img/woman-phone.svg"
                 alt="User interacting with AI"
@@ -218,26 +217,22 @@ export default function Workforce() {
       </section>
 
       {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-           <section
-          className="relative flex justify-center items-center mx-4 md:mx-[120px] mb-6 md:my-16 max-w-6xl overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 md:px-[120px] py-18 text-white"
-        >
-          <div className="md:container mx-auto flex md:max-w-3xl flex-col items-center  text-center">
-            <h2 className="mb-4 text-2xl leading-tight md:px-4 font-medium sm:text-4xl md:text-4xl md:max-w-lg">
-              Take a smarter approach to AI in your business today.
-            </h2>
-            <p className="px-3 md:px-0 max-w-lg">
-              Seamlessly connect ai to your everyday tools and start working
-              faster, better, and easier
-            </p>
-            <Link href="/contact-us" passHref>
-              <button
-                className="cursor-pointer mt-6 md:mt-12 rounded-md bg-white px-8 py-3 text-sm md:text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] hover:text-black"
-              >
-                Get Started Now
-              </button>
-            </Link>
-          </div>
-        </section>
+      <section className="relative mx-4 mb-6 flex max-w-6xl items-center justify-center overflow-hidden rounded-[16px] bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:mb-[47px] md:px-[120px]">
+        <div className="mx-auto flex flex-col items-center text-center md:container md:max-w-3xl">
+          <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-lg md:px-4 md:text-4xl">
+            Take a smarter approach to AI in your business today.
+          </h2>
+          <p className="max-w-lg px-3 md:px-0">
+            Seamlessly connect ai to your everyday tools and start working
+            faster, better, and easier
+          </p>
+          <Link href="/contact-us" passHref>
+            <button className="mt-6 cursor-pointer rounded-md bg-white px-8 py-3 text-sm font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] hover:text-black md:mt-12 md:text-base">
+              Get Started Now
+            </button>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

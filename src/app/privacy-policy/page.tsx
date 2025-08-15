@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-white py-18 md:pt-30 md:pb-50">
-       <main className="mx-auto max-w-7xl px-8 sm:px-6 md:px-8">
+       <main className="mx-auto max-w-6xl px-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

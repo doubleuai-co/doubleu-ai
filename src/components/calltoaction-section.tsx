@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function CallToActionSection() {
   return (
-    <section className="relative mx-6 my-6 max-w-6xl overflow-hidden rounded-3xl bg-[#7D73C3] px-4 py-12 md:py-6 text-white shadow-sm sm:px-6 md:my-20 md:mx-[120px]">
+    <section className="relative mx-6 my-6 max-w-6xl overflow-hidden rounded-3xl bg-[#7D73C3] px-4 py-12 md:py-6 text-white shadow-sm sm:px-6 md:my-[47px] md:mx-[120px]">
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         {/* Text Content */}
         <motion.div
@@ -17,11 +17,11 @@ export default function CallToActionSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="mb-4 text-xl leading-tight sm:text-4xl md:text-3xl md:pr-16">
+          <h2 className="mb-4 text-xl leading-tight sm:text-4xl md:text-[40px] md:pr-2">
             Why work harder when your AI can do it cooler?
             <br className="hidden sm:block" />
           </h2>
-          <p className="mb-8 text-sm text-[#D9D9D9] sm:text-lg md:text-base">
+          <p className="mb-8 text-sm text-[#D9D9D9] sm:text-lg md:text-lg">
             One AI! all your platforms, always on.
           </p>
           <Link href="/contact" passHref>

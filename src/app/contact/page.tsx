@@ -101,7 +101,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="firstName"
-                      className="block text-sm font-semibold text-gray-700"
+                      className="block text-sm font-normal text-[#0B0A0A]"
                     >
                       First Name
                     </label>
@@ -121,7 +121,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="lastName"
-                      className="block text-sm font-semibold text-gray-700"
+                      className="block text-sm font-normal text-[#0B0A0A]"
                     >
                       Last Name
                     </label>
@@ -155,7 +155,7 @@ const Contact = () => {
                   >
                     <label
                       htmlFor={field.name}
-                      className="block text-sm font-semibold text-gray-700"
+                      className="block text-sm font-normal text-[#0B0A0A]"
                     >
                       {field.label}
                     </label>
