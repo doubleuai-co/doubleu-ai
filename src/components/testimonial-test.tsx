@@ -32,7 +32,7 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
 
 const TestimonialCard = ({ rating, text, author }:TestimonialProps) => {
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 h-fit">
+    <div className="bg-white rounded-[9px] p-4 shadow-sm border border-[#BDBDBD] h-fit">
       <StarRating rating={rating} />
       <p className="text-[#000000] text-sm md:text-md leading-relaxed mb-6">{text}</p>
       <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ const TestimonialsGrid = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto px-6 py-4">
       {/* Desktop Grid Layout */}
       <div className="hidden md:grid md:grid-cols-3 gap-6 items-center">
         {/* Column 1 */}

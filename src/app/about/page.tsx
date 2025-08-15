@@ -164,7 +164,7 @@ const AboutPage = () => {
               custom-built for your business needs
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <Link href="/contact" passHref className="cursor-pointer">
+              <Link href="/contact" passHref>
                 <button className="mt-8 cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
                   Try DoubleU AI
                 </button>
@@ -179,18 +179,18 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={staggerContainer}
-          className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+          className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-[77px]"
         >
           <div className="container mx-auto max-w-4xl px-2 py-12 text-justify lg:px-6 lg:text-center">
             <motion.h2
               variants={fadeInUp}
-              className="mb-8 text-2xl font-medium text-[#0B0A0A] lg:text-[40px]"
+              className="mb-8 text-2xl font-medium text-[#0B0A0A] lg:text-[47px]"
             >
               Our Mission
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="md:text-md mx-auto max-w-md text-sm leading-relaxed text-[#404040] lg:mb-12"
+              className="md:text-[18px] mx-auto max-w-xl text-sm leading-relaxed text-[#404040] "
             >
               To bring personalized AI agents to businesses of all sizes,
               helping teams cut time on tasks, automate the boring stuff, and
@@ -198,13 +198,13 @@ const AboutPage = () => {
             </motion.p>
             <motion.h2
               variants={fadeInUp}
-              className="mb-8 pt-12 text-2xl font-medium text-[#0B0A0A] lg:text-[40px]"
+              className="mb-8 text-2xl lg:mt-24 font-medium text-[#0B0A0A] lg:text-[45px]"
             >
               Our Vision
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="mx-auto max-w-xl text-sm leading-relaxed text-[#404040]"
+              className="md:text-[18px] mx-auto max-w-2xl text-sm leading-relaxed text-[#404040] "
             >
               The future of work isn&apos;t on the horizon, it&apos;s already
               here. With the AI Workforce, businesses no longer have to imagine
@@ -221,7 +221,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
-          className="relative w-full overflow-hidden bg-[#0B0A0A] py-20 text-white"
+          className="relative w-full overflow-hidden bg-[#0B0A0A] py-10 text-white"
         >
           <div
             className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] opacity-60 blur-[400px]"
@@ -266,7 +266,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white py-24 md:px-[120px]"
+          className="bg-white py-[118px] md:px-[120px]"
         >
           <div className="container mx-auto mb-12 text-center">
             <motion.h2
@@ -364,7 +364,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white pt-14 md:pt-24"
+          className="bg-white pt-[118px]"
         >
           <div className="container mx-auto mb-8 max-w-3xl px-4 text-center sm:px-6 md:mb-14 md:px-18">
             <motion.h2
@@ -427,13 +427,13 @@ const AboutPage = () => {
           </div>
         </motion.section>
 
-        {/* 8. Bottom CTA Banner */}
-        <motion.section
+        {/* 8. Bottom CTA Banner */}          
+          <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={fadeIn}
-          className="relative mx-4 mb-6 flex max-w-6xl items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:my-16 md:px-[120px]"
+          className="relative mx-4 flex max-w-6xl items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:my-[87px] md:px-[120px]"
         >
           <div className="mx-auto flex flex-col items-center text-center md:container md:max-w-3xl">
             <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-lg md:px-4 md:text-4xl">
