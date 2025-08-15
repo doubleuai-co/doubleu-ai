@@ -1,7 +1,7 @@
 "use client";
-
 import { Logo } from "./logo";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import { usePathname } from "next/navigation";
 import MobileNav from "./mobile-nav";
 import Link from "next/link";
 
@@ -14,10 +14,15 @@ export const navItems = [
 
 export default function Navbar() {
   const isDesktop = useMediaQuery("(min-width: 1120px)");
+  const pathname = usePathname();
 
-  // // Split navigation items for desktop layout
-  // const leftNavItems = navItems.slice(0, 3);
-  // const rightNavItems = navItems.slice(3);
+  // Helper function to determine if a link is active
+  const isActiveLink = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -28,19 +33,21 @@ export default function Navbar() {
             <div className="block">
               <Logo width={120} height={40} />
             </div>
-
             {/* Navigation Links */}
             <div className="md:text-md hidden items-center space-x-8 text-[#E3E3E3] md:flex">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
-                  className="transition duration-300 ease-in-out hover:text-[#7D73C3]"
+                  className={`transition duration-300 ease-in-out hover:text-[#7D73C3] ${
+                    isActiveLink(item.href)
+                      ? "text-[#7D73C3]"
+                      : "text-[#E3E3E3]"
+                  }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-
               <Link href="/contact">
                 <button className="cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
                   Contact Us
