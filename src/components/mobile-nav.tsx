@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { navItems } from "./navbar";
@@ -10,12 +10,20 @@ import { LogoNav } from "./logo nav";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Helper function to determine if a link is active
+  const isActiveLink = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <div className="fixed top-0 z-50 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50">
       {/* Logo */}
       <LogoNav />
-
       {/* Mobile Menu Trigger */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
@@ -54,7 +62,11 @@ export default function MobileNav() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="transition duration-300 ease-in-out text-md font-light text-[#A2A2A2] hover:text-[#7D73C3]"
+                className={`transition duration-300 ease-in-out text-md font-light hover:text-[#7D73C3] ${
+                  isActiveLink(item.href)
+                    ? "text-[#7D73C3]"
+                    : "text-[#A2A2A2]"
+                }`}
                 onClick={() => setOpen(false)}
               >
                 {item.name}

@@ -38,7 +38,7 @@ export default function AnywhereYouworkSection() {
   };
 
   return (
-    <section className="bg-white px-0 text-[#0B0A0A] md:px-[120px] py-12">
+    <section className="bg-white px-0 text-[#0B0A0A] md:px-[120px] py-[49px] md:pt-[87px]">
       {/* Section Header */}
       <motion.div
         className="container mx-auto mb-12 text-center"
