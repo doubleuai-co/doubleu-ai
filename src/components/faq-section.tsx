@@ -13,12 +13,12 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-[#F3F3F333] py-2 md:py-4">
+    <div className="border-b border-[#F3F3F333] py-2 md:py-5">
       <button
         className="flex w-full cursor-pointer items-center justify-between text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="pr-10 text-sm font-medium text-white md:text-lg">
+        <span className="pr-10 text-sm font-bold font-satoshi text-white md:text-lg">
           {question}
         </span>
         {isOpen ? (
@@ -85,14 +85,14 @@ export default function FAQSection() {
 
   return (
     <motion.section
-      className="bg-[#0B0A0A] px-4 py-20 text-white sm:px-6 md:px-[120px]"
+      className="bg-[#0B0A0A] px-8 md:py-22 py-8 text-white sm:px-6 md:px-[120px]"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto max-w-sm lg:max-w-7xl">
-        <h2 className="mb-22 text-center text-2xl font-bold text-white lg:mb-12 lg:text-4xl">
+        <h2 className="md:mb-22 mb-12 text-center text-2xl font-bold text-white lg:mb-12 lg:text-4xl">
           FREQUENTLY ASKED <br /> QUESTIONS
         </h2>
 

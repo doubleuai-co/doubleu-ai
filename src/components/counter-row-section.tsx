@@ -8,7 +8,7 @@ import { motion, useMotionValue, animate, easeOut } from "framer-motion";
 const stats = [
   { number: "2M+", description: "Tasks completed around the globe" },
   { number: "100%", description: "Time saved by using doubleU AI workforce" },
-  { number: "85%", description: "Reduction in task completion time post-AI" },
+  { number: "85%", description: "Reduction in time taken to complete tasks pre- and post-AI" },
   { number: "99.9%", description: "AI agent availability" },
 ];
 
@@ -62,7 +62,7 @@ const brandVariants = {
 // Main Component
 export default function CounterRowSection() {
   return (
-    <section className="bg-white md:text-center text-left py-[49px] md:pt-[87px] text-gray-800 sm:px-6 md:px-[120px]">
+    <section className="bg-white md:text-center text-left pt-[49px] md:pt-[87px] text-gray-800 sm:px-6 md:px-[120px]">
       {/* Statistics Section */}
       <motion.div
         className="container mx-auto justify-between grid grid-cols-1 gap-4 md:gap-8 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-4"
@@ -84,7 +84,7 @@ export default function CounterRowSection() {
       viewport={{ once: true }}
     >
       <AnimatedCounter rawNumber={stat.number} start={startCount}  />
-      <p className="md:max-w-[200px] md:pt-4 text-sm md:text-base text-[#404040]">
+      <p className="md:max-w-[200px] md:pt-4 pt-4 pr-28 md:pr-0 text-md md:text-base text-[#404040]">
         {stat.description}
       </p>
     </motion.div>
@@ -195,7 +195,7 @@ const AnimatedCounter = ({ rawNumber, start = false }: { rawNumber: string; star
 
   return (
     <motion.h2
-      className="text-2xl text-[#0B0A0A] lg:text-5xl"
+      className="text-3xl text-[#0B0A0A] lg:text-5xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >

@@ -67,7 +67,7 @@ export default function WhyChooseUsSection() {
   };
 
   return (
-    <section className="bg-white px-6 py-[49px] text-[#0B0A0A] sm:px-6 md:px-[120px] md:py-[87px]">
+    <section className="bg-white px-6 text-[#0B0A0A] sm:px-6 md:px-[120px] pt-[64px] md:pt-[87px]">
       <motion.div
         className="container mx-auto mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ export default function WhyChooseUsSection() {
         </p>
       </motion.div>
 
-      <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-5 md:gap-y-6 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <motion.div
             key={index}
@@ -129,7 +129,7 @@ export default function WhyChooseUsSection() {
 
             <p
               className={`md:text-md text-sm transition-colors duration-300 ease-in-out ${
-                feature.highlight ? "text-gray-300" : "text-gray-700"
+                feature.highlight ? "text-gray-300" : "text-[#0B0A0A]"
               }`}
             >
               {feature.description}
@@ -139,14 +139,14 @@ export default function WhyChooseUsSection() {
       </div>
 
       <motion.div
-        className="mt-8 mb-18 text-center md:mt-16"
+        className="mt-8 mb-12 text-center md:mt-10 md:mb-[89px]"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
         <Link href="/workforce" passHref>
-          <button className="cursor-pointer rounded-md bg-[#6a5acd] px-8 py-3 text-sm text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+          <button className="cursor-pointer rounded-[8px] bg-[#6a5acd] px-7 py-3.5 text-sm text-white shadow-sm transition duration-300 ease-in-out hover:bg-[#9747FF]">
             Explore AI Workers
           </button>
         </Link>

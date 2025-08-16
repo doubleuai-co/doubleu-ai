@@ -99,7 +99,7 @@ const TestimonialsGrid = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-4">
+    <div className="max-w-7xl mx-auto px-6 md:py-4 py-8">
       {/* Desktop Grid Layout */}
       <div className="hidden md:grid md:grid-cols-3 gap-6 items-center">
         {/* Column 1 */}

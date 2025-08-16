@@ -98,7 +98,7 @@ const AboutPage = () => {
           initial="hidden"
           animate="visible"
           variants={fadeIn}
-          className="relative inset-0 overflow-hidden bg-[#0B0A0A] py-24"
+          className="relative inset-0 overflow-hidden bg-[#0B0A0A] md:py-24 py-16"
           // style={{
           //   background: "#0B0A0A",
           //   backgroundImage: `url('dots-bg.png')`,
@@ -151,14 +151,14 @@ const AboutPage = () => {
           >
             <motion.h1
               variants={fadeInUp}
-              className="mb-6 pt-12 text-center text-3xl leading-[36px] font-medium -tracking-wide text-white md:text-[3.9rem] md:leading-[72px]"
+              className="mb-6 pt-12 text-center text-3xl leading-[36px] font-medium -tracking-wide text-[#F0F0F0] md:text-[64px] md:leading-[72px]"
             >
-              AI workers that handles the work, So you can handle whats next{" "}
-              <br className="hidden md:block" />
+              AI workers that handles the work, So you can handle <br className="hidden md:block" />whats next{" "}
+              
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="px-4 py-2 text-sm font-normal text-[#D9D9D9] md:px-2 md:text-lg lg:px-40"
+              className="px-6 py-2 text-sm font-light text-[#D9D9D9] md:px-2 md:text-lg lg:px-40"
             >
               Build, grow, and scale your business with our AI workforce,
               custom-built for your business needs
@@ -179,12 +179,12 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={staggerContainer}
-          className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-[77px]"
+          className="bg-white px-4 sm:px-6 md:px-8 py-[32px] md:py-[49px] "
         >
           <div className="container mx-auto max-w-4xl px-2 py-12 text-justify lg:px-6 lg:text-center">
             <motion.h2
               variants={fadeInUp}
-              className="mb-8 text-2xl font-medium text-[#0B0A0A] lg:text-[47px]"
+              className="md:mb-8 mb-4 text-2xl font-medium text-[#0B0A0A] lg:text-[40px]"
             >
               Our Mission
             </motion.h2>
@@ -198,7 +198,7 @@ const AboutPage = () => {
             </motion.p>
             <motion.h2
               variants={fadeInUp}
-              className="mb-8 text-2xl lg:mt-24 font-medium text-[#0B0A0A] lg:text-[45px]"
+              className="md:mb-8 mb-4 pt-12 md:pt-0 text-2xl font-medium text-[#0B0A0A] lg:text-[40px]"
             >
               Our Vision
             </motion.h2>
@@ -221,7 +221,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
-          className="relative w-full overflow-hidden bg-[#0B0A0A] py-10 text-white"
+          className="relative w-full overflow-hidden bg-[#0B0A0A] md:py-10 py-16 text-white"
         >
           <div
             className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] opacity-60 blur-[400px]"
@@ -231,10 +231,10 @@ const AboutPage = () => {
             className="absolute top-1/4 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] opacity-60 blur-[400px]"
             aria-hidden="true"
           ></div>
-          <div className="z-20 container mx-auto mb-18 text-center">
+          <div className="z-20 container mx-auto mb-8 md:mb-18 text-center">
             <motion.h2
               variants={fadeInUp}
-              className="mb-4 px-22 text-2xl font-bold text-white lg:text-[40px]"
+              className="mb-4 px-18 text-2xl font-bold text-white lg:text-[40px]"
             >
               Our Impact by the Numbers
             </motion.h2>
@@ -266,9 +266,9 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white py-[118px] md:px-[120px]"
+          className="bg-white py-[49px] md:py-[87px] md:px-[120px]"
         >
-          <div className="container mx-auto mb-12 text-center">
+          <div className="container mx-auto md:mb-12 mb-8 text-center">
             <motion.h2
               variants={fadeInUp}
               className="mb-4 px-14 text-2xl font-bold text-[#0B0A0A] lg:text-[40px]"
@@ -285,7 +285,7 @@ const AboutPage = () => {
           </div>
           <motion.div
             variants={staggerContainer}
-            className="container mx-auto mt-16 grid grid-cols-1 gap-6 md:grid-cols-3"
+            className="container mx-auto md:mt-16 grid grid-cols-1 gap-6 md:grid-cols-3"
           >
             {approachSteps.map((step, index) => (
               <motion.div
@@ -293,7 +293,7 @@ const AboutPage = () => {
                 variants={fadeInUp}
                 className="flex items-center gap-x-6 px-4 text-center lg:p-4"
               >
-                <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] p-4 lg:p-4">
+                <div className="flex h-[40px] w-[40px] items-center justify-center rounded-[4px] bg-[linear-gradient(129.25deg,rgba(125,115,195,0.3)_-8.65%,rgba(0,180,216,0.3)_145.4%)] p-4 lg:p-4">
                   {/* <step.icon size={30} className="" />{" "} */}
                 </div>
                 <div className="text-left">
@@ -325,7 +325,7 @@ const AboutPage = () => {
               Our Team
             </motion.h2>
           </div>
-          <div className="container grid grid-cols-1 items-center justify-between gap-12 text-center md:grid-cols-1">
+          <div className="container grid grid-cols-1 items-center justify-between gap-8 md:gap-12 text-center md:grid-cols-1">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -343,13 +343,13 @@ const AboutPage = () => {
                 </div>
 
                 <div className="mx-auto text-left md:text-left">
-                  <h3 className="mb-1 text-[26px] leading-[48px] font-bold text-[#0B0A0A]">
+                  <h3 className="md:mb-2 md:text-[26px] text-2xl leading-[48px] font-bold text-[#0B0A0A]">
                     {member.name}
                   </h3>
-                  <p className="text-md py-2 text-[#404040] md:text-xl">
+                  <p className="text-sm md:py-2 text-[#404040] font-light md:text-xl">
                     {member.role}
                   </p>
-                  <p className="py-2 text-sm leading-relaxed text-[#404040] md:text-[15px]">
+                  <p className="md:py-2 py-4 text-sm leading-relaxed text-[#404040] md:text-[15px]">
                     {member.bio}
                   </p>
                 </div>
@@ -364,7 +364,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="bg-white pt-[118px]"
+          className="bg-white pt-[49px] md:pt-[87px]"
         >
           <div className="container mx-auto mb-8 max-w-3xl px-4 text-center sm:px-6 md:mb-14 md:px-18">
             <motion.h2
@@ -433,10 +433,10 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={fadeIn}
-          className="relative mx-4 flex max-w-6xl items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:my-[87px] md:px-[120px]"
+          className="relative mx-4 flex max-w-6xl items-center justify-center overflow-hidden rounded-[20px] bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:mb-[49px] md:mt-[87px] my-[47px] md:px-[120px]"
         >
           <div className="mx-auto flex flex-col items-center text-center md:container md:max-w-3xl">
-            <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-lg md:px-4 md:text-4xl">
+            <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-xl md:px-4 md:text-4xl">
               Take a smarter approach to AI in your business today.
             </h2>
             <p className="max-w-lg px-3 md:px-0">

@@ -44,41 +44,42 @@ export default function Mylo() {
   ];
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white">
       {/* 1. Hero Section for Mylo Page */}
-      <section className="relative overflow-hidden bg-[#0B0A0A] text-white md:px-[120px] md:pt-24">
+      <section className="relative overflow-hidden bg-[#0B0A0A] text-white md:px-[120px] md:pt-2">
         {/* Background elements - subtle blurs/gradients */}
         {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
         {/* <div className="animate-blob animation-delay-2000 absolute top-[45%] right-40 h-120 w-120 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div> */}
         {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
 
-        <div className="max-h-7xl relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between gap-x-2 md:flex-row md:items-center md:pt-8">
+        <div className="max-h-7xl relative z-10 flex flex-col items-center justify-between gap-x- pt-40 md:flex-row md:items-center md:justify-around md:pt-8 px-4 md:px-0">
           {/* Left Column: Text Content */}
-          <div className="mt-30 flex flex-col items-center text-center md:mt-26 md:mb-0 md:w-1/2 md:items-start md:text-left">
+          <div className="flex flex-col items-center pb-4 md:pb-22 text-center md:mt-26 md:mb-0 md:w-1/2 md:items-start md:text-left">
             <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
               Hi, I&apos;m Mylo!
             </h1>
-            <p className="mb-8 px-4 text-sm leading-[28px] -tracking-wide text-gray-300 md:-mr-40 md:px-0 md:text-lg md:leading-[34px]">
+            <p className="mb-8 max-w-lg px-4 text-sm leading-[28px] -tracking-wide text-[#D9D9D9] md:-mr-40 md:px-0 md:text-lg md:leading-[34px]">
               I help you enhance your sales and customer experience effortlessly
               by automating outreach, optimizing campaigns, and driving
               engagement. Let me handle the strategy while you focus on closing
               deals.
             </p>
             <Link href="/" passHref>
-              <button className="text-md md:text-md rounded-md bg-[#7D73C3] px-8 py-3 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:mb-4">
+              <button className="text-md md:text-md rounded-md bg-[#7D73C3] px-6 py-3.5 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:mb-4">
                 Try DoubleU AI
               </button>
             </Link>
           </div>
 
           {/* Right Column: Mylo Image with Overlays */}
-          <div className="h-md relative m-0 flex w-full justify-end md:items-end md:pl-40">
+          <div>
+            {" "}
             <Image
               src="/new-img/mylo-m.svg" // Placeholder for Mylo's image
               alt="Mylo AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="h-full w-full"
+              className="h-full w-[1200px] md:ml-18"
             />
             {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
             {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>

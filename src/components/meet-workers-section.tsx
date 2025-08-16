@@ -77,7 +77,7 @@ export default function MeetWorkersSection() {
   };
 
   return (
-    <section className="bg-white px-4 text-gray-800 md:px-[120px] py-[49px] md:pt-[87px]">
+    <section className="bg-white px-4 text-gray-800 md:px-[120px] pt-[64px] md:pt-[87px]">
       <div className="container mx-auto mb-12 md:mb-8 text-center">
         <h2 className="mb-4 text-2xl md:text-4xl font-bold text-[#0B0A0A]">
           Meet our AI workforce

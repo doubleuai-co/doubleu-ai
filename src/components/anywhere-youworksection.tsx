@@ -38,7 +38,7 @@ export default function AnywhereYouworkSection() {
   };
 
   return (
-    <section className="bg-white px-0 text-[#0B0A0A] md:px-[120px] py-[49px] md:pt-[87px]">
+    <section className="bg-white px-0 text-[#0B0A0A] md:px-[120px] pt-[64px] md:pt-[87px]">
       {/* Section Header */}
       <motion.div
         className="container mx-auto mb-12 text-center"
@@ -54,7 +54,7 @@ export default function AnywhereYouworkSection() {
         <h2 className="mb-4 text-xl font-bold lg:text-4xl max-w-lg mx-auto">
           DoubleU AI, anywhere you work
         </h2>
-        <p className="text-md mx-auto max-w-xl px-8 text-gray-600 lg:text-lg">
+        <p className="text-md mx-auto max-w-xl md:px-8 px-4 text-gray-600 lg:text-lg">
           Your AI agents go where you go, making work faster, smoother, and
           hands-free. Start anywhere, pick up anytime. One AI, same great
           experience.

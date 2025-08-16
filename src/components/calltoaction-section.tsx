@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 
 export default function CallToActionSection() {
   return (
-    <section className="relative mx-6 my-6 max-w-6xl overflow-hidden rounded-3xl bg-[#7D73C3] px-4 py-12 md:py-6 text-white shadow-sm sm:px-6 md:my-[47px] md:mx-[120px]">
+    <section className="relative mx-6 my-[34px] overflow-hidden rounded-2xl bg-[#7D73C3] px-2 py-10 md:py-6 text-white shadow-sm sm:px-6 md:my-[47px] md:mx-[120px]">
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         {/* Text Content */}
         <motion.div
-          className="flex flex-col items-center px-4 pt-4 text-center md:mb-0 md:w-1/2 md:items-start md:text-left lg:pt-0"
+          className="flex flex-col items-center px-4 pt- text-center md:mb-0 md:w-1/2 md:items-start md:text-left lg:pt-0"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -21,7 +21,7 @@ export default function CallToActionSection() {
             Why work harder when your AI can do it cooler?
             <br className="hidden sm:block" />
           </h2>
-          <p className="mb-8 text-sm text-[#D9D9D9] sm:text-lg md:text-lg">
+          <p className="mb-8 text-md text-[#D9D9D9] sm:text-lg md:text-lg">
             One AI! all your platforms, always on.
           </p>
           <Link href="/contact" passHref>
@@ -44,7 +44,7 @@ export default function CallToActionSection() {
             alt="AI and human interaction illustration"
             width={450}
             height={300}
-            className="object-fit object-bottom"
+            className="object-fit object-bottom px-6"
           />
         </motion.div>
       </div>
