@@ -1,8 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
+import axios from 'axios'; // Make sure to install axios: npm install axios
 
 // 1. Define form values interface
 interface ContactFormValues {
@@ -47,12 +49,59 @@ const fadeUp = {
 };
 
 const Contact = () => {
-  const handleSubmit = (
+  // State to manage submission status (success, error, or null)
+  const [submissionStatus, setSubmissionStatus] = useState<
+    'success' | 'error' | null
+  >(null);
+
+  // Handle form submission
+  const handleSubmit = async (
     values: ContactFormValues,
-    { resetForm }: FormikHelpers<ContactFormValues>
+    { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>
   ) => {
-    console.log('Form values:', values);
-    resetForm();
+    setSubmissionStatus(null); // Reset status on new submission
+
+    // Airtable API configuration
+    const AIRTABLE_API_URL = 'https://api.airtable.com/v0/appiALdFmgtI2q1gn/Leads';
+    const AIRTABLE_API_TOKEN = 'patLJPljtQ0Yeanx5.2d69474b4ca31726fa691d53d165c47c537f7995050d252cc514776386c164fe';
+
+    // Prepare data in the format Airtable expects
+    const data = {
+      records: [
+        {
+          fields: {
+            First_Name: values.firstName,
+            Last_Name: values.lastName,
+            Company: values.company,
+            Role: values.role,
+            Email: values.email,
+            Message: values.message,
+          },
+        },
+      ],
+    };
+
+    try {
+      // Post data to Airtable
+      await axios.post(AIRTABLE_API_URL, data, {
+        headers: {
+          Authorization: `Bearer ${AIRTABLE_API_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      // On success
+      setSubmissionStatus('success');
+      resetForm();
+      
+    } catch (error) {
+      // On error
+      console.error('Airtable submission error:', error);
+      setSubmissionStatus('error');
+    } finally {
+        // Re-enable the submit button
+        setSubmitting(false);
+    }
   };
 
   return (
@@ -96,7 +145,7 @@ const Contact = () => {
                   variants={fadeUp}
                   initial="hidden"
                   animate="visible"
-                  className="grid grid-cols-2 gap-4 md:grid-cols-2"
+                  className="grid grid-cols-1 gap-4 md:grid-cols-2"
                 >
                   <div>
                     <label
@@ -117,7 +166,7 @@ const Contact = () => {
                       className="mt-1 text-sm text-red-600"
                     />
                   </div>
-                  
+
                   <div>
                     <label
                       htmlFor="lastName"
@@ -141,10 +190,10 @@ const Contact = () => {
 
                 {/* Other Fields */}
                 {[
-                  { name: 'company', label: 'Company', type: 'text', placeholder:'Enter company name', },
-                  { name: 'role', label: 'Role', type: 'text',placeholder:'Enter your role at the company', },
-                  { name: 'email', label: 'Email', type: 'email', placeholder:'Enter email', },
-                  { name: 'message', label: 'Message', type: 'textarea', placeholder:'Leave us a message...' },
+                  { name: 'company', label: 'Company', type: 'text', placeholder: 'Enter company name' },
+                  { name: 'role', label: 'Role', type: 'text', placeholder: 'Enter your role at the company' },
+                  { name: 'email', label: 'Email', type: 'email', placeholder: 'Enter email' },
+                  { name: 'message', label: 'Message', type: 'textarea', placeholder: 'Leave us a message...' },
                 ].map((field, index) => (
                   <motion.div
                     key={field.name}
@@ -164,7 +213,7 @@ const Contact = () => {
                       as={field.type === 'textarea' ? 'textarea' : 'input'}
                       type={field.type}
                       name={field.name}
-                      placeholder={field.placeholder} 
+                      placeholder={field.placeholder}
                       rows={field.type === 'textarea' ? 5 : undefined}
                       className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
                     />
@@ -176,6 +225,18 @@ const Contact = () => {
                   </motion.div>
                 ))}
 
+                {/* Submission Status Message */}
+                {submissionStatus === 'success' && (
+                    <div className="rounded-md bg-green-100 p-4 text-center text-green-700">
+                        Your message has been sent successfully!
+                    </div>
+                )}
+                {submissionStatus === 'error' && (
+                    <div className="rounded-md bg-red-100 p-4 text-center text-red-700">
+                        Something went wrong. Please try again later.
+                    </div>
+                )}
+
                 {/* Submit Button */}
                 <motion.div
                   whileHover={{ scale: 1.03 }}
@@ -185,7 +246,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full cursor-pointer rounded-lg bg-[#6a5acd] px-12 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]"
+                    className="w-full cursor-pointer rounded-lg bg-[#7D73C3] px-12 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] disabled:opacity-50"
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit'}
                   </button>
