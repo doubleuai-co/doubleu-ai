@@ -46,35 +46,35 @@ export default function Ehiz() {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for Ehiz Page */}
-      <section className="relative md:px-[120px] overflow-hidden bg-[#0B0A0A] md:pt-24 text-white">
+      <section className="relative overflow-hidden bg-[#0B0A0A] text-white md:px-[120px] md:pt-24">
         {/* Background elements - subtle blurs/gradients */}
         {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
         <div className="animate-blob animation-delay-2000 absolute top-[45%] right-40 h-120 w-120 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
         {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
 
-        <div className="max-h-7xl gap-x-18 md:pt-32 relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between md:flex-row md:items-center">
+        <div className="max-h-7xl relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between gap-x-18 md:flex-row md:items-center md:pt-32">
           {/* Left Column: Text Content */}
           <div className="mt-48 flex flex-col items-center text-center md:mt-0 md:mb-0 md:w-1/2 md:items-start md:text-left">
             <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
               Hi, I&apos;m Ehiz!
             </h1>
-            <p className="text-sm mb-8 max-w-xl px-4 md:px-0 leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
+            <p className="mb-8 max-w-xl px-4 text-sm leading-[28px] -tracking-wide text-gray-300 md:px-0 md:text-lg md:leading-[34px]">
               I help you enhance your recruitment process by sourcing top
               talent, screening candidates, and simplifying hiring decisions.
               Let me handle the search while you focus on building your dream
               team.
             </p>
             <Link href="/" passHref>
-              <button className="rounded-md md:mb-18 bg-[#7D73C3] px-8 py-3 text-md font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:text-md">
+              <button className="text-md md:text-md rounded-md bg-[#7D73C3] px-8 py-3 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:mb-18">
                 Try DoubleU AI
               </button>
             </Link>
           </div>
 
           {/* Right Column: Ehiz Image with Overlays */}
-          <div className="relative m-0 flex w-full mt-8 md:mt-0 px-4 md:px-0 h-full items-end justify-end p-0 md:w-[50%]">
+          <div className="relative m-0 mt-8 flex h-full w-full items-end justify-end p-0 px-4 md:mt-0 md:w-[50%] md:px-0">
             <Image
-              src="/new-img/Ehiz-m.svg" // Placeholder for Ehiz's image
+              src="/new-img/ehiz-m.svg" // Placeholder for Ehiz's image
               alt="Ehiz AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
@@ -89,14 +89,14 @@ export default function Ehiz() {
       </section>
 
       {/* 2. Who is Ehiz? Section */}
-      <section className="bg-white px-6 py-16 sm:px-6 md:py-26 md:px-[120px]">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center justify-between gap-8 md:grid-cols-2">
+      <section className="bg-white px-6 pt-[49px] sm:px-6 md:px-[120px] md:pt-[118px]">
+        <div className="grid grid-cols-1 items-center justify-between gap-4 md:grid-cols-2 md:gap-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
-            <h2 className="mb-6 text-2xl font-bold text-[#222831] md:text-4xl">
+            <h2 className="mb-6 text-[28px] font-bold text-[#0B0A0A] md:text-[40px]">
               Who is Ehiz?
             </h2>
-            <p className="text-md mb-4  leading-relaxed text-gray-700">
+            <p className="mb-4 text-sm leading-relaxed text-[#404040] md:text-[16px]">
               Ehiz isn’t just a hiring tool, it’s your recruitment partner,
               built to streamline every stage of talent acquisition. From
               screening applicants to scheduling interviews and managing
@@ -113,23 +113,23 @@ export default function Ehiz() {
           {/* Right Column: Illustration */}
           <div className="flex justify-center md:justify-end">
             <Image
-              src="/new-img/image-2.svg" // Placeholder for the sales illustration
+              src="/new-img/image.png" // Placeholder for the sales illustration
               alt="Sales process illustration"
               width={400}
               height={300}
-              className="rounded-xl border-2 border-gray-400 object-contain"
+              className="rounded-xl border border-[#7D73C3] object-contain"
             />
           </div>
         </div>
       </section>
 
       {/* 3. What Ehiz can do for you Section */}
-      <section className="mx-auto max-w-[85rem] bg-white px-8 py-8 sm:px-6 md:px-[120px]">
-        <div className="container mx-auto mb-12 text-center">
-          <h2 className="mb-4 px-18 text-2xl font-bold text-[#222831] md:px-0 md:text-4xl">
+      <section className="mx-auto bg-white px-8 py-[49px] sm:px-6 md:px-[120px] md:py-[89px]">
+        <div className="mx-auto mb-10 text-center md:mb-16">
+          <h2 className="mb-4 px-14 text-[28px] font-bold text-[#0B0A0A] md:px-0 md:text-4xl">
             What Ehiz can do for you
           </h2>
-          <p className="px-2 text-[#404040] md:px-0 md:mx-auto max-w-md">
+          <p className="mx-auto max-w-sm px-2 text-[#404040] md:px-0">
             Skilled, specialized, and always ready, these AI agents are built to
             work for you.
           </p>
@@ -150,10 +150,10 @@ export default function Ehiz() {
                   className="flex-shrink-0 object-contain group-hover:brightness-200"
                 />
               </div>
-              <h3 className="text-md mb-2 pt-4 font-semibold text-[#222831] md:text-lg">
+              <h3 className="text-md mb-2 pt-4 font-semibold text-[#404040] md:text-lg">
                 {capability.title}
               </h3>
-              <p className="md:text-md text-sm text-gray-700">
+              <p className="md:text-md text-sm text-[#0B0A0A]">
                 {capability.description}
               </p>
             </div>
@@ -162,15 +162,15 @@ export default function Ehiz() {
       </section>
 
       {/* 4. The future of AI-driven sales Section (CTA) */}
-      <section className="relative w-screen overflow-hidden bg-[#0B0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+      <section className="relative w-screen overflow-hidden bg-[#0B0A0A] px-4 py-12 text-center text-white sm:px-6 lg:px-8">
         <div className="animate-blob animation-delay-2000 absolute top-0 right-0 h-80 w-80 rounded-full bg-[#6a5acd] opacity-20 mix-blend-screen blur-3xl filter"></div>
-        <div className="animate-blob absolute top-0 left-0 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
+        <div className="animate-blob absolute top-1/2 left-8 h-80 w-80 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter md:top-0 md:left-0"></div>
 
-        <div className="container mx-0 max-w-4xl px-4 md:px-2 md:mx-auto">
-          <h2 className="mb-4 px-10 text-2xl leading-tight font-bold md:px-0 md:text-4xl">
+        <div className="container mx-0 max-w-5xl md:mx-auto">
+          <h2 className="mb-8 px-10 text-[28px] leading-tight font-bold text-[#F0F0F0] md:px-0 md:text-4xl">
             The Future of AI-Driven Business Solutions
           </h2>
-          <p className="text-md mx-auto leading-relaxed text-[#D9D9D9] md:text-center">
+          <p className="mx-auto max-w-5xl px-4 text-start text-[16px] leading-relaxed text-[#D9D9D9] md:px-0 md:text-center">
             Ehiz redefines how organizations approach talent acquisition by
             providing a balance between automation and human connection. It
             ensures that every stage of recruitment is streamlined,
@@ -185,7 +185,7 @@ export default function Ehiz() {
       </section>
 
       {/* 5. Bottom CTA Banner */}
-      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-18 text-white sm:px-6 md:my-18 md:mx-[120px] md:px-14">
+      <section className="relative mx-4 my-10 max-w-6xl overflow-hidden rounded-2xl bg-gradient-to-b from-[#000] to-[#7D73C3] px-4 py-[49px] text-[#F0F0F0] sm:px-6 md:mx-[120px] md:py-[87px]">
         <div className="container mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl lg:text-5xl">
             Get Started with Ehiz Today
@@ -194,12 +194,12 @@ export default function Ehiz() {
           <p className="px-4 md:px-0">
             Discover a new level of customer engagement with an AI sales agent
             who ensures every moment of your customer&apos;s experience counts.
-            Integrate Mylo into your business today and revolutionize the way
+            Integrate Ehiz into your business today and revolutionize the way
             you connect with prospects and close sales.
           </p>
           <Link href="/contact-us" passHref className="mt-14">
-            <button className="rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] cursor-pointer">
-              Explore AI Workers
+            <button className="cursor-pointer rounded-md bg-white px-8 py-4 text-base font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF]">
+              Get Started Now
             </button>
           </Link>
         </div>

@@ -58,7 +58,7 @@ export default function Mylo() {
             <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[3rem] md:leading-[72px]">
               Hi, I&apos;m Mylo!
             </h1>
-            <p className="mb-8 max-w-lg px-4 text-sm leading-[28px] -tracking-wide text-[#D9D9D9] md:-mr-40 md:px-0 md:text-lg md:leading-[34px]">
+            <p className="mb-8 max-w-lg px-4 text-sm leading-[28px] -tracking-wide text-[#D9D9D9] md:-mr-40 md:px-0 md:text-[14px] md:leading-[34px]">
               I help you enhance your sales and customer experience effortlessly
               by automating outreach, optimizing campaigns, and driving
               engagement. Let me handle the strategy while you focus on closing
@@ -72,19 +72,15 @@ export default function Mylo() {
           </div>
 
           {/* Right Column: Mylo Image with Overlays */}
-          <div className="w-full md:ml-30 text-right">
+          <div className="w-full flex justify-end transform translate-x-22">
             {" "}
             <Image
-              src="/new-img/mylo-m.png" // Placeholder for Mylo's image
+              src="/new-img/mylo-m.svg" // Placeholder for Mylo's image
               alt="Mylo AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="md:h-fit md:w-[700px] object-cover w-full h-full"
+              className="md:h-fit md:w-[800px] object-fill w-full h-full"
             />
-            {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
-            {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
-      <div className="absolute top-1/3 right-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">Sales Agent</div>
-   */}{" "}
           </div>
         </div>
       </section>
@@ -171,7 +167,7 @@ export default function Mylo() {
           <h2 className="mb-8 px-10 text-[#F0F0F0] text-[28px] leading-tight font-bold md:px-0 md:text-4xl">
             The Future of AI-Driven Sales
           </h2>
-          <p className="text-[16px] mx-auto px-4 md:px-0 max-w-[7xl] text-start leading-relaxed text-[#D9D9D9] md:text-center">
+          <p className="text-[16px] mx-auto px-4 md:px-0 max-w-5xl text-center leading-relaxed text-[#D9D9D9] md:text-center">
             Mylo redefines the way businesses engage with customers by providing
             a balance between technological efficiency and genuine personal
             service. She ensures that every interaction is informative,
