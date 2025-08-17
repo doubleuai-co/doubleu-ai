@@ -74,7 +74,7 @@ export default function Neo() {
           {/* Right Column: Neo Image with Overlays */}
           <div className="h-md relative m-0 flex w-full justify-end md:items-end md:pl-40">
             <Image
-              src="/neo-m.svg" // Placeholder for Neo's image
+              src="/new-img/neo-m.png" // Placeholder for Neo's image
               alt="Neo AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions

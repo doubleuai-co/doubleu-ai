@@ -74,11 +74,11 @@ export default function Agora() {
           {/* Right Column: Agora Image with Overlays */}
           <div className="h-md relative m-0 flex w-full justify-end md:items-end md:pl-40">
             <Image
-              src="/new-img/agora-m.svg" // Placeholder for Agora's image
+              src="/new-img/agora-m.png.png" // Placeholder for Agora's image
               alt="Agora AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="h-full w-full"
+              className="h-full w-fit"
             />
             {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
             {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>

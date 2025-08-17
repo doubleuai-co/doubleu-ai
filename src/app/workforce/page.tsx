@@ -25,7 +25,7 @@ export default function Workforce() {
   return (
     <main className="bg-white">
       {/* 1. Hero Section for Workforce Page */}
-      <section className="relative flex h-screen items-center justify-center bg-black text-white md:h-[120vh]">
+      <section className="relative flex items-center justify-center bg-black text-white md:h-[120vh]">
         <Image
           src="/new-img/workforce(2).png"
           alt=""
@@ -45,7 +45,7 @@ export default function Workforce() {
 
         {/* Main Content */}
         <div className="relative mx-auto max-w-[52rem] px-4 pb-20 pt-40 text-center">
-          <h1 className="text-3xl leading-tight font-bold sm:text-5xl md:text-6xl">
+          <h1 className="text-[30px] leading-tight font-bold sm:text-5xl md:text-6xl">
             Workforce built specifically for business needs
           </h1>
           <p className="mx-auto mt-6 max-w-lg text-lg text-gray-300">
@@ -78,7 +78,7 @@ export default function Workforce() {
         {/* 2. Meet our AI workforce Section */}
         <section className="bg-white px-2 py-[49px] md:py-[118px] text-[#0B0A0A] sm:px-2 lg:px-8">
           <div className="container mx-auto mb-8 text-center">
-            <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] md:text-4xl">
+            <h2 className="mb-4 text-3xl font-bold text-[#0B0A0A] md:text-4xl">
               Meet our AI workforce
             </h2>
             <p className="mx-auto max-w-lg px-6 text-center text-sm leading-[1.4rem] font-normal -tracking-wide text-[#404040] md:text-[18px] md:leading-[150%]">
@@ -174,10 +174,10 @@ export default function Workforce() {
           <div className="container mx-auto grid max-w-7xl grid-cols-1 bg-[#F9F9F9] md:hidden md:grid-cols-2">
             {/* Left Column: Features List */}
             <div className="flex flex-col space-y-6 md:p-12">
-              <h2 className="mb-4 px-6 pb-2 text-center text-2xl font-bold text-[0B0A0A] md:text-start md:text-4xl">
+              <h2 className="mb-4 px-6 pb-2 pt-8 text-center text-2xl font-bold text-[0B0A0A] md:text-start md:text-4xl">
                 Our Workers general features
               </h2>
-              <p className="max-w-sm px-6 pb-4 text-center text-sm text-[#404040] md:text-start">
+              <p className="max-w-sm px-2 pb-4 text-center text-sm text-[#404040] md:text-start">
                 Skilled, specialized, and always ready, these AI agents are
                 built to work for you.
               </p>
@@ -196,7 +196,7 @@ export default function Workforce() {
                 {generalFeatures.map((feature, index) => (
                   <li
                     key={index}
-                    className="flex w-fit items-center space-x-3 bg-[#FFFFFF] p-2"
+                    className="flex w-max items-center rounded-sm ml-4 space-x-3 bg-[#FFFFFF] p-2"
                   >
                     <Image
                       src="/new-img/bullet.svg"
@@ -205,7 +205,7 @@ export default function Workforce() {
                       height="20"
                       className="h-auto object-cover"
                     />
-                    <p className="text-xs font-bold text-[#0B0A0A] md:text-lg">
+                    <p className="text-[12px] font-semibold text-[#0B0A0A] md:text-lg">
                       {feature}
                     </p>
                   </li>
@@ -217,22 +217,26 @@ export default function Workforce() {
       </section>
 
       {/* 8. Bottom CTA Banner ("Take a smarter approach...") */}
-      <section className="relative mx-4 mb-6 flex max-w-6xl items-center justify-center overflow-hidden rounded-[16px] bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:mb-[47px] md:px-[120px]">
-        <div className="mx-auto flex flex-col items-center text-center md:container md:max-w-3xl">
-          <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-lg md:px-4 md:text-4xl">
-            Take a smarter approach to AI in your business today.
-          </h2>
-          <p className="max-w-lg px-3 md:px-0">
-            Seamlessly connect ai to your everyday tools and start working
-            faster, better, and easier
-          </p>
-          <Link href="/contact-us" passHref>
-            <button className="mt-6 cursor-pointer rounded-md bg-white px-8 py-3 text-sm font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] hover:text-black md:mt-12 md:text-base">
-              Get Started Now
-            </button>
-          </Link>
-        </div>
-      </section>
+          <section
+          className="relative mx-4 flex max-w-6xl items-center justify-center overflow-hidden rounded-[20px] bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:mb-[49px] md:mt-[87px] my-[47px] md:px-[120px]"
+        >
+          <div className="mx-auto flex flex-col items-center text-center md:container md:max-w-3xl">
+            <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-xl md:px-4 md:text-4xl">
+              Take a smarter approach to AI in your business today.
+            </h2>
+            <p className="max-w-lg px-3 md:px-0">
+              Seamlessly connect ai to your everyday tools and start working
+              faster, better, and easier
+            </p>
+            <Link href="/contact" passHref>
+              <button
+                className="mt-6 cursor-pointer rounded-md bg-white px-8 py-3 text-sm font-normal text-[#160F0F] shadow-md transition duration-300 ease-in-out hover:bg-[#9747FF] hover:text-black md:mt-12 md:text-base"
+              >
+                Get Started Now
+              </button>
+            </Link>
+          </div>
+        </section>
     </main>
   );
 }
