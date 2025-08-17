@@ -44,7 +44,7 @@ export default function Workforce() {
         {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/30 to-black/90" /> */}
 
         {/* Main Content */}
-        <div className="relative mx-auto max-w-[52rem] px-4 py-20 text-center">
+        <div className="relative mx-auto max-w-[52rem] px-4 pb-20 pt-40 text-center">
           <h1 className="text-3xl leading-tight font-bold sm:text-5xl md:text-6xl">
             Workforce built specifically for business needs
           </h1>
@@ -53,7 +53,7 @@ export default function Workforce() {
             in operational efficiency.
           </p>
           <Link href="/contact-us" passHref>
-            <button className="md:text-md mt-14 cursor-pointer rounded-md bg-[#6a5acd] px-8 py-3 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee]">
+            <button className="md:text-md mt-14 cursor-pointer rounded-md bg-[#7D73C3] px-8 py-3 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF]">
               Try DoubleU AI
             </button>
           </Link>
@@ -76,18 +76,18 @@ export default function Workforce() {
 
       <section>
         {/* 2. Meet our AI workforce Section */}
-        <section className="bg-white px-2 py-[47px] text-[#0B0A0A] sm:px-2 lg:px-8">
-          <div className="container mx-auto mb-8 text-center md:my-20">
+        <section className="bg-white px-2 py-[49px] md:py-[118px] text-[#0B0A0A] sm:px-2 lg:px-8">
+          <div className="container mx-auto mb-8 text-center">
             <h2 className="mb-4 text-2xl font-bold text-[#0B0A0A] md:text-4xl">
               Meet our AI workforce
             </h2>
-            <p className="mx-auto max-w-lg px-6 text-center text-sm leading-[1.4rem] font-normal -tracking-wide text-[#404040] md:text-xl md:leading-[150%]">
+            <p className="mx-auto max-w-lg px-6 text-center text-sm leading-[1.4rem] font-normal -tracking-wide text-[#404040] md:text-[18px] md:leading-[150%]">
               Skilled, specialized, and always ready, these AI agents are built
               to work for you.
             </p>
           </div>
 
-          <div className="container mx-auto grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-8 px-6 sm:grid-cols-2 sm:px-4 md:max-w-2xl md:px-0 lg:grid-cols-2">
+          <div className="container mx-auto grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-6 px-6 sm:grid-cols-2 sm:px-4 md:max-w-2xl md:px-0 lg:grid-cols-2">
             {agents.map((agent, index) => (
               // <Link key="" href="" passHref>
               <div
@@ -126,7 +126,7 @@ export default function Workforce() {
         </section>
 
         {/* 3. Our Workers General Features Section */}
-        <section className="bg-white px-6 py-0 sm:px-6 md:px-[120px] md:py-[47px]">
+        <section className="bg-white px-6 sm:px-6 md:px-[120px]">
           <div className="m-0 mx-auto hidden max-w-7xl grid-cols-1 items-center justify-between bg-[#F9F9F9] p-0 md:grid md:grid-cols-2">
             {/* Left Column: Features List */}
             <div className="flex flex-col space-y-8 p-4 pl-8">
