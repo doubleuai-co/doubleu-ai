@@ -422,7 +422,7 @@ const AboutPage = () => {
               </motion.div>
             ))}
           </motion.div> */}
-          <div className="w-full bg-[#F9F9F9] sm:px-6 lg:px-36">
+          <div className="w-full bg-[#F9F9F9] px-2 md:px-0">
             <TestimonialsGrid />
           </div>
         </motion.section>
@@ -433,7 +433,7 @@ const AboutPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={fadeIn}
-          className="relative mx-4 flex max-w-6xl items-center justify-center overflow-hidden rounded-[20px] bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:mb-[49px] md:mt-[87px] my-[47px] md:px-[120px]"
+          className="relative mx-4 flex max-w-6xl items-center justify-center overflow-hidden rounded-[20px] bg-[linear-gradient(171.67deg,_#160F0F_35.65%,_#7D73C3_93.62%)] px-4 py-18 text-white md:mx-[120px] md:mb-[49px] md:mt-[49px] my-[47px] md:px-[120px]"
         >
           <div className="mx-auto flex flex-col items-center text-center md:container md:max-w-3xl">
             <h2 className="mb-4 text-2xl leading-tight font-medium sm:text-4xl md:max-w-xl md:px-4 md:text-4xl">
