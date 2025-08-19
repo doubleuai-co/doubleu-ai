@@ -72,7 +72,7 @@ export default function Neo() {
           </div>
 
           {/* Right Column: Neo Image with Overlays */}
-          <div className="flex w-full translate-x-22 transform justify-end">
+          <div className="flex w-full md:translate-x-22 transform justify-end">
             {" "}
             <Image
               src="/new-img/neo-m.svg" // Placeholder for Neo's image

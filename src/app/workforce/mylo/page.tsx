@@ -72,7 +72,7 @@ export default function Mylo() {
           </div>
 
           {/* Right Column: Mylo Image with Overlays */}
-          <div className="w-full flex justify-end transform translate-x-22">
+          <div className="w-full flex justify-end transform md:translate-x-22">
             {" "}
             <Image
               src="/new-img/mylo-m.svg" // Placeholder for Mylo's image
@@ -167,7 +167,7 @@ export default function Mylo() {
           <h2 className="mb-8 px-10 text-[#F0F0F0] text-[28px] leading-tight font-bold md:px-0 md:text-4xl">
             The Future of AI-Driven Sales
           </h2>
-          <p className="text-[16px] mx-auto px-4 md:px-0 max-w-5xl text-center leading-relaxed text-[#D9D9D9] md:text-center">
+          <p className="text-[16px] mx-auto px-4 md:px-0 max-w-5xl text-start leading-relaxed text-[#D9D9D9] md:text-center">
             Mylo redefines the way businesses engage with customers by providing
             a balance between technological efficiency and genuine personal
             service. She ensures that every interaction is informative,

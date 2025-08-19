@@ -198,7 +198,7 @@ const AboutPage = () => {
             </motion.p>
             <motion.h2
               variants={fadeInUp}
-              className="md:mb-8 mb-4 pt-12 md:pt-0 text-2xl font-medium text-[#0B0A0A] lg:text-[40px]"
+              className="md:mb-8 mb-4 pt-12 md:pt-16 text-2xl font-medium text-[#0B0A0A] lg:text-[40px]"
             >
               Our Vision
             </motion.h2>
@@ -223,6 +223,14 @@ const AboutPage = () => {
           variants={staggerContainer}
           className="relative w-full overflow-hidden bg-[#0B0A0A] md:py-10 py-16 text-white"
         >
+                 <Image
+                   src="/our numbers gradient.svg"
+                   alt=""
+                   layout="fill"
+                   objectFit="cover"
+                   quality={100}
+                   className="-z-0 block md:hidden opacity-50"
+                 />
           <div
             className="absolute top-1/4 left-24 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#00B4D852] opacity-60 blur-[400px]"
             aria-hidden="true"
@@ -231,7 +239,7 @@ const AboutPage = () => {
             className="absolute top-1/4 right-24 h-[300px] w-[300px] translate-x-1/2 rounded-full bg-[#7D73C359] opacity-60 blur-[400px]"
             aria-hidden="true"
           ></div>
-          <div className="z-20 container mx-auto mb-8 md:mb-18 text-center">
+          <div className="z-20 relative container mx-auto mb-8 md:mb-18 text-center">
             <motion.h2
               variants={fadeInUp}
               className="mb-4 px-18 text-2xl font-bold text-white lg:text-[40px]"
@@ -241,7 +249,7 @@ const AboutPage = () => {
           </div>
           <motion.div
             variants={staggerContainer}
-            className="container mx-auto grid grid-cols-1 gap-8 px-12 text-center md:grid-cols-2 lg:grid-cols-4"
+            className="container relative mx-auto grid grid-cols-1 gap-8 px-12 text-center md:grid-cols-2 lg:grid-cols-4"
           >
             {impactStats.map((stat, index) => (
               <motion.div
@@ -422,7 +430,7 @@ const AboutPage = () => {
               </motion.div>
             ))}
           </motion.div> */}
-          <div className="w-full bg-[#F9F9F9] px-2 md:px-0">
+          <div className="w-full bg-[#F9F9F9] px-2 md:px-[120px]">
             <TestimonialsGrid />
           </div>
         </motion.section>

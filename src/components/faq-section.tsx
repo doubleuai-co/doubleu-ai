@@ -18,7 +18,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         className="flex w-full cursor-pointer items-center justify-between text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="pr-10 text-sm font-bold font-satoshi text-white md:text-lg">
+        <span className="pr-10 text-sm font-bold font-satoshi text-white md:text-xl text-[16px]">
           {question}
         </span>
         {isOpen ? (
@@ -35,13 +35,13 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            className="overflow-hidden pr-8 text-[#F0F0F0]"
+            className="overflow-hidden pr-8"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <p className="mt-2">{answer}</p>
+            <p className="mt-2 text-[#d9d9d9] md:pr-8 md:text-[18px] text-sm">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>

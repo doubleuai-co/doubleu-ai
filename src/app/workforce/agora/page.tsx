@@ -72,7 +72,7 @@ export default function Agora() {
           </div>
 
           {/* Right Column: Agora Image with Overlays */}
-          <div className="flex w-full translate-x-22 transform justify-end">
+          <div className="flex w-full md:translate-x-22 transform justify-end">
             {" "}
             <Image
               src="/new-img/Agora-m.svg" // Placeholder for Agora's image
