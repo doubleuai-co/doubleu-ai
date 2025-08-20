@@ -46,44 +46,42 @@ export default function Ehiz() {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Hero Section for Ehiz Page */}
-      <section className="relative overflow-hidden bg-[#0B0A0A] text-white md:px-[120px] md:pt-24">
+      <section className="relative overflow-hidden bg-[#0B0A0A] text-white md:px-[120px] md:pt-2">
         {/* Background elements - subtle blurs/gradients */}
         {/* <div className="absolute top-0 left-0 w-80 h-80 bg-[#00bcd4] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div> */}
         <div className="animate-blob animation-delay-2000 absolute md:top-[45%] md:right-40 -bottom-30 h-120 w-120 rounded-full bg-[#00bcd4] opacity-20 mix-blend-screen blur-3xl filter"></div>
         {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-[#ff6347] opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div> */}
 
-        <div className="max-h-7xl relative z-10 container mx-auto flex max-w-7xl flex-col items-center justify-between gap-x-18 md:flex-row md:items-center md:pt-32">
+        <div className="max-h-7xl relative z-10 flex flex-col items-center justify-between gap-x-24 pt-20 md:flex-row md:items-center md:justify-between md:px-0 md:pt-24">
           {/* Left Column: Text Content */}
-          <div className="mt-48 flex flex-col items-center text-center md:mt-0 md:mb-0 md:w-1/2 md:items-start md:text-left">
-            <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
-              Hi, I&apos;m Ehiz!
+          <div className="pb- flex flex-col items-center px-2 pt-18 text-center md:mt-26 md:mb-0 md:w-1/2 md:items-start md:px-0 md:pb-22 md:text-left">
+            <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[3rem] md:leading-[72px]">
+              Hi, I&apos;m Neo!
             </h1>
-            <p className="mb-8 max-w-xl px-4 text-sm leading-[28px] -tracking-wide text-gray-300 md:px-0 md:text-lg md:leading-[34px]">
-              I help you enhance your recruitment process by sourcing top
-              talent, screening candidates, and simplifying hiring decisions.
-              Let me handle the search while you focus on building your dream
-              team.
+            <p className="mb-8 max-w-lg px-4 text-sm leading-[28px] -tracking-wide text-[#D9D9D9] md:-mr-40 md:px-0 md:text-[14px] md:leading-[34px]">
+              I help you enhance your sales and engagement process by automating
+              outreach, nurturing leads, and driving meaningful customer
+              interactions. Let me handle the conversations while you focus on
+              closing deals.
             </p>
             <Link href="/contact" passHref>
-              <button className="text-md md:text-md rounded-md bg-[#7D73C3] px-8 py-3 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:mb-18">
+              <button className="cursor-pointer rounded-md bg-[#7D73C3] px-6 py-3.5 text-sm font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:mb-4 md:text-[16px]">
                 Try DoubleU AI
               </button>
             </Link>
           </div>
 
-          {/* Right Column: Ehiz Image with Overlays */}
-          <div className="relative m-0 mt-8 flex h-full w-full items-end justify-end p-0 px-4 md:mt-0 md:w-[50%] md:px-0">
+          {/* Right Column: Neo Image with Overlays */}
+          <div className="flex w-full md:translate-x-2 transform justify-end px-4 md:px-0">
+            {" "}
             <Image
-              src="/new-img/ehiz-m.svg" // Placeholder for Ehiz's image
-              alt="Ehiz AI Worker"
+                            src="/new-img/ehiz-m.svg" // Placeholder for Ehiz's image
+
+              alt="Neo AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
-              className="h-fir w-full object-fill"
+              className="h-full w-full object-fill md:h-fit md:w-[580px]"
             />
-            {/* Small info overlays - these are illustrative and might need custom SVG/CSS */}
-            {/* <div className="absolute top-1/4 left-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">AI Model</div>
-      <div className="absolute top-1/3 right-0 bg-gray-700 bg-opacity-70 text-white text-xs px-2 py-1 rounded-md">Sales Agent</div>
-   */}{" "}
           </div>
         </div>
       </section>
