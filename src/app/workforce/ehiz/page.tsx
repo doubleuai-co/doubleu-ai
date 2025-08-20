@@ -64,7 +64,7 @@ export default function Ehiz() {
               Let me handle the search while you focus on building your dream
               team.
             </p>
-            <Link href="/" passHref>
+            <Link href="/contact" passHref>
               <button className="text-md md:text-md rounded-md bg-[#7D73C3] px-8 py-3 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#7b68ee] md:mb-18">
                 Try DoubleU AI
               </button>

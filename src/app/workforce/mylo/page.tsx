@@ -64,7 +64,7 @@ export default function Mylo() {
               engagement. Let me handle the strategy while you focus on closing
               deals.
             </p>
-            <Link href="/" passHref>
+            <Link href="/contact" passHref>
               <button className="text-sm md:text-[16px] cursor-pointer rounded-md bg-[#7D73C3] px-6 py-3.5 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:mb-4">
                 Try DoubleU AI
               </button>
