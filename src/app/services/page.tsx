@@ -16,7 +16,7 @@ const Services = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="-z-0 opacity-30"
+          className="-z-0"
         />
         {/* Blue Blurred Gradient */}
         {/* <div
@@ -41,11 +41,11 @@ const Services = () => {
           <h1 className="mb-6 text-center text-[40px] leading-[46px] -tracking-wide text-white md:text-[4rem] md:leading-[72px]">
             Our AI-Powered Business Solutions
           </h1>
-          <p className="text-md mb-8 max-w-lg text-center leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
+          <p className="text-md max-w-lg text-center leading-[28px] -tracking-wide text-gray-300 md:text-lg md:leading-[34px]">
             Leverage AI to streamline processes, reduce costs, and drive growth.
           </p>
           <Link href="/contact" passHref>
-            <button className="mt-8 cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
+            <button className="mt-11.5 cursor-pointer rounded-[8px] bg-[#7D73C3] px-5.5 py-3.5 text-sm font-medium text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:rounded-lg md:px-6 md:py-3.5 md:text-[16px]">
               Try DoubleU AI
             </button>
           </Link>
