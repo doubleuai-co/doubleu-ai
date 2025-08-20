@@ -25,7 +25,7 @@ export default function Home() {
         <div className="max-w-7x relative flex w-full flex-col items-center justify-center gap-6 rounded-[36px] bg-white px-5 py-6 text-center">
           <div className="space-y-1">
             <h2 className="font-montserrat text-center text-[2.6rem] leading-12 font-bold -tracking-wide text-[#222831] md:text-[4rem] md:leading-16">
-              Got Questions?
+              Got Question?
             </h2>
             <h2 className="font-montserrat text-center text-[2.5rem] leading-12 font-bold -tracking-wide text-[#222831] md:text-[4rem] md:leading-16">
               Let’s clear things up.
