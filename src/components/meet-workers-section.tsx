@@ -35,7 +35,7 @@ export default function MeetWorkersSection() {
     },
   ];
 
-  const numSlides = Math.ceil(agents.length / 2);
+  const numSlides = Math.ceil(2);
   const [currentSlideGroupIndex, setCurrentSlideGroupIndex] = useState(0);
 
   // Refs for touch events
@@ -134,7 +134,7 @@ export default function MeetWorkersSection() {
             {agents.map((agent, index) => (
               <div
                 key={index}
-                className="relative mx-2 w-1/2 flex-shrink-0 overflow-hidden rounded-xl"
+                className="relative px-1 w-1/2 flex-shrink-0 overflow-hidden rounded-xl"
               >
                 {/* Agent ID Circle */}
                 {/* <div className="absolute top-4 left-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-700">
