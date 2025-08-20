@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
-import axios from 'axios'; // Make sure to install axios: npm install axios
+import axios from 'axios';
 
 // 1. Define form values interface
 interface ContactFormValues {
@@ -145,7 +145,7 @@ const Contact = () => {
                   variants={fadeUp}
                   initial="hidden"
                   animate="visible"
-                  className="grid grid-cols-1 gap-4 md:grid-cols-2"
+                  className="grid grid-cols-2 gap-4 md:grid-cols-2"
                 >
                   <div>
                     <label
