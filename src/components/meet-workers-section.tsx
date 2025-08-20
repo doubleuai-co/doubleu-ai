@@ -111,7 +111,7 @@ export default function MeetWorkersSection() {
               {/* Name and Role Overlay */}
               {/* <div className="absolute right-0 bottom-0 left-0 rounded-b-xl bg-gradient-to-t from-black/70 to-transparent p-4 text-center text-white">
               <h3 className="text-xl font-semibold">{agent.name}</h3>
-              <p className="text-sm text-gray-300">{agent.role}</p>
+              <p className="text-sm text-gray-600">{agent.role}</p>
             </div> */}
             </div>
           </Link>
