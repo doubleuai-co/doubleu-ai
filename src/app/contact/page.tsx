@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
-import * as Yup from 'yup';
-import { motion } from 'framer-motion';
-import axios from 'axios';
+import { useState } from "react";
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
+import * as Yup from "yup";
+import { motion } from "framer-motion";
+import axios from "axios";
 
 // 1. Define form values interface
 interface ContactFormValues {
@@ -13,29 +13,32 @@ interface ContactFormValues {
   company: string;
   role: string;
   email: string;
+  type: string;
   message: string;
 }
 
 // 2. Initial values
 const initialValues: ContactFormValues = {
-  firstName: '',
-  lastName: '',
-  company: '',
-  role: '',
-  email: '',
-  message: '',
+  firstName: "",
+  lastName: "",
+  company: "",
+  role: "",
+  email: "",
+  type: "General",
+  message: "",
 };
 
 // 3. Validation
 const validationSchema = Yup.object({
-  firstName: Yup.string().required('First name is required'),
-  lastName: Yup.string().required('Last name is required'),
-  company: Yup.string().required('Company is required'),
-  role: Yup.string().required('Role is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
+  firstName: Yup.string().required("First name is required"),
+  lastName: Yup.string().required("Last name is required"),
+  company: Yup.string().required("Company is required"),
+  role: Yup.string().required("Role is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  type: Yup.string().required("Type is required"),
   message: Yup.string()
-    .min(10, 'Message must be at least 10 characters')
-    .required('Message is required'),
+    .min(10, "Message must be at least 10 characters")
+    .required("Message is required"),
 });
 
 // 4. Animation variants
@@ -51,19 +54,21 @@ const fadeUp = {
 const Contact = () => {
   // State to manage submission status (success, error, or null)
   const [submissionStatus, setSubmissionStatus] = useState<
-    'success' | 'error' | null
+    "success" | "error" | null
   >(null);
 
   // Handle form submission
   const handleSubmit = async (
     values: ContactFormValues,
-    { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>
+    { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>,
   ) => {
     setSubmissionStatus(null); // Reset status on new submission
 
     // Airtable API configuration
-    const AIRTABLE_API_URL = 'https://api.airtable.com/v0/appiALdFmgtI2q1gn/Leads';
-    const AIRTABLE_API_TOKEN = 'patLJPljtQ0Yeanx5.2d69474b4ca31726fa691d53d165c47c537f7995050d252cc514776386c164fe';
+    const AIRTABLE_API_URL =
+      "https://api.airtable.com/v0/appiALdFmgtI2q1gn/Leads";
+    const AIRTABLE_API_TOKEN =
+      "patLJPljtQ0Yeanx5.2d69474b4ca31726fa691d53d165c47c537f7995050d252cc514776386c164fe";
 
     // Prepare data in the format Airtable expects
     const data = {
@@ -75,6 +80,7 @@ const Contact = () => {
             Company: values.company,
             Role: values.role,
             Email: values.email,
+            Type: values.type,
             Message: values.message,
           },
         },
@@ -86,21 +92,20 @@ const Contact = () => {
       await axios.post(AIRTABLE_API_URL, data, {
         headers: {
           Authorization: `Bearer ${AIRTABLE_API_TOKEN}`,
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       });
 
       // On success
-      setSubmissionStatus('success');
+      setSubmissionStatus("success");
       resetForm();
-      
     } catch (error) {
       // On error
-      console.error('Airtable submission error:', error);
-      setSubmissionStatus('error');
+      console.error("Airtable submission error:", error);
+      setSubmissionStatus("error");
     } finally {
-        // Re-enable the submit button
-        setSubmitting(false);
+      // Re-enable the submit button
+      setSubmitting(false);
     }
   };
 
@@ -111,9 +116,9 @@ const Contact = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative overflow-hidden bg-white px-4 md:pt-36 pt-20 md:pb-8 text-[#0B0A0A] sm:px-6 lg:px-8"
+        className="relative overflow-hidden bg-white px-4 pt-20 text-[#0B0A0A] sm:px-6 md:pt-36 md:pb-8 lg:px-8"
       >
-        <div className="relative z-10 mx-auto md:pt-18 flex max-w-7xl flex-col items-center text-center">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center md:pt-18">
           <h1 className="mb-6 pt-10 text-[35px] leading-tight font-medium text-[#0B0A0A] md:text-[4rem]">
             Talk with our team
           </h1>
@@ -158,7 +163,7 @@ const Contact = () => {
                       type="text"
                       name="firstName"
                       placeholder="Enter first name"
-                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
+                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-1 focus:ring-[#9747FF] focus:outline-none"
                     />
                     <ErrorMessage
                       name="firstName"
@@ -178,7 +183,7 @@ const Contact = () => {
                       type="text"
                       name="lastName"
                       placeholder="Enter last name"
-                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
+                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-1 focus:ring-[#9747FF] focus:outline-none"
                     />
                     <ErrorMessage
                       name="lastName"
@@ -190,10 +195,36 @@ const Contact = () => {
 
                 {/* Other Fields */}
                 {[
-                  { name: 'company', label: 'Company', type: 'text', placeholder: 'Enter company name' },
-                  { name: 'role', label: 'Role', type: 'text', placeholder: 'Enter your role at the company' },
-                  { name: 'email', label: 'Email', type: 'email', placeholder: 'Enter email' },
-                  { name: 'message', label: 'Message', type: 'textarea', placeholder: 'Leave us a message...' },
+                  {
+                    name: "company",
+                    label: "Company",
+                    type: "text",
+                    placeholder: "Enter company name",
+                  },
+                  {
+                    name: "role",
+                    label: "Role",
+                    type: "text",
+                    placeholder: "Enter your role at the company",
+                  },
+                  {
+                    name: "email",
+                    label: "Email",
+                    type: "email",
+                    placeholder: "Enter email",
+                  },
+                  {
+                    name: "type",
+                    label: "Type",
+                    type: "select",
+                    options: ["Mylo", "Neo", "Agora", "Ehiz", "General"],
+                  },
+                  {
+                    name: "message",
+                    label: "Message",
+                    type: "textarea",
+                    placeholder: "Leave us a message...",
+                  },
                 ].map((field, index) => (
                   <motion.div
                     key={field.name}
@@ -209,14 +240,33 @@ const Contact = () => {
                       {field.label}
                     </label>
 
-                    <Field
-                      as={field.type === 'textarea' ? 'textarea' : 'input'}
-                      type={field.type}
-                      name={field.name}
-                      placeholder={field.placeholder}
-                      rows={field.type === 'textarea' ? 5 : undefined}
-                      className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#9747FF]"
-                    />
+                    {field.type === "select" ? (
+                      <Field
+                        as="select"
+                        name={field.name}
+                        className="font-inter mt-1 w-full rounded-md border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 focus:ring-1 focus:ring-[#9747FF] focus:outline-none"
+                      >
+                        {field.options?.map((option) => (
+                          <option
+                            key={option}
+                            value={option}
+                            selected={option === "General"}
+                          >
+                            {option}
+                          </option>
+                        ))}
+                      </Field>
+                    ) : (
+                      <Field
+                        as={field.type === "textarea" ? "textarea" : "input"}
+                        type={field.type}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        rows={field.type === "textarea" ? 5 : undefined}
+                        className="mt-1 w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:ring-1 focus:ring-[#9747FF] focus:outline-none"
+                      />
+                    )}
+
                     <ErrorMessage
                       name={field.name}
                       component="div"
@@ -226,15 +276,15 @@ const Contact = () => {
                 ))}
 
                 {/* Submission Status Message */}
-                {submissionStatus === 'success' && (
-                    <div className="rounded-md bg-green-100 p-4 text-center text-green-700">
-                        Your message has been sent successfully!
-                    </div>
+                {submissionStatus === "success" && (
+                  <div className="rounded-md bg-green-100 p-4 text-center text-green-700">
+                    Your message has been sent successfully!
+                  </div>
                 )}
-                {submissionStatus === 'error' && (
-                    <div className="rounded-md bg-red-100 p-4 text-center text-red-700">
-                        Something went wrong. Please try again later.
-                    </div>
+                {submissionStatus === "error" && (
+                  <div className="rounded-md bg-red-100 p-4 text-center text-red-700">
+                    Something went wrong. Please try again later.
+                  </div>
                 )}
 
                 {/* Submit Button */}
@@ -248,7 +298,7 @@ const Contact = () => {
                     disabled={isSubmitting}
                     className="w-full cursor-pointer rounded-lg bg-[#7D73C3] px-12 py-3 text-lg font-semibold text-white shadow-xs transition duration-300 ease-in-out hover:bg-[#9747FF] disabled:opacity-50"
                   >
-                    {isSubmitting ? 'Submitting...' : 'Submit'}
+                    {isSubmitting ? "Submitting..." : "Submit"}
                   </button>
                 </motion.div>
               </Form>

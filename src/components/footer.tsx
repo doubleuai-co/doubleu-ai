@@ -3,7 +3,6 @@ import React from "react";
 import { Mail, MapPin } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
   faInstagram,
   faLinkedin,
   faXTwitter,
@@ -119,7 +118,7 @@ export default function Footer() {
         </p>
         <div className="flex space-x-6 pt-4">
           <a
-            href="https://twitter.com/"
+            href="https://x.com/doubleuai_"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
@@ -127,7 +126,7 @@ export default function Footer() {
             <FontAwesomeIcon icon={faXTwitter} size="lg" />{" "}
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/company/doubleu-ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
@@ -140,20 +139,7 @@ export default function Footer() {
             {/* LinkedIn icon */}
           </a>
           <a
-            href="https://facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-white"
-          >
-            <FontAwesomeIcon
-              icon={faFacebook}
-              className="text-[#fff]"
-              size="lg"
-            />{" "}
-            {/* LinkedIn icon */}
-          </a>
-          <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/doubleuai.co/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
