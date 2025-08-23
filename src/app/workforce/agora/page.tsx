@@ -55,7 +55,7 @@ export default function Agora() {
         <div className="max-h-7xl relative z-10 flex flex-col items-center justify-between gap-x-4 pt-20 md:flex-row md:items-center md:justify-between md:px-0 md:pt-8">
           {/* Left Column: Text Content */}
           <div className="pb- flex flex-col items-center px-2 pt-18 text-center md:mt-26 md:mb-0 md:w-1/2 md:items-start md:px-0 md:pb-22 md:text-left">
-            <h1 className="mb-6 text-[40px] leading-[46px] -tracking-wide text-white md:text-[3rem] md:leading-[72px]">
+            <h1 className="mb-4 text-[40px] leading-[46px] -tracking-wide text-white md:text-[3rem] md:leading-[72px]">
               Hi, I&apos;m Agora!
             </h1>
             <p className="mb-8 max-w-lg px-4 text-sm leading-[28px] -tracking-wide text-[#D9D9D9] md:-mr-40 md:px-0 md:text-[14px] md:leading-[34px]">

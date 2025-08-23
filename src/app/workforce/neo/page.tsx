@@ -90,7 +90,7 @@ export default function Neo() {
         <div className="grid grid-cols-1 items-center justify-between gap-4 md:grid-cols-2 md:gap-2">
           {/* Left Column: Text Content */}
           <div className="text-left">
-            <h2 className="mb-6 text-[28px] font-bold text-[#0B0A0A] md:text-[40px]">
+            <h2 className="mb-4 text-[28px] font-bold text-[#0B0A0A] md:text-[40px]">
               Who is Neo?
             </h2>
             <p className="mb-4 text-sm leading-relaxed text-[#404040] md:text-[16px]">
