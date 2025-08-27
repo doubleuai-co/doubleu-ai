@@ -28,13 +28,14 @@ export default function MobileNav() {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button className="cursor-pointer pt-6" variant="trans" size="icon">
-            <Image
+{/*             <Image
               src="/new-img/Menu.svg"
               alt=""
               width={350}
               height={150}
               className="object-fit mb-6 object-cover"
-            />
+            /> */}
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
@@ -47,13 +48,14 @@ export default function MobileNav() {
               size="icon"
               onClick={() => setOpen(false)}
             >
-              <Image
+{/*               <Image
                 src="/new-img/Xoutline.svg"
                 alt=""
                 width={350}
                 height={150}
                 className="object-fit mb-6 object-cover"
-              />
+              /> */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               <span className="sr-only">Close menu</span>
             </Button>
           </div>
