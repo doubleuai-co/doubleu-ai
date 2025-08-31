@@ -20,7 +20,7 @@ export default function MobileNav() {
   };
 
   return (
-    <div className="fixed top-0 z-50 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50">
+    <div className="fixed top-0 z-50 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50 lg:hidden">
       {/* Logo */}
       <LogoNav />
       {/* Mobile Menu Trigger */}
@@ -44,7 +44,7 @@ export default function MobileNav() {
               stroke-width="3"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-menu-icon lucide-menu"
+              className="lucide lucide-menu-icon lucide-menu"
             >
               <path d="M4 12h16" />
               <path d="M4 18h16" />
@@ -79,7 +79,7 @@ export default function MobileNav() {
                 stroke-width="3"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-x-icon lucide-x"
+                className="lucide lucide-x-icon lucide-x"
               >
                 <path d="M18 6 6 18" />
                 <path d="m6 6 12 12" />
