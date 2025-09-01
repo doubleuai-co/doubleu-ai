@@ -6,6 +6,8 @@ import { Button } from "./ui/button";
 import { navItems } from "./navbar";
 import Link from "next/link";
 import { LogoNav } from "./logo nav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -27,14 +29,14 @@ export default function MobileNav() {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button className="cursor-pointer py-3.5" variant="trans" size="icon">
-            {/*             <Image
+            {/* <Image
               src="/new-img/Menu.svg"
               alt=""
               width={350}
               height={150}
               className="object-fit mb-6 object-cover"
             /> */}
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -49,7 +51,12 @@ export default function MobileNav() {
               <path d="M4 12h16" />
               <path d="M4 18h16" />
               <path d="M4 6h16" />
-            </svg>
+            </svg> */}
+            <FontAwesomeIcon
+              icon={faBars}
+              size="xl"
+              style={{ color: "#ffffff" }}
+            />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
@@ -69,7 +76,7 @@ export default function MobileNav() {
                 height={150}
                 className="object-fit mb-6 object-cover"
               /> */}
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -83,7 +90,13 @@ export default function MobileNav() {
               >
                 <path d="M18 6 6 18" />
                 <path d="m6 6 12 12" />
-              </svg>
+              </svg> */}
+              <FontAwesomeIcon
+                icon={faXmark}
+                size="xl"
+                style={{ color: "#ffffff" }}
+              />
+
               <span className="sr-only">Close menu</span>
             </Button>
           </div>
