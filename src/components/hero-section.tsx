@@ -211,7 +211,7 @@ export default function HeroSection() {
           {[
             { text: "Always Available" },
             { text: "Cloud & Secure" },
-            { text: "AI Solution" },
+            { text: "Custom Integration" },
           ].map((feature, index) => (
             <motion.div
               key={index}
