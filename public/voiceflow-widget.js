@@ -314,6 +314,10 @@
         extensions: [FileUploadExtension, FormExtension],
         persistence: "memory",
       },
+    }).then(() => {
+      window.voiceflow.chat.proactive.push(  
+        { type: 'text', payload: { message: 'Hi! I’m your guide to DoubleU AI’s world.' } }
+      )
     });
   };
   v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";

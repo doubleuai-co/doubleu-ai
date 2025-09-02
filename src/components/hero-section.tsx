@@ -174,7 +174,7 @@ export default function HeroSection() {
           {[
             { text: "Always Available Workforce" },
             { text: "Cloud-Based & Secure" },
-            { text: "Custom Integration" },
+            { text: "Custom Solution" },
           ].map((feature, index) => (
             <motion.div
               key={index}
@@ -211,7 +211,7 @@ export default function HeroSection() {
           {[
             { text: "Always Available" },
             { text: "Cloud & Secure" },
-            { text: "Custom Integration" },
+            { text: "Custom Solution" },
           ].map((feature, index) => (
             <motion.div
               key={index}
