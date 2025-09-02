@@ -8,7 +8,7 @@ import { motion, useMotionValue, animate, easeOut } from "framer-motion";
 const stats = [
   { number: "2M+", description: "Tasks completed around the globe" },
   { number: "99.9%", description: "Workload reduced by using AI workforce" },
-  { number: "85%", description: "Reduction in time taken to do tasks pre- and post-AI" },
+  { number: "85%", description: "Reduction in time taken to complete tasks" },
   { number: "100%", description: "AI workerforce availability" },
 ];
 
