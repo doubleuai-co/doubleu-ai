@@ -316,7 +316,7 @@
       },
     }).then(() => {
       window.voiceflow.chat.proactive.push(  
-        { type: 'text', payload: { message: 'Hi! I’m your guide to DoubleU AI’s world.' } }
+        { type: 'text', payload: { message: 'Hi! I’m your guide to DoubleU AI’s world. So ask me any question you’ve got.' } }
       )
     });
   };
