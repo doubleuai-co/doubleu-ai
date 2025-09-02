@@ -9,7 +9,7 @@ const stats = [
   { number: "2M+", description: "Tasks completed around the globe" },
   { number: "99.9%", description: "Cost saved by using doubleU AI workforce" },
   { number: "85%", description: "Reduction in time taken to complete tasks pre- and post-AI" },
-  { number: "24/7", description: "AI workers availability" },
+  { number: "100%", description: "AI workers availability" },
 ];
 
 const brands = [
