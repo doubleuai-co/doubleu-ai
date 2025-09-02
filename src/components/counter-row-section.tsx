@@ -7,7 +7,7 @@ import { motion, useMotionValue, animate, easeOut } from "framer-motion";
 // Stats and brand data
 const stats = [
   { number: "2M+", description: "Tasks completed around the globe" },
-  { number: "99.9%", description: "Cost saved by using doubleU AI workforce" },
+  { number: "99.9%", description: "Workload reduced by using DoubleU AI workforce" },
   { number: "85%", description: "Reduction in time taken to complete tasks pre- and post-AI" },
   { number: "100%", description: "AI workers availability" },
 ];
