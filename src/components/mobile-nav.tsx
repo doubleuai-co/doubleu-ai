@@ -117,7 +117,7 @@ export default function MobileNav() {
               href="/contact"
               className="text-md cursor-pointer rounded-md border border-[#7D73C3] bg-[#7D73C3] px-8 py-2 text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
             >
-              <span className="-mt-4">Contact Us</span>
+              <span className="-mt-4">Contactm Us</span>
             </Link>
           </nav>
         </SheetContent>
