@@ -75,7 +75,7 @@ export default function Agora() {
           <div className="flex w-full md:translate-x-22 transform justify-end">
             {" "}
             <Image
-              src="/new-img/Agora-m.svg" // Placeholder for Agora's image
+              src="/Group 42112(1).png" // Placeholder for Agora's image
               alt="Agora AI Worker"
               width={400} // Adjust based on actual image dimensions
               height={500} // Adjust based on actual image dimensions
