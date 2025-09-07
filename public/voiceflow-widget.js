@@ -304,7 +304,7 @@
   v.type = "text/javascript";
   v.onload = function () {
     window.voiceflow.chat.load({
-      verify: { projectID: "6836d2af25c29c8e392b7196" },
+      verify: { projectID: "68b2a3da4a5a505537240400" },
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       voice: {
@@ -314,6 +314,10 @@
         extensions: [FileUploadExtension, FormExtension],
         persistence: "memory",
       },
+    }).then(() => {
+      window.voiceflow.chat.proactive.push(  
+        { type: 'text', payload: { message: 'Hi! I’m your guide to DoubleU AI’s world. So ask me any question you’ve got.' } }
+      )
     });
   };
   v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";

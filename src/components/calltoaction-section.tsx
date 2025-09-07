@@ -18,11 +18,11 @@ export default function CallToActionSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="mb-4 text-xl leading-tight sm:text-4xl md:text-[40px] md:pr-2">
-            Why work harder when your AI can do it cooler?
+            Why work harder when AI workers can do it faster?
             <br className="hidden sm:block" />
           </h2>
           <p className="mb-8 text-md text-[#D9D9D9] sm:text-lg md:text-lg">
-            One AI! all your platforms, always on.
+            One AI! All your platforms, always on.
           </p>
           <Link href="/contact" passHref>
             <button className="cursor-pointer rounded-md bg-white px-8 py-3 text-sm text-[#110D0D] shadow-md transition duration-300 ease-in-out hover:bg-gray-100 md:text-base">

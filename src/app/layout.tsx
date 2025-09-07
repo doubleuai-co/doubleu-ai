@@ -4,15 +4,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
-
 
 const satoshi = localFont({
   src: [
     {
-      path: '/fonts/satoshi/Satoshi-Bold.woff2',
+      path: "/fonts/satoshi/Satoshi-Bold.woff2",
       weight: "700",
       style: "normal",
     },
@@ -34,7 +33,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "DoubleU AI",
-  description: "AI Agents That Think, Reason, Respond & Act.",
+  description: "AI Workforce That Think, Reason, Respond & Act.",
 };
 
 export default function RootLayout({
