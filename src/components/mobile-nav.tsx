@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { navItems } from "./navbar";
 import Link from "next/link";
 import { LogoNav } from "./logo nav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -21,19 +22,40 @@ export default function MobileNav() {
   };
 
   return (
-    <div className="fixed top-0 z-50 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50">
+    <div className="fixed top-0 z-50 flex w-full items-center justify-between bg-[#0B0A0A] px-6 py-[21px] shadow-sm shadow-black/50 lg:hidden">
       {/* Logo */}
       <LogoNav />
       {/* Mobile Menu Trigger */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button className="cursor-pointer pt-6" variant="trans" size="icon">
-            <Image
+          <Button className="cursor-pointer py-3.5" variant="trans" size="icon">
+            {/* <Image
               src="/new-img/Menu.svg"
               alt=""
               width={350}
               height={150}
               className="object-fit mb-6 object-cover"
+            /> */}
+            {/* <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="lucide lucide-menu-icon lucide-menu"
+            >
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+              <path d="M4 6h16" />
+            </svg> */}
+            <FontAwesomeIcon
+              icon={faBars}
+              size="xl"
+              style={{ color: "#ffffff" }}
             />
             <span className="sr-only">Toggle menu</span>
           </Button>
@@ -42,18 +64,39 @@ export default function MobileNav() {
           <div className="flex items-center justify-between bg-[#0B0A0A] px-[21px] py-6">
             <LogoNav />
             <Button
-              className="cursor-pointer pt-6"
+              className="cursor-pointer py-3.5"
               variant="trans"
               size="icon"
               onClick={() => setOpen(false)}
             >
-              <Image
+              {/*               <Image
                 src="/new-img/Xoutline.svg"
                 alt=""
                 width={350}
                 height={150}
                 className="object-fit mb-6 object-cover"
+              /> */}
+              {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-x-icon lucide-x"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg> */}
+              <FontAwesomeIcon
+                icon={faXmark}
+                size="xl"
+                style={{ color: "#ffffff" }}
               />
+
               <span className="sr-only">Close menu</span>
             </Button>
           </div>
@@ -62,10 +105,8 @@ export default function MobileNav() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition duration-300 ease-in-out text-md font-light hover:text-[#7D73C3] ${
-                  isActiveLink(item.href)
-                    ? "text-[#7D73C3]"
-                    : "text-[#A2A2A2]"
+                className={`text-md font-light transition duration-300 ease-in-out hover:text-[#7D73C3] ${
+                  isActiveLink(item.href) ? "text-[#7D73C3]" : "text-[#A2A2A2]"
                 }`}
                 onClick={() => setOpen(false)}
               >
@@ -74,7 +115,7 @@ export default function MobileNav() {
             ))}
             <Link
               href="/contact"
-              className="cursor-pointer text-md rounded-md border border-[#7D73C3] bg-[#7D73C3] px-8 py-2 text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
+              className="text-md cursor-pointer rounded-md border border-[#7D73C3] bg-[#7D73C3] px-8 py-2 text-white shadow-md shadow-black/50 transition-colors duration-300 hover:bg-[#9747FF] hover:text-white hover:shadow-none"
             >
               <span className="-mt-4">Contact Us</span>
             </Link>
