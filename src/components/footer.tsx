@@ -25,7 +25,7 @@ export default function Footer() {
     // Main footer container with a subtle gradient background
     <footer className="relative w-full overflow-hidden bg-[#0B0A0A] px-6 py-12 pt-14 pb-8 text-gray-300 md:px-[120px] lg:pt-18">
       <Image
-               src="/footer.svg"
+               src="/footer(1).svg"
                alt=""
                layout="fill"
                objectFit="cover"

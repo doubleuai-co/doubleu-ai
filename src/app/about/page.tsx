@@ -108,7 +108,7 @@ const AboutPage = () => {
           // }}
         >
           <Image
-            src="/new-img/about(2).png"
+            src="/About.svg"
             alt=""
             layout="fill"
             objectFit="cover"
