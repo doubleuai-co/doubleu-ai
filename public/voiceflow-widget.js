@@ -304,7 +304,7 @@
   v.type = "text/javascript";
   v.onload = function () {
     window.voiceflow.chat.load({
-      verify: { projectID: "68c2eeb8dc6441d438a71ba7" },
+      verify: { projectID: "68cb083c2e910ad067374d37" },
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       voice: {
