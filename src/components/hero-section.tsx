@@ -128,7 +128,7 @@ export default function HeroSection() {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="ml-2 text-xs text-white md:text-sm"
           >
-            -Rated by users
+            Rated by users
           </motion.span>
         </motion.div>
 
@@ -146,7 +146,7 @@ export default function HeroSection() {
           variants={fadeInUp}
           className="text-md mb-2 max-w-2xl px-8 text-center leading-[28px] -tracking-wide text-gray-300 md:mb-8 md:text-2xl md:leading-[34px] lg:text-xl"
         >
-          Build, grow, and scale your business with our AI workforce,{" "}
+          Build, grow, and scale your business with our AI Workforce,{" "}
           <br className="hidden md:block" /> custom-built for your business
           needs
         </motion.p>
