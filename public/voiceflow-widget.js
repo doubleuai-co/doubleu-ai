@@ -304,7 +304,7 @@
   v.type = "text/javascript";
   v.onload = function () {
     window.voiceflow.chat.load({
-      verify: { projectID: "68f9a2b8b9abe8c36ec95e86" },
+      verify: { projectID: "6901b0f5a2bb01ad14bfcc5b" },
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       voice: {
@@ -316,7 +316,7 @@
       },
     }).then(() => {
       window.voiceflow.chat.proactive.push(  
-        { type: 'text', payload: { message: 'Hi! I’m your guide to DoubleU AI’s world. So ask me any question you’ve got!' } }
+        { type: 'text', payload: { message: 'Hi! I’m your guide to DoubleU AI’s world. Got any question?' } }
       )
     });
   };
