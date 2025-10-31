@@ -59,10 +59,10 @@ export default function Mylo() {
               Hi, I&apos;m Mylo!
             </h1>
             <p className="mb-8 max-w-lg px-4 text-sm leading-[28px] -tracking-wide text-[#D9D9D9] md:-mr-40 md:px-0 md:text-[14px] md:leading-[34px]">
-              I help you enhance your sales and customer experience effortlessly
-              by automating outreach, optimizing campaigns, and driving
-              engagement. Let me handle the strategy while you focus on closing
-              deals.
+              I help your business boost sales and customer experience effortlessly
+              by automating order taking, managing customer interactions, and 
+              keeping your guests engaged. Let me handle the service while you 
+              focus on running your business.
             </p>
             <Link href="/contact" passHref>
               <button className="text-sm md:text-[16px] cursor-pointer rounded-md bg-[#7D73C3] px-6 py-3.5 font-normal text-white shadow-lg transition duration-300 ease-in-out hover:bg-[#9747FF] md:mb-4">
